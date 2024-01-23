@@ -22,10 +22,11 @@ nav {
     align-items: center;
 }
 
-.project-name {
+.project-name a {
     color:black;
     font-size:25px;
     font-weight:bold;
+    text-decoration:none;
 }
 
 nav ul {
