@@ -8,6 +8,7 @@ html {
 body {
     position: relative;
     background-color:#F6EEE04A;
+    color:white;
 }
 
 nav {
@@ -24,9 +25,13 @@ nav {
 
 .project-name a {
     color:white;
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none; 
+    color: inherit;
+    font-family:'Aleo'; 
     font-size:25px;
-    font-weight:bold;
-    text-decoration:none;
 }
 
 nav ul {
