@@ -23,7 +23,7 @@ nav {
 }
 
 .project-name a {
-    color:black;
+    color:white;
     font-size:25px;
     font-weight:bold;
     text-decoration:none;
@@ -42,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color:black;
+    color:white;
     text-decoration:none;
     font-size:25px;
     font-weight:bold;
@@ -51,13 +51,13 @@ nav ul li a {
 
 .custom-section {
     background-image: url('../img/homepageart.jpg');
-    background-size: cover; 
-    background-position: 10% 5px; 
-    min-height:510px;
+    background-size: 98%; 
+    background-position: center; 
+    min-height:500px;
 }
 
 header {
-    color:black; 
+    color:#7B5F49; 
     font-size:70px;
     padding-top:1rem;
     text-align: center;
@@ -67,8 +67,8 @@ header {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 100px;
-    left: 110px;
+    top: 90px;
+    left: 75px;
 }
 
 .header-content h1 {
@@ -81,7 +81,7 @@ header {
 
 
 header h2 {
-    font-family:'Poppins';
+    font-family:'Aleo';
     margin-bottom:0.5rem ;
     font-weight:700;
     text-align:center;
@@ -90,7 +90,7 @@ header h2 {
 header p {
     font-family:'Aleo';
     font-weight:bold;
-    font-size:30px;
+    font-size:26px;
     position: absolute;
     top:255px;
     left:75px;
@@ -100,7 +100,7 @@ header p {
 }
 
 section {
-    font-family:'Poppins';
+    font-family:'Aleo';
     font-size:20px;
 }
 
@@ -108,19 +108,20 @@ section {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 408px;
-    height: 74px;
+    width: 395px;
+    height: 65px;
     position: absolute;
-    top: 350px;
-    left: 163px;
+    top: 340px;
+    left: 133px;
     border-radius: 15px;
-    border:1px solid #00000033;
+    border:0.5px solid #00000033;
     background-color:white; 
 }
 
 .create p {
     margin:0;
     font-family:'Aleo';
-    font-size:25px;
+    font-size:20px;
     font-weight:700;
+    color:#7B5F49;
 }
