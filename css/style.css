@@ -7,7 +7,7 @@ html {
 
 body {
     position: relative;
-    background-color:#F6EEE04A
+    background-color:#F6EEE04A;
 }
 
 nav {
@@ -49,19 +49,36 @@ nav ul li a {
 
 }
 
+.custom-section {
+    background-image: url('../img/homepageart.jpg');
+    background-size: cover; 
+    background-position: 10% 5px; 
+    min-height:510px;
+}
+
 header {
     color:black; 
-    font-size:55px;
+    font-size:70px;
     padding-top:1rem;
     text-align: center;
 }
 
-header h1 {
-    font-family:'Fraunces';
-    margin-bottom:0.5rem;
-    font-weight:700;
-    text-align:center;
+.header-content {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    left: 110px;
 }
+
+.header-content h1 {
+    font-family:'Aleo';
+    margin-bottom:0.5rem;
+    font-weight:bold;
+    text-align:center;
+    font-size:80px;
+}
+
 
 header h2 {
     font-family:'Poppins';
@@ -71,11 +88,15 @@ header h2 {
 }
 
 header p {
-    font-family:'Poppins';
-    font-size:25px;
-    font-weight:600;
+    font-family:'Aleo';
+    font-weight:bold;
+    font-size:30px;
+    position: absolute;
+    top:255px;
+    left:75px;
     margin-top:0.5rem;
     margin-bottom:1rem;
+    margin-bottom:0.5rem;
 }
 
 section {
@@ -83,44 +104,23 @@ section {
     font-size:20px;
 }
 
-.loginbutton {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 350px;
-    height: 70px;
-    position: absolute;
-    top: 320px;
-    left: 231px;
-    border-radius: 10px;
-    border: 1px solid black; 
-    background-color: #93B78F; 
-}
-
-.loginbutton p {
-    margin:0;
-    font-family:'Poppins';
-    font-size:30px;
-    font-weight:bold;
-}
-
 .create {
     display:flex;
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 70px;
+    width: 408px;
+    height: 74px;
     position: absolute;
-    top: 320px;
-    left: 671px;
-    border-radius: 10px;
-    border: 1px solid black; 
-    background-color: #93B78F; 
+    top: 350px;
+    left: 163px;
+    border-radius: 15px;
+    border:1px solid #00000033;
+    background-color:white; 
 }
 
 .create p {
     margin:0;
-    font-family:'Poppins';
+    font-family:'Aleo';
     font-size:25px;
-    font-weight:bold;
+    font-weight:700;
 }
