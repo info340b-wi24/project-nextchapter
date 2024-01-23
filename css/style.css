@@ -7,6 +7,7 @@ html {
 
 body {
     position: relative;
+    background-color:#F6EEE04A
 }
 
 nav {
@@ -15,7 +16,7 @@ nav {
     left:0;
     width:100%;
     background-color: #93B78F;
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 1rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -23,7 +24,7 @@ nav {
 
 .project-name {
     color:black;
-    font-size:30px;
+    font-size:25px;
     font-weight:bold;
 }
 
@@ -42,21 +43,30 @@ nav ul li {
 nav ul li a {
     color:black;
     text-decoration:none;
-    font-size:30px;
+    font-size:25px;
     font-weight:bold;
 
 }
 
 header {
     color:black; 
-    font-family: 'Fraunces';
-    font-size:75px;
-    text-align:center;
+    font-size:55px;
+    padding-top:1rem;
+    text-align: center;
 }
 
 header h1 {
-    margin-bottom: 0.5rem;
+    font-family:'Fraunces';
+    margin-bottom:0.5rem;
     font-weight:700;
+    text-align:center;
+}
+
+header h2 {
+    font-family:'Poppins';
+    margin-bottom:0.5rem ;
+    font-weight:700;
+    text-align:center;
 }
 
 header p {
@@ -64,6 +74,12 @@ header p {
     font-size:25px;
     font-weight:600;
     margin-top:0.5rem;
+    margin-bottom:1rem;
+}
+
+section {
+    font-family:'Poppins';
+    font-size:20px;
 }
 
 .loginbutton {
@@ -73,7 +89,7 @@ header p {
     width: 350px;
     height: 70px;
     position: absolute;
-    top: 285px;
+    top: 320px;
     left: 231px;
     border-radius: 10px;
     border: 1px solid black; 
@@ -94,8 +110,8 @@ header p {
     width: 350px;
     height: 70px;
     position: absolute;
-    top: 285px;
-    left: 631px;
+    top: 320px;
+    left: 671px;
     border-radius: 10px;
     border: 1px solid black; 
     background-color: #93B78F; 
