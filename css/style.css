@@ -164,22 +164,6 @@ section {
     margin-left: 40px;
 }
 
-.person-container {
-    display: inline-block;
-    text-align:center;
-    margin: 0 10px;
-}
-
-.image-container {
-    text-align: center;
-}
-
-.photoDesc{
-    font-size: 1.5em;
-    display: block;
-    margin-top: 10px;
-}
-
 footer {
     margin-top: 60px;
     font-size: 16px;
@@ -209,4 +193,35 @@ input[type=text], select {
   display: flex;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+
+.person-container {
+    display: inline-block;;
+    margin-right: 10px;
+}
+
+.person-container img {
+    width: 200px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.img-with-text {
+    text-align: center;
+    width: 200px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+    height: 250px;
+}
+
+.img-with-text p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.img-with-text p:not(:first-child) {
+    font-weight: normal;
 }
