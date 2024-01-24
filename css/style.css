@@ -133,3 +133,8 @@ section {
 #aboutus-page {
     color: #7B5F49ff;
 }
+
+.image-container img {
+    width: 300px;
+    margin-right: 30 px;
+}
