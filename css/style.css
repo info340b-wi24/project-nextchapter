@@ -137,4 +137,5 @@ section {
 .image-container img {
     width: 200px;
     margin-right: 60px;
+    margin-left: 60px;
 }
