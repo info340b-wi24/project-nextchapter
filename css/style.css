@@ -3,6 +3,7 @@ html {
 }
 * {
     box-sizing:border-box;
+    font-family:'Aleo'; 
 }
 
 body {
@@ -62,7 +63,7 @@ nav ul li a {
 }
 
 header {
-    color:#7B5F49; 
+    color:#7B5F49;
     padding-top:1rem;
     text-align: center;
 }
@@ -71,6 +72,7 @@ header {
     display: flex;
     align-items: center;
     position: absolute;
+    margin:auto;
     top: 110px;
     left: 75px;
 }
@@ -81,6 +83,15 @@ header {
     font-weight:bold;
     text-align:center;
     font-size:70px;
+}
+
+.page-title h1 {
+    margin: auto;
+    width: 100%; 
+    text-align: center;
+    padding-top: 8rem;
+    padding-bottom: 2.5rem;
+    font-size:50px;
 }
 
 
@@ -122,12 +133,25 @@ section {
     background-color:white; 
 }
 
+.create:hover{
+    background-color: #7B5F49ff;
+}
+
+.create a {
+    text-decoration: none;
+    color: #7B5F49ff;
+}
+
 .create p {
     margin:0;
     font-family:'Aleo';
     font-size:20px;
     font-weight:700;
     color:#7B5F49;
+}
+
+.create:hover a {
+    color: white;
 }
 
 #aboutus-page {
@@ -159,4 +183,28 @@ section {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+.form-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    background-color: #93B78F;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+form{
+    align-items: center;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
