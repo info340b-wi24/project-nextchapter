@@ -144,13 +144,10 @@ section {
     display: inline-block;
     text-align:center;
     margin: 0 10px;
-    width: max-content;
 }
 
-.person-container img {
-    width: 200px;
-    margin-right: 10px;
-    margin-left: 10px;
+image-container {
+    text-align: center;
 }
 
 .photoDesc{
