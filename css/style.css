@@ -136,15 +136,15 @@ section {
 
 .image-container img {
     width: 200px;
-    margin-right: 60px;
-    margin-left: 60px;
+    margin-right: 40px;
+    margin-left: 40px;
     margin-bottom: 40px;
 }
 
 .person-container {
     display: inline-block;
     text-align:center;
-    margin: 0 20px;
+    margin: 0 10px;
 }
 
 image-container {
