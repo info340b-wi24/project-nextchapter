@@ -9,7 +9,6 @@ html {
 body {
     position: relative;
     background-color:#F6EEE0;
-    color:white;
 }
 
 nav {
@@ -30,7 +29,6 @@ nav {
     align-items: center; 
     gap: 10px; 
     text-decoration: none; 
-    color: inherit;
     font-family:'Aleo'; 
     font-size:25px;
 }
@@ -102,6 +100,13 @@ header h2 {
     text-align:center;
 }
 
+h2 {
+    font-size:30px;
+    color:#7B5F49ff;
+    margin-top:2rem;
+    margin-left:1rem;
+}
+
 header p {
     font-family:'Aleo';
     font-weight:bold;
@@ -152,6 +157,47 @@ section {
 
 .create:hover a {
     color: white;
+}
+
+.books-listed {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; 
+    padding: 0;
+    list-style: none;
+    font-size:15px;
+}
+
+.item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    aspect-ratio: 3 / 4;
+    border-radius: 5px; 
+    margin-top:1.5rem;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #93B78F;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; 
+}
+
+button:hover {
+    background-color:#7B5F49ff;
 }
 
 #aboutus-page {
