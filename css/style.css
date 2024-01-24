@@ -180,9 +180,11 @@ section {
     margin-top: 10px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
+footer {
+    margin-top: 60px;
+    font-size: 16px;
+    color:#7B5F49;
+    text-align: center;
 }
 
 .form-box {
