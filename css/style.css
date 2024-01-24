@@ -204,6 +204,27 @@ button:hover {
     color: #7B5F49ff;
 }
 
+.person-container {
+    display: inline-block;;
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.person-container img {
+    width: 200px;
+}
+
+.img-with-text {
+    text-align: center;
+    width: 200px;
+}
+
+.img-with-text img {
+    display: block;
+    margin: 0 auto;
+    height: 280px;
+}
+
 .image-container img {
     width: 200px;
     margin-right: 40px;
@@ -241,24 +262,3 @@ input[type=text], select {
   border-radius: 10px;
 }
 
-.person-container {
-    display: inline-block;;
-    margin-right: 60px;
-    margin-left: 60px;
-}
-
-.person-container img {
-    width: 200px;
-    margin-bottom: 20px;
-}
-
-.img-with-text {
-    text-align: center;
-    width: 200px;
-}
-
-.img-with-text img {
-    display: block;
-    margin: 0 auto;
-    height: 280px;
-}
