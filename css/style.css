@@ -245,17 +245,29 @@ footer {
 }
 
 .form-box {
+  flex-wrap: wrap;
+  align-content: space-around;
+  overflow: scroll;  
+}
+
+.form-box div{
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 40%;
     height: auto;
     text-align: center;
     border-radius: 10px;
     padding: 2rem;
+    background-color: #93B78F;
 }
 
 form{
-    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.form-box a, p {
+    color: white;
 }
 
 input[type=text], select {
@@ -265,6 +277,22 @@ input[type=text], select {
   display: flex;
   border: 1px solid #ccc;
   border-radius: 10px;
+}
+
+input[type=button]{
+  width: 30%;
+  padding: 1rem;
+  margin: 0.5rem;
+  border: 3px solid white;
+  background-color: #93B78F;
+  border-radius: 10px;
+  color: white;
+}
+
+input[type=button]:hover {
+  border: 3px solid white;
+  background-color: white;
+  color:#93B78F;
 }
 
 button {
