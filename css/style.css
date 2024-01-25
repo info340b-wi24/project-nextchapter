@@ -216,6 +216,7 @@ button:hover {
 
 .person-container img {
     height: auto;
+    width: 200px;
 }
 
 .img-with-text {
