@@ -1,6 +1,7 @@
 html {
     height:100%;
 }
+
 * {
     box-sizing:border-box;
     font-family:'Aleo'; 
@@ -9,6 +10,7 @@ html {
 body {
     position: relative;
     background-color:#F6EEE0;
+    padding-bottom: 10px;
 }
 
 nav {
@@ -39,7 +41,6 @@ nav ul {
     margin:0;
     display:flex;
 }
-
 
 nav ul li {
     margin:0 1rem;
@@ -91,7 +92,6 @@ header {
     padding-bottom: 2.5rem;
     font-size:50px;
 }
-
 
 header h2 {
     font-family:'Aleo';
@@ -209,15 +209,20 @@ button:hover {
     display: inline-block;;
     margin-right: 60px;
     margin-left: 60px;
+    text-align: center;
+    height: 500px;
+    vertical-align: top;
 }
 
 .person-container img {
-    width: 200px;
+    height: auto;
+    width: 220px;
 }
 
 .img-with-text {
     text-align: center;
     width: 200px;
+    height: 450px;
 }
 
 .img-with-text img {
@@ -233,10 +238,10 @@ button:hover {
 }
 
 footer {
-    margin-top: 60px;
-    font-size: 16px;
-    color:#7B5F49;
-    text-align: center;
+    padding-top: 1rem;
+    font-size: 100%;
+    padding-left: 20px;
+    color: #7B5F49;
 }
 
 .form-box {
@@ -245,7 +250,6 @@ footer {
     width: 30%;
     height: auto;
     text-align: center;
-    background-color: #93B78F;
     border-radius: 10px;
     padding: 2rem;
 }
@@ -263,3 +267,8 @@ input[type=text], select {
   border-radius: 10px;
 }
 
+button {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
