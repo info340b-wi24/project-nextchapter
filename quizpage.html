@@ -29,7 +29,7 @@
 
     <section id="quiz">
         <form action="quiz_results.html" method="post">
-            <div>
+            <div id="question1">
                 <h2>What kind of genre do you like?</h2>
                 <label>
                 <input type="radio" name="genre" value="fantasy"> Fantasy
@@ -43,9 +43,10 @@
             <label>
                 <input type="radio" name="genre" value="romance"> Romance
             </label>
+            <a href="#question2">Next</a>
             </div>
             
-            <div>
+            <div id="question2">
                 <h2>Who is your favorite author?</h2>
             <label>
                 <input type="radio" name="author" value="colleen_hoover"> Colleen Hoover
@@ -59,8 +60,10 @@
             <label>
                 <input type="radio" name="author" value="angie_thomas"> Angie_Thomas
             </label>
+            <a href="#question3">Next</a>
             </div>
-
+            
+            <div id="question3">
             <div>
                 <h2>Paperback or Hardback?</h2>
             <label>
@@ -69,9 +72,8 @@
             <label>
                 <input type="radio" name="type" value="hardback"> Hardback
             </label>
-            </div>
-
             <button type="submit">Submit</button>
+        </div>
         </form>
     </section>
 
