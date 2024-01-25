@@ -1,6 +1,7 @@
 html {
     height:100%;
 }
+
 * {
     box-sizing:border-box;
     font-family:'Aleo'; 
@@ -40,7 +41,6 @@ nav ul {
     margin:0;
     display:flex;
 }
-
 
 nav ul li {
     margin:0 1rem;
@@ -92,7 +92,6 @@ header {
     padding-bottom: 2.5rem;
     font-size:50px;
 }
-
 
 header h2 {
     font-family:'Aleo';
@@ -267,3 +266,8 @@ input[type=text], select {
   border-radius: 10px;
 }
 
+button {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
