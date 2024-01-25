@@ -245,9 +245,9 @@ footer {
 }
 
 .form-box {
-  flex-wrap: wrap;
-  align-content: space-around;
-  overflow: scroll;  
+    display:flex;
+    flex-wrap: wrap;
+    align-content: space-around;  
 }
 
 .form-box div{
@@ -266,11 +266,11 @@ form{
     flex-wrap: wrap;
 }
 
-.form-box a, p {
+.form-box p, .form-box a{
     color: white;
 }
 
-input[type=text], select {
+input[type=text],input[type=password], select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -293,6 +293,34 @@ input[type=button]:hover {
   border: 3px solid white;
   background-color: white;
   color:#93B78F;
+}
+
+.bookshelf {
+    display:flex;
+    min-width: 80%;
+    min-height: 20%;
+    flex-wrap: wrap;
+    align-content: space-around;  
+}
+
+.book {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    height: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: #93B78F;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: scale-down;
+    object-position: center;
+    margin-bottom: 10px;
 }
 
 button {
