@@ -210,7 +210,7 @@ button:hover {
     margin-right: 60px;
     margin-left: 60px;
     text-align: center;
-    height: 380px;
+    height: 500px;
     vertical-align: top;
 }
 
@@ -221,6 +221,7 @@ button:hover {
 .img-with-text {
     text-align: center;
     width: 200px;
+    height: 450px;
 }
 
 .img-with-text img {
