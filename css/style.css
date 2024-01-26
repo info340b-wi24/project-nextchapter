@@ -297,24 +297,51 @@ input[type=button]:hover {
 
 .bookshelf {
     display:flex;
-    min-width: 80%;
-    min-height: 20%;
-    flex-wrap: wrap;
-    align-content: space-around;  
+    margin-left: auto;
+    margin-right:auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 80%;
+    height: min-content;
+    flex-direction: row;
 }
 
 .book {
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
-    height: auto;
+    margin: 0.5rem;
+    flex: 0 0 250px;
     text-align: center;
     border-radius: 10px;
-    padding: 2rem;
+    padding: 0.5rem;
     background-color: #93B78F;
 }
 
+.bookshelf::-webkit-scrollbar {
+    width: 4rem;
+}
+
+.bookshelf::-webkit-scrollbar-track {
+    background: #7B5F49ff;
+}
+
+.bookshelf::-webkit-scrollbar-thumb {
+    background: #7B5F49ff;
+    border-radius: 5px;
+}
+
+.bookshelf::-webkit-scrollbar-thumb:hover {
+    background: white;
+}
+
+.bookshelf .book:first-child{
+    margin-left: auto;
+}
+
+.bookshelf .book:last-child{
+    margin-right: auto;
+}
+
 .book img {
+    border-radius: 10px;
     max-width: 100%;
     height: auto;
     display: block;
