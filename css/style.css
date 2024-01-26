@@ -355,3 +355,28 @@ button {
     font-size: 30px;
     font-weight: bold;
 }
+
+input[type="radio"] {
+    display: none;
+}
+
+section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    width: 400px;
+    height: 60px;
+    cursor: pointer;
+    background-color: #93B78F; /* Green background color */
+    color: #fff; /* Brown text color */
+    font-weight:bold;
+}
