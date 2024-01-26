@@ -306,6 +306,7 @@ input[type=button]:hover {
     width: 80%;
     height: min-content;
     flex-direction: row;
+    background-color: #D6C7A7;
 }
 
 .book {
@@ -315,6 +316,11 @@ input[type=button]:hover {
     border-radius: 10px;
     padding: 0.5rem;
     background-color: #93B78F;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25),0 1px 5px rgba(0,0,0,0.40);
+}
+
+.book h3{
+    color: white;
 }
 
 .bookshelf::-webkit-scrollbar {
@@ -331,7 +337,7 @@ input[type=button]:hover {
 }
 
 .bookshelf::-webkit-scrollbar-thumb:hover {
-    background: white;
+    background: #BE996E;
 }
 
 .bookshelf .book:first-child{
