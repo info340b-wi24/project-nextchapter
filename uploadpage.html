@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="your name">
-    <meta name="description" content="description of your page">
-    <title>My Page Title</title>
+    <meta name="author" content="Erica Luo, Alexis Nguyen, Brianna Pak, and Kayla Tounalom">
+    <meta name="description" content="Upload Book">
+    <title>Upload Book</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <nav>
         <div class="project-name">
             <a href="index.html">
-                <img width="48" height="48" src="https://img.icons8.com/color/48/story-book.png" alt="Story Book">Next Chapter</a>
+                <img width="48" height="48" src="https://img.icons8.com/color/48/story-book.png" alt="Story Book">Next Chapter
+            </a>
         </div>
         <ul>
             <li><a href="uploadpage.html">Upload</a></li>
@@ -24,14 +27,52 @@
         </ul>
     </nav>
     <header class="page-title">
-        <h1>Upload a Book</h1>
+        <h1>List a Book</h1>
     </header>
-    
+    <div class="form-box">
+        <form>
+            <label for="bookTitleInput">Book title:</label>
+            <input class="upload-form" id="bookTitleInput" required>
+
+            <label for="authorInput">Author:</label>
+            <input class="upload-form" id="authorInput" required>
+
+            <label for="bookTypeInput">Book Type:</label>
+            <select class="upload-form" id="bookTypeInput" required>
+                <option value="Hard cover">Hard Cover</option>
+                <option value="Soft cover">Soft Cover</option>
+            </select>
+
+            <label for="bookLengthInput">Book Length:</label>
+            <select class="upload-form" id="bookLengthInput" required>
+                <option value="Short">Short</option>
+                <option value="Medium">Medium</option>
+                <option value="Long">Long</option>
+            </select>
+
+            <label for="bookConditionInput">Book Condition:</label>
+            <select class="upload-form" id="bookConditionInput" required>
+                <option value="New">New</option>
+                <option value="Like New">Like New</option>
+                <option value="Very Good">Very Good</option>
+                <option value="Good">Good</option>
+                <option value="Fair">Fair</option>
+                <option value="Poor">Poor</option>
+            </select>
+
+            <label for="bookPhotoInput">Upload Book Photo:</label>
+            <input type="file" class="upload-form" id="bookPhotoInput" accept="image/*">
+
+
+            <input type="button" value="Giveaway Book">
+            <input type="button" value="Swap Book">
+        </form>
+    </div>
+
     <footer>
         <p>2024 Next Chapter | Erica Luo, Alexis Nguyen, Brianna Pak, Kayla Tounalom</p>
         <p>Story Book icon by <a href="https://icons8.com">Icons8</a></p>
-  </footer>
-
+    </footer>
 </body>
 
 </html>
