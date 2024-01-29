@@ -23,6 +23,7 @@ nav {
     display: flex;
     justify-content:space-between;
     align-items: center;
+
 }
 
 .project-name a {
@@ -32,7 +33,7 @@ nav {
     gap: 10px; 
     text-decoration: none; 
     font-family:'Aleo'; 
-    font-size:25px;
+    font-size: 1.5rem;
 }
 
 nav ul {
@@ -46,17 +47,21 @@ nav ul li {
     margin:0 1rem;
 }
 
-nav ul li a {
+nav a {
+    text-align: center;
     color:white;
     text-decoration:none;
-    font-size:25px;
+    font-size: 1.5rem;
     font-weight:bold;
 
 }
 
 .custom-section {
     background-image: url('../img/homepageart.jpg');
-    background-size: 98%; 
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    flex-direction: column;
     background-position: center; 
     min-height:500px;
 }
@@ -68,19 +73,14 @@ header {
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    margin:auto;
-    top: 110px;
-    left: 75px;
+    text-align: left;
+    margin-left: 5em;
+    margin-top: 15vh;
 }
 
-.header-content h1 {
-    font-family:'Aleo';
+.header-content h1{
     margin-bottom:0.5rem;
     font-weight:bold;
-    text-align:center;
     font-size:70px;
 }
 
@@ -112,7 +112,6 @@ header p {
     font-family:'Aleo';
     font-weight:bold;
     font-size:26px;
-    position: absolute;
     top:255px;
     left:75px;
     margin-top:0.5rem;
@@ -125,22 +124,11 @@ section {
     font-size:20px;
 }
 
-.create {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 395px;
-    height: 65px;
-    position: absolute;
-    top: 340px;
-    left: 133px;
-    border-radius: 15px;
-    border:0.5px solid #00000033;
-    background-color:white; 
-}
-
-.create:hover{
-    background-color: #7B5F49ff;
+.create button {
+    width: 15em;
+    text-decoration: none;
+    border: 2px solid #7B5F49ff;
+    background-color: white;
 }
 
 .create a {
@@ -148,15 +136,8 @@ section {
     color: #7B5F49ff;
 }
 
-.create p {
-    margin:0;
-    font-family:'Aleo';
-    font-size:20px;
-    font-weight:700;
-    color:#7B5F49;
-}
 
-.create:hover a {
+.create button:hover a {
     color: white;
 }
 
@@ -177,7 +158,6 @@ section {
 .card {
     width: 100%;
     height: 500px;
-    position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;
 }
@@ -189,7 +169,7 @@ section {
 .card-front, .card-back {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: fixed;
     backface-visibility: hidden; 
     display: flex;
     align-items: center;
@@ -449,6 +429,7 @@ section form {
 
 .center-button {
     display: flex;
+    margin: 0.5rem;
     justify-content: center;
     align-items: center;
     background-color: #7B5F49ff;
