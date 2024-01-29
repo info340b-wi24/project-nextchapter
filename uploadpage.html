@@ -31,26 +31,26 @@
     </header>
     <div class="upload-box">
         <form>
-            <label2 for="bookTitleInput">Book title:</label2>
+            <label class="upload-spec" for="bookTitleInput">Book title:</label>
             <input class="upload-form" id="bookTitleInput" required>
 
-            <label2 for="authorInput">Author:</label2>
+            <label for="authorInput">Author:</label2>
             <input class="upload-form" id="authorInput" required>
 
-            <label2 for="bookTypeInput">Book Type:</label2>
+            <label for="bookTypeInput">Book Type:</label>
             <select class="upload-form" id="bookTypeInput" required>
                 <option value="Hard cover">Hard Cover</option>
                 <option value="Soft cover">Soft Cover</option>
             </select>
-
-            <label2 for="bookLengthInput">Book Length:</label2>
+    
+            <label class="upload-spec" for="bookLengthInput">Book Length:</label>
             <select class="upload-form" id="bookLengthInput" required>
                 <option value="Short">Short</option>
                 <option value="Medium">Medium</option>
                 <option value="Long">Long</option>
             </select>
-
-            <label2 for="bookConditionInput">Book Condition:</label2>
+ 
+            <label for="bookConditionInput">Book Condition:</label>
             <select class="upload-form" id="bookConditionInput" required>
                 <option value="New">New</option>
                 <option value="Like New">Like New</option>
@@ -64,8 +64,12 @@
                 <label2 for="fileInput">Choose a file:</label2>
                 <input type="file" id="fileInput" name="fileInput" accept="image/*">
             </form>
-            <input type="button" value="Giveaway Book">
-            <input type="button" value="Swap Book">
+
+            <div>
+                <button class="center-button">Giveaway Book</button>
+                <button class="center-button">Swap Book</button>
+            </div>
+
         </form>
     </div>
 

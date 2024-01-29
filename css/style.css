@@ -414,7 +414,7 @@ section form {
     align-items: center;
 }
 
-label {
+.option {
     display: flex;
     justify-content: center;
     margin: 10px;
@@ -434,13 +434,25 @@ label {
     flex-direction: column;
     align-items: center;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto;
+    padding: 40px;
     border-radius: 10px;
     background-color: #93B78F;
 }
 
 .upload-form {
     width: 100%;
+    align-items:center;
     margin-bottom: 10px;
     padding: 8px;
 }
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #7B5F49ff;
+    font-size: large;
+    width: auto;
+    float: left;
+  }
