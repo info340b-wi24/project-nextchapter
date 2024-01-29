@@ -427,13 +427,16 @@ section form {
     padding: 8px;
 }
 
-.center-button {
+div.button-container {
     display: flex;
     margin: 0.5rem;
     justify-content: center;
     align-items: center;
+  }
+  
+  .center-button {
     background-color: #7B5F49ff;
-    font-size: large;
+    font-size: xx-large;
     width: auto;
-    float: left;
+    margin: 5px; 
   }
