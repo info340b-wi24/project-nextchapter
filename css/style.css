@@ -214,6 +214,9 @@ button {
     cursor: pointer;
     width: 50%;
     border-radius: 5px; 
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 button:hover {
@@ -302,7 +305,7 @@ input[type=text],input[type=password], select {
 }
 
 input[type=button]{
-  width: 30%;
+  width: fit-content;
   padding: 1rem;
   margin: 0.5rem;
   border: 3px solid white;
@@ -378,12 +381,6 @@ input[type=button]:hover {
     margin-bottom: 10px;
 }
 
-button {
-    margin-top: 20px;
-    font-size: 30px;
-    font-weight: bold;
-}
-
 input[type="radio"] {
     display: none;
 }
@@ -438,5 +435,11 @@ div.button-container {
     background-color: #7B5F49ff;
     font-size: xx-large;
     width: auto;
-    margin: 5px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .center-button:hover {
+    background-color: white;
+    color: #7B5F49ff;
   }
