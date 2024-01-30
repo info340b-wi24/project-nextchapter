@@ -36,24 +36,28 @@
       <div class="upload-box">
          <form>
             <label class="upload-spec" for="bookTitleInput">Book title:</label>
-            <input class="upload-form" name="bookTitleInput" required>
+            <input id="bookTitleInput" class="upload-form" name="bookTitleInput" required>
+
             <label for="authorInput">Author:</label>
-            <input class="upload-form" name="authorInput" required>
+            <input id="authorInput" class="upload-form" name="authorInput" required>
+
             <label for="bookTypeInput">Book Type:</label>
-            <select class="upload-form" name="bookTypeInput" required>
+            <select id="bookTypeInput" class="upload-form" name="bookTypeInput" required>
                <option value="" disabled selected>Select Book Type</option>
                <option value="Hard cover">Hard Cover</option>
                <option value="Soft cover">Soft Cover</option>
             </select>
+
             <label class="upload-spec" for="bookLengthInput">Book Length:</label>
-            <select class="upload-form" name="bookLengthInput" required>
+            <select id="bookLengthInput" class="upload-form" name="bookLengthInput" required>
                <option value="" disabled selected>Select Book Length</option>
                <option value="Short">Short</option>
                <option value="Medium">Medium</option>
                <option value="Long">Long</option>
             </select>
+
             <label for="bookConditionInput">Book Condition:</label>
-            <select class="upload-form" name="bookConditionInput" required>
+            <select id="bookConditionInput" class="upload-form" name="bookConditionInput" required>
                <option value="" disabled selected>Select Book Condition</option>
                <option value="New">New</option>
                <option value="Like New">Like New</option>
@@ -62,8 +66,9 @@
                <option value="Fair">Fair</option>
                <option value="Poor">Poor</option>
             </select>
+
             <label for="fileInput">Choose a file:</label>
-            <input type="file" name="fileInput" accept="image/*">
+            <input type="file" id="fileInput" name="fileInput" accept="image/*">
             <div class="button-container">
                <button class="center-button" type="submit">Giveaway Book</button>
                <button class="center-button" type="submit">Swap Book</button>
