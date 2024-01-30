@@ -7,7 +7,7 @@ html {
     font-family:'Aleo'; 
 }
 
-body {
+.custom-body {
     position: relative;
     background-color:#F6EEE0;
     padding-bottom: 10px;
@@ -361,8 +361,8 @@ button:hover {
 
 /* About Us Page */
 
-#aboutus-page {
-    color: #7B5F49;
+.aboutus-page {
+    color: #7B5F49ff;
 }
 
 .person-container {
