@@ -329,10 +329,11 @@ h3, p {
 /* Quiz button on home page */
 
 .quizlink-home button {
-    width: 15em;
     text-decoration: none;
+    border: 2px solid #7B5F49ff;
     background-color: #93B78F;
     border-radius: 10px;
+    color: #7B5F49ff;
 }
 
 .quizlink-home a {
