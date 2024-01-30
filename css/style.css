@@ -497,6 +497,7 @@ section form {
     align-items: center;
 }
 
+/* Quiz Page */
 .option {
     display: flex;
     justify-content: center;
