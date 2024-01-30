@@ -1,5 +1,5 @@
 html {
-    height:100%;
+    min-height: 100vh;
 }
 
 * {
@@ -11,6 +11,7 @@ body {
     position: relative;
     background-color:#F6EEE0;
     padding-bottom: 10px;
+    min-height: 100vh;
 }
 
 nav {
@@ -367,12 +368,13 @@ button:hover {
 }
 
 footer {
+    position:relative;
+	margin-bottom: 0;
+	left: 0;
     padding-top: 1rem;
     font-size: 100%;
     padding-left: 20px;
     color: #7B5F49;
-    margin: 0;
-    padding: 0;
 }
 
 .form-box {
