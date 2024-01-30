@@ -353,8 +353,8 @@ button:hover {
 
 /* About Us Page */
 
-#aboutus-page {
-    color: #7B5F49;
+.aboutus-page {
+    color: #7B5F49ff;
 }
 
 .person-container {
