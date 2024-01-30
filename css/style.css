@@ -354,7 +354,7 @@ button:hover {
 /* About Us Page */
 
 #aboutus-page {
-    color: #7B5F49ff;
+    color: #7B5F49;
 }
 
 .person-container {
@@ -403,6 +403,7 @@ footer {
     display:flex;
     flex-wrap: wrap;
     align-content: space-around;  
+    height: 400px;
 }
 
 .form-box div{

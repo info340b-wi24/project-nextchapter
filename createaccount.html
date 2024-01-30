@@ -36,10 +36,9 @@
     <div>
         <h1>About me</h1>
         <form>
-             <input type="text" id="email" name="email" placeholder="Email">
-             
-             <input type="text" id="username" name="username" placeholder="Username">
-             <input type="text" id="password" name="password" placeholder="Password">
+             <input type="text" name="email" placeholder="Email">
+             <input type="text" name="username" placeholder="Username">
+             <input type="text" name="password" placeholder="Password">
 
         </form>
     <p>Already have an account? <a href="loginpage.html">Login</a></p>
@@ -48,7 +47,8 @@
     <div>
         <h1>What I like </h1> 
         <form>
-             <select class="upload-form" id="preferences" required>
+             <select class="upload-form" required>
+                <option value="" disabled selected>Select your preference</option>
                 <option value="Romance">Romance</option>
                 <option value="Horror">Horror</option>
                 <option value="SciFi">Science Fiction</option>
