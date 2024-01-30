@@ -379,6 +379,7 @@ footer {
     display:flex;
     flex-wrap: wrap;
     align-content: space-around;  
+    height: 400px;
 }
 
 .form-box div{
