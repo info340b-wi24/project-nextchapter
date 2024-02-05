@@ -4,7 +4,7 @@ html {
 
 * {
     box-sizing:border-box;
-    font-family:'Aleo'; 
+    font-family:'Aleo', sans-serif; 
 }
 
 .custom-body {
@@ -26,6 +26,7 @@ nav {
     display: flex;
     justify-content:space-between;
     align-items: center;
+    z-index: 1;
 
 }
 
@@ -65,7 +66,7 @@ nav {
     align-items: center; 
     gap: 10px; 
     text-decoration: none; 
-    font-family:'Aleo'; 
+    font-family:'Aleo', sans-serif; 
     font-size: 1.5rem;
 }
 
@@ -135,7 +136,7 @@ header {
 }
 
 header h2 {
-    font-family:'Aleo';
+    font-family:'Aleo', sans-serif;
     margin-bottom:0.5rem ;
     font-weight:700;
     text-align:center;
@@ -151,7 +152,7 @@ h2 {
 }
 
 header p {
-    font-family:'Aleo';
+    font-family:'Aleo', sans-serif;
     font-weight:bold;
     font-size:26px;
     top:255px;
@@ -162,7 +163,7 @@ header p {
 }
 
 section {
-    font-family:'Aleo';
+    font-family:'Aleo', sans-serif;
     font-size:20px;
 }
 
@@ -420,58 +421,7 @@ footer {
     padding-left: 20px;
     color: #7B5F49;
 }
-
-.form-box {
-    display:flex;
-    flex-wrap: wrap;
-    align-content: space-around;  
-    height: 400px;
-}
-
-.form-box div{
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
-    height: auto;
-    text-align: center;
-    border-radius: 10px;
-    padding: 2rem;
-    background-color: #93B78F;
-}
-
-form {
-    align-content: center;
-    flex-wrap: wrap;
-}
-
-.form-box p, .form-box a{
-    color: white;
-}
-
-input[type=text],input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: flex;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-}
-
-input[type=button]{
-  width: fit-content;
-  padding: 1rem;
-  margin: 0.5rem;
-  border: 3px solid white;
-  background-color: #93B78F;
-  border-radius: 10px;
-  color: white;
-}
-
-input[type=button]:hover {
-  border: 3px solid white;
-  background-color: white;
-  color:#93B78F;
-}
+/*BOOKSHELF*/
 
 .bookshelf {
     display:flex;
