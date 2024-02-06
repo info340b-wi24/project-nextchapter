@@ -4,14 +4,7 @@ html {
 
 * {
     box-sizing:border-box;
-    font-family:'Aleo', sans-serif; 
-}
-
-.custom-body {
-    position: relative;
-    background-color:#F6EEE0;
-    padding-bottom: 10px;
-    min-height: 100vh;
+    font-family:'Poppins', sans-serif; 
 }
 
 /*Navigation*/
@@ -21,8 +14,8 @@ nav {
     top:0;
     left:0;
     width:100%;
-    background-color: #93B78F;
-    padding: 1.2rem 1rem;
+    background-color:rgba(123, 95, 73, 0.948);
+    padding: 1rem 1rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -66,7 +59,7 @@ nav {
     align-items: center; 
     gap: 10px; 
     text-decoration: none; 
-    font-family:'Aleo', sans-serif; 
+    font-family:'Poppins', sans-serif; 
     font-size: 1.5rem;
 }
 
@@ -87,7 +80,6 @@ nav a {
     text-decoration:none;
     font-size: 1.5rem;
     font-weight:bold;
-
 }
 
 nav a:hover {
@@ -97,34 +89,43 @@ nav a:hover {
 /* Home page art */
 
 .custom-section {
-    background-image: url('../img/homepageart.jpg');
+    background-image: url('../img/oldbooks.jpg');
     display: flex;
     width: 100%;
-    object-fit: cover;
-    flex-direction: column;
-    background-position: center; 
-    min-height:500px;
-    margin-bottom:15px;
+    width: 100%;
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center 80%; 
 }
 
 header {
-    color:#7B5F49;
     padding-top:1rem;
     text-align: center;
 }
 
 .header-content {
     text-align: left;
-    margin-left: 5em;
     margin-top: 15vh;
 }
 
 .header-content h1{
-    margin-top:20px;
-    margin-bottom:0.5rem;
+    color: white;
+    margin-top:17px;
+    margin-left: 18rem;
+    margin-bottom:1rem;
     font-weight:bold;
-    font-size:70px;
+    font-size:130px;
 }
+
+.header-content p {
+    color:#553c1b;
+    margin-top:15px;
+    margin-left:27rem;
+    margin-bottom:1rem;
+    font-weight:bold;
+    font-size:20px;
+}
+
 
 .page-title h1 {
     margin: auto;
@@ -136,23 +137,24 @@ header {
 }
 
 header h2 {
-    font-family:'Aleo', sans-serif;
+    font-family:'Poppins', sans-serif;
     margin-bottom:0.5rem ;
     font-weight:700;
     text-align:center;
     margin-top:3em;
+    color:#7B5F49ff;
 }
 
 h2 {
     font-size:30px;
-    color:#7B5F49ff;
-    margin-top:3rem;
-    margin-bottom:15px;
+    margin-top:15rem;
+    margin-bottom:5rem;
     margin-left:1rem;
+    color:#7B5F49ff;
 }
 
 header p {
-    font-family:'Aleo', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-weight:bold;
     font-size:26px;
     top:255px;
@@ -163,32 +165,34 @@ header p {
 }
 
 section {
-    font-family:'Aleo', sans-serif;
+    font-family:'Poppins', sans-serif;
     font-size:20px;
 }
 
 /* Join our community */
 
 .create button {
-    width: 15em;
+    width: 20em;
+    height: 3em;
     text-decoration: none;
-    border: 2px solid #7B5F49ff;
-    background-color: #93B78F;
+    border: 2px solid white;
+    background-color: white;
     border-radius: 10px;
+    margin-top:3rem;
+    margin-left:27rem;
+    color:#7B5F49ff;
+    font-size:30px;
 }
 
-.create a {
-    text-decoration: none;
-    color: #7B5F49ff;
-}
-
-
-.create button:hover a {
-    color: white;
-}
 
 /*Genre Filter*/
 /*Tag sizes*/
+
+.tags h2 {
+    margin-top:2rem;
+    margin-bottom:1rem;
+    color:#7B5F49ff;
+}
 
 .type-button-fiction,
 .type-button-non,
@@ -208,8 +212,8 @@ section {
     font-size: 15px; 
     border: 1px solid #ddd;
     border-radius: 5px; 
-    margin-left: 14px; 
-    margin-bottom:15px;
+    margin-left: 20px; 
+    margin-bottom:20px;
     cursor: pointer; 
     text-align: center;
     font-weight: bold;
@@ -219,58 +223,59 @@ section {
 /*Colors of tags*/
 
 .type-button-fiction {
-    background-color: #c6def1;
+    background-color: #231709;
 }
 
 .type-button-non {
-    background-color: #c9e4de; 
+    background-color: #4b371c; 
 }
 
 .type-button-fantasy {
-    background-color: #fd8a8a; 
+    background-color: #3c280d; 
 }
 
 .type-button-mystery {
-    background-color: #9ea1d4; 
+    background-color: #795c34; 
 }
 
 .type-button-romance {
-    background-color: pink; 
+    background-color: #362511; 
 }
 
 .type-button-nar {
-    background-color: orange; 
+    background-color: #371d10; 
 }
 
 .type-button-informative {
-    background-color: #97ecf1;
+    background-color: #3f301d;
 }
 
 .type-button-chid {
-    background-color: yellowgreen; 
+    background-color: #4a2511; 
 }
 
 .type-button-fairy {
-    background-color: rgb(235, 192, 243); 
+    background-color: #432616; 
 }
 
 .type-button-fantasy {
-    background-color: rgb(237, 72, 130)
+    background-color: #65350f;
 }
 
 .type-button-science  {
-    background-color: darkseagreen;
+    background-color: #5e2c04;
 }
 
 .type-button-poetry {
-    background-color: rgb(22, 98, 98);
+    background-color: #481f01;
 }
 
 .type-button-biography {
-    background-color: coral;
+    background-color: #2e1505;
 }
 
 /*Card flipping*/
+
 
 .books-listed {
     display: flex;
@@ -280,12 +285,24 @@ section {
     padding: 20px;
 }
 
+.books-listed h3 {
+    font-size:20px;
+    margin-bottom:1rem;
+    text-align: center;
+}
+
+
 .item {
     flex-basis: calc(20% - 20px); 
     perspective: 1000px;
 }
 
 /* Card Styling */
+
+h3 {
+    margin-bottom: 5rem;
+    margin-left: 20px;
+}
 .card {
     width: 100%;
     height: 500px;
@@ -307,8 +324,6 @@ section {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    border: 1px solid #ccc; 
-    border-radius: 10px; 
 }
 
 .card-front {
@@ -369,15 +384,24 @@ button {
     font-weight: bold;
 }
 
-button:hover {
-    background-color:#7B5F49ff;
+/* About Us Page */
+
+.custom-body {
+    position: relative;
+    background-color:white;
+    padding-bottom: 10px;
+    min-height: 100vh;
 }
 
-/* About Us Page */
 
 .aboutus-page {
     color: #7B5F49ff;
     margin-left: 20px;
+}
+
+.aboutus-page h3 {
+    margin-top:1rem;
+    margin-bottom:2rem;
 }
 
 .person-container {
@@ -414,6 +438,7 @@ button:hover {
 
 footer {
     position:relative;
+    margin-top:1rem;
 	margin-bottom: 0;
 	left: 0;
     padding-top: 1rem;
