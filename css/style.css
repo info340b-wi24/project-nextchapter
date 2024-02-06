@@ -449,74 +449,37 @@ footer {
 /*BOOKSHELF*/
 
 .bookshelf {
-    display:flex;
-    margin-left: auto;
-    margin-right:auto;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    width: 80%;
-    height: min-content;
-    flex-direction: row;
-    background-color: #D6C7A7;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(3, 250px);
+    justify-content: center;
+    align-items: start; 
+    position:relative;
+    background-image: url('../img/shelfhold.jpg');
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height:700px;
+    overflow: visible;
+    padding-top:6rem;
+    padding-left:7rem;
 }
 
 .book {
-    margin: 0.5rem;
-    flex: 0 0 250px;
-    text-align: center;
-    border-radius: 10px;
-    padding: 0.5rem;
-    background-color: #93B78F;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.25),0 1px 5px rgba(0,0,0,0.40);
-}
-
-.book h3{
-    color: white;
-}
-
-.bookshelf::-webkit-scrollbar {
-    width: 4rem;
-}
-
-.bookshelf::-webkit-scrollbar-track {
-    background: #7B5F49ff;
-}
-
-.bookshelf::-webkit-scrollbar-thumb {
-    background: #7B5F49ff;
-    border-radius: 5px;
-}
-
-.bookshelf::-webkit-scrollbar-thumb:hover {
-    background: #BE996E;
-}
-
-.bookshelf .book:first-child{
-    margin-left: auto;
-}
-
-.bookshelf .book:last-child{
-    margin-right: auto;
+    width: auto;
+    height: 200px;
 }
 
 .book img {
-    border-radius: 10px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: scale-down;
-    object-position: center;
-    margin-bottom: 10px;
+    max-height: 200px;
+    width: auto; 
+    display:block;
 }
 
-input[type="radio"] {
-    display: none;
-}
-
-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.page-title h1 {
+    font-size:70px;
+    font-weight: bold;
+    color:#7B5F49ff;
 }
 
 /* Quiz Page */
