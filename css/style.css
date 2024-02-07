@@ -14,7 +14,7 @@ nav {
     top:0;
     left:0;
     width:100%;
-    background-color:rgba(123, 95, 73, 0.948);
+    background-color:#93B78F;
     padding: 1rem 1rem;
     display: flex;
     justify-content:space-between;
@@ -223,55 +223,55 @@ section {
 /*Colors of tags*/
 
 .type-button-fiction {
-    background-color: #231709;
+    background-color: #c6def1;
 }
 
 .type-button-non {
-    background-color: #4b371c; 
+    background-color: #fd8a8a; 
 }
 
 .type-button-fantasy {
-    background-color: #3c280d; 
+    background-color: #62a271; 
 }
 
 .type-button-mystery {
-    background-color: #795c34; 
+    background-color: pink; 
 }
 
 .type-button-romance {
-    background-color: #362511; 
+    background-color: rgb(239, 194, 111); 
 }
 
 .type-button-nar {
-    background-color: #371d10; 
+    background-color: #7dc1c5; 
 }
 
 .type-button-informative {
-    background-color: #3f301d;
+    background-color: coral;
 }
 
 .type-button-chid {
-    background-color: #4a2511; 
+    background-color: darkseagreen; 
 }
 
 .type-button-fairy {
-    background-color: #432616; 
+    background-color: yellowgreen; 
 }
 
 .type-button-fantasy {
-    background-color: #65350f;
+    background-color: #efe237;
 }
 
 .type-button-science  {
-    background-color: #5e2c04;
+    background-color: #bf6773;
 }
 
 .type-button-poetry {
-    background-color: #481f01;
+    background-color: #cfd178;
 }
 
 .type-button-biography {
-    background-color: #2e1505;
+    background-color: #9c89d1;
 }
 
 /*Card flipping*/
