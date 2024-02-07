@@ -27,13 +27,24 @@ nav {
 }
 
 @media (max-width: 769px) {
-	nav {
+	nav{
         display: flex;
-        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         margin-left: auto;
         margin-right: auto;
+        padding-right: 2em;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    nav ul{
+        display: flex;
+        width: fit-content;
+    }
+    
+    body{
+        margin: auto;
     }
 
     .page-title h1 {
