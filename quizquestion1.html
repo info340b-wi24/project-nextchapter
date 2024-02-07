@@ -36,20 +36,25 @@
     <section class="quiz">
         <form action="quizquestion2.html" method="post">
             <h2>What Kind of Genre do You Like?</h2>
-            <label class="option" for="fantasy">
-                <input type="radio" id="fantasy" name="genre" value="fantasy"> Fantasy
-            </label>
-            <label class="option" for="mystery">
-                <input type="radio" id="mystery" name="genre" value="mystery"> Mystery
-            </label>
-            <label class="option" for="science-fiction">
-                <input type="radio" id="science-fiction" name="genre" value="science fiction"> Science Fiction
-            </label>
-            <label class="option" for="romance">
-                <input type="radio" id="romance" name="genre" value="romance"> Romance
-            </label>
-            <br>
-            <button type="submit">Next</button>
+            <div class="option">
+                <input type="radio" id="fantasy" name="genre" value="fantasy">
+                <label for="fantasy">Fantasy</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="mystery" name="genre" value="mystery">
+                <label for="mystery">Mystery</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="science-fiction" name="genre" value="science fiction">
+                <label for="science-fiction">Science Fiction</label>
+            </div>
+            <div class="option">
+                <input type="radio" id="romance" name="genre" value="romance">
+                <label for="romance">Romance</label>
+            </div>
+            <div>
+                <button type="submit">Next</button>
+            </div>
         </form>
     </section>
 
