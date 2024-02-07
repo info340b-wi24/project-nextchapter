@@ -176,14 +176,18 @@ section {
     height: 3em;
     text-decoration: none;
     border: 2px solid white;
-    background-color: white;
+    background-color: #93B78F;
     border-radius: 10px;
     margin-top:3rem;
     margin-left:27rem;
-    color:#7B5F49ff;
+    color: white;
     font-size:30px;
 }
 
+.create button:hover {
+    background-color: #7B5F49ff;
+    
+}
 
 /*Genre Filter*/
 /*Tag sizes*/
