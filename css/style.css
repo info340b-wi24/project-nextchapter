@@ -38,6 +38,10 @@ nav {
         text-align: center;
     }
 
+    .header-content h1{
+        font-size: 1.5rem;
+    }
+
     
 
     nav li a{
@@ -53,17 +57,10 @@ nav {
     header{
         align-items: center;
         width: 100%;
-        font-size: 1rem; 
-        
     }
 
-    .page-title{
-       
-        block-size: fit-content;
-    }
-
-    header h1{
-        font-size: 6px;
+    .page-title h1{
+        text-size-adjust: 50%;
         
     }
 
@@ -118,37 +115,39 @@ nav a:hover {
 .custom-section {
     background-image: url('../img/oldbooks.jpg');
     display: flex;
-    width: 100%;
-    width: 100%;
+    width: 100vw;
     height: 100vh; 
-    background-size: cover; 
+    background-size: cover;
     background-position: center 80%; 
 }
 
 header {
     padding-top:3rem;
-    text-align: center;
+    align-items: center;
 }
 
 .header-content {
-    text-align: left;
+    text-align: center;
     margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .header-content h1{
     color: white;
-    margin-top:17px;
-    margin-left: 18rem;
+    margin-top: 17px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom:1rem;
     font-weight:bold;
-    font-size:130px;
+    font-size: 130px;
 }
 
 .header-content p {
     color:#553c1b;
     margin-top:15px;
-    margin-left:27rem;
     margin-bottom:1rem;
+    text-align: center;
     font-weight:bold;
     font-size:20px;
 }
@@ -197,7 +196,13 @@ section {
 
 /* Join our community */
 
+.create {
+    display: flex;
+    align-items: center;
+}
+
 .create button {
+    flex: 1 1 auto;
     width: 20em;
     height: 3em;
     text-decoration: none;
@@ -205,7 +210,8 @@ section {
     background-color: #93B78F;
     border-radius: 10px;
     margin-top:1rem;
-    margin-left:27rem;
+    margin-left: auto;
+    margin-right: auto;
     color: white;
     font-size:30px;
 }
