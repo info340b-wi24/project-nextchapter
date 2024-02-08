@@ -34,13 +34,15 @@ nav {
         margin-left: auto;
         margin-right: auto;
         padding-right: 2em;
+        padding-left: 2em;
         flex: 1 1 auto;
         width: 100%;
+        text-align: center;
     }
 
-    nav ul{
-        display: flex;
-        width: fit-content;
+    nav li a{
+        font-size: 1rem;
+        
     }
     
     body{
