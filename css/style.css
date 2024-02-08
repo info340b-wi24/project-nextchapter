@@ -24,10 +24,6 @@ nav {
 
 }
 
-@media (max-width: 600px) {
-	
-}
-
 @media (max-width: 769px) {
 	nav{
         display: flex;
@@ -76,6 +72,7 @@ nav {
     }
 
 }
+
 
 @media (min-width: 481px){
     .form-box div {
