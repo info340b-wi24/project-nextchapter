@@ -1,10 +1,12 @@
 html {
     min-height: 100vh;
+    max-width: 100vw;
 }
 
 * {
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif; 
+    font-family:'Poppins', sans-serif;
+    max-width: 100vw;
 }
 
 
@@ -40,6 +42,8 @@ nav {
         text-align: center;
     }
 
+    
+
     nav li a{
         font-size: 1rem;
         
@@ -47,10 +51,24 @@ nav {
     
     body{
         margin: auto;
+        width: 100%;
+    }
+    
+    header{
+        align-items: center;
+        width: 100%;
+        font-size: 1rem; 
+        
     }
 
-    .page-title h1 {
-        margin-top: 20vh;
+    .page-title{
+       
+        block-size: fit-content;
+    }
+
+    header h1{
+        font-size: 6px;
+        
     }
 
     .form-box div {
@@ -60,10 +78,6 @@ nav {
 }
 
 @media (min-width: 481px){
-    .page-title h1 {
-        margin-top: 50vh;
-    }
-
     .form-box div {
         width: 90%;
     }
@@ -148,7 +162,7 @@ header {
     text-align: center;
     padding-top: 8rem;
     padding-bottom: 2.5rem;
-    font-size:50px;
+    font-size: 50px;
 }
 
 header h2 {
