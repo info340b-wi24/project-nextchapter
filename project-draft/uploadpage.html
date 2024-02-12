@@ -29,16 +29,41 @@
             <li><a href="myshelf.html">My Shelf</a></li>
          </ul>
       </nav>
+
       <header class="page-title">
-         <h1>List a Book</h1>
+         <h2>List A Book</h2>
       </header>
+
       <div class="upload-box">
          <form>
-            <label class="upload-spec" for="bookTitleInput">Book title:</label>
+            <div class="button-container">
+               <button class="center-button">Giveaway Book</button>
+               <button class="center-button">Swap Book</button>
+            </div>
+
+            <label class="upload-spec" for="bookTitleInput">Book Title:</label>
             <input id="bookTitleInput" class="upload-form" name="bookTitleInput" required>
 
             <label for="authorInput">Author:</label>
             <input id="authorInput" class="upload-form" name="authorInput" required>
+
+            <label for="bookGenreTags">Genre Tags:</label>
+            <div class = "tagsInBox">
+               <div class = "tagButtons">
+                  <button class="type-button-fiction" value="Fiction">Fiction</button>
+                  <button class="type-button-non" value="Non-Fiction">Non-Fiction</button>
+                  <button class="type-button-fantasy" value="Fantasy">Fantasy</button>
+                  <button class="type-button-mystery" value="Mystery">Mystery</button>
+                  <button class="type-button-romance" value="Romance">Romance</button>
+                  <button class="type-button-nar" value="Narrative">Narrative</button>
+                  <button class="type-button-informative"value="Informative">Informative</button>
+                  <button class="type-button-chid" value="Children">Children</button>
+                  <button class="type-button-science" value="Science">Science</button>
+                  <button class="type-button-biography" value="Biography">Biography</button>
+                  <button class="type-button-fairy" value="Fairy tale">Fairy tale</button>
+                  <button class="type-button-poetry" value="Poetry">Poetry</button>
+               </div>
+            </div>
 
             <label for="bookTypeInput">Book Type:</label>
             <select id="bookTypeInput" class="upload-form" name="bookTypeInput" required>
@@ -68,9 +93,9 @@
 
             <label for="fileInput">Choose a file:</label>
             <input type="file" id="fileInput" name="fileInput" accept="image/*">
-            <div class="button-container">
-               <button class="center-button" type="submit">Giveaway Book</button>
-               <button class="center-button" type="submit">Swap Book</button>
+         
+            <div class = "upload-book">
+            <button class="finalcenter-button" type="submit">Upload</button>
             </div>
          </form>
       </div>
