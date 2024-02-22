@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavBar } from './NavBar'; 
 import { MyComponent } from './MyComponent'; 
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
   const bookData = {

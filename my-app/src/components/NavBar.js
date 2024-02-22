@@ -12,10 +12,10 @@ export function NavBar(props) {
          </Link>
        </div>
        <ul>
-         <li><Link to="./UploadPage">Upload</Link></li>
-         <li><Link to="./QuizQuestion1">Quiz</Link></li>
-         <li><Link to="./AboutUs">About Us</Link></li>
-         <li><Link to="./MyShelf">My Shelf</Link></li>
+         <li><Link to="UploadPage">Upload</Link></li>
+         <li><Link to="QuizQuestion1">Quiz</Link></li>
+         <li><Link to="AboutUs">About Us</Link></li>
+         <li><Link to="MyShelf">My Shelf</Link></li>
        </ul>
      </nav>
    );
