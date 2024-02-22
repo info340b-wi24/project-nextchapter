@@ -1,7 +1,7 @@
 // Importing image in a React component
 import oldBooksImage from './images/oldbooks.jpg';
 
-function MyComponent() {
+export function MyComponent(props) {
   return (
     <header>
          <section className="custom-section">
@@ -16,4 +16,3 @@ function MyComponent() {
       </header>
   );
 }
-export default MyComponent;

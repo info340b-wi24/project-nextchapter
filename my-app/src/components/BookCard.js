@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-function BookCard({ title, imageUrl, author }) {
+export function BookCard({ title, imageUrl, author }) {
     return (
       <div className="card">
         <div className="card-front">
@@ -14,5 +14,3 @@ function BookCard({ title, imageUrl, author }) {
       </div>
     );
   }
-
-  export default BookCard;

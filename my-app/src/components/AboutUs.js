@@ -5,7 +5,7 @@ import kaylaImage from './img/kayla.jpg';
 import alexisImage from './img/alexis2.jpg';
 import ericaImage from './img/erica.jpg';
 
-export function AboutUs() {
+export function AboutUs(props) {
   return (
     <div>
       <header className="page-title">
