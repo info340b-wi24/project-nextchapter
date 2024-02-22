@@ -5,7 +5,7 @@ import kaylaImage from './img/kayla.jpg';
 import alexisImage from './img/alexis2.jpg';
 import ericaImage from './img/erica.jpg';
 
-function AboutUs() {
+export function AboutUs() {
   return (
     <div>
       <header className="page-title">
@@ -58,5 +58,3 @@ function AboutUs() {
     </div>
   );
 }
-
-export default AboutUs;
