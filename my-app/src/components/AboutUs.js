@@ -5,7 +5,19 @@ import kaylaImage from './img/kayla.jpg';
 import alexisImage from './img/alexis2.jpg';
 import ericaImage from './img/erica.jpg';
 
-export function AboutUs(props) {
+function Person(props) {
+  return (
+    <div className="person-container">
+      <div className="img-with-text">
+        <img src={props.image} alt={props.name} />
+        <p>{props.name}</p>
+        <p>{props.description}</p>
+      </div>
+    </div>
+  );
+}
+
+function AboutUs(props) {
   return (
     <div>
       <header className="page-title">
@@ -22,34 +34,10 @@ export function AboutUs(props) {
       </section>
       <section className="aboutus-page">
         <h3>Who Are We?</h3> 
-        <div className="person-container">
-          <div className="img-with-text">
-            <img src={briImage} alt="Brianna Pak" />
-            <p>Brianna Pak</p>
-            <p>Third Year studying informatics with a focus in project management and data science.</p>
-          </div>
-          </div>
-        <div className="person-container">
-          <div className="img-with-text">
-            <img src= {kaylaImage} alt="Kayla Tounalom" />
-            <p>Kayla Tounaloum</p>
-            <p>Third year studying informatics with a focus in project management and human-computer interaction.</p>
-          </div>
-        </div>
-        <div className="person-container">
-          <div className="img-with-text">
-            <img src= {alexisImage} alt="Alexis Nguyen" />
-            <p>Alexis Nguyen</p>
-            <p>Senior studying Informatics specializing in frontend development.</p>
-          </div>
-        </div>
-        <div className="person-container">
-          <div className="img-with-text">
-            <img src= {ericaImage} alt="Erica Luo" />
-            <p>Erica Luo</p>
-            <p>Second year studying Psychology with a minor in Informatics.</p>
-          </div>
-        </div>
+        <Person name="Brianna Pak" description="Third Year studying informatics with a focus in project management and data science." image={briImage} />
+        <Person name="Kayla Tounaloum" description="Third year studying informatics with a focus in project management and human-computer interaction." image={kaylaImage} />
+        <Person name="Alexis Nguyen" description="Senior studying Informatics specializing in frontend development." image={alexisImage} />
+        <Person name="Erica Luo" description="Second year studying Psychology with a minor in Informatics." image={ericaImage} />
       </section>
       <footer>
         <p>2024 Next Chapter | Erica Luo, Alexis Nguyen, Brianna Pak, Kayla Tounalom</p>
@@ -58,3 +46,5 @@ export function AboutUs(props) {
     </div>
   );
 }
+
+export default AboutUs;
