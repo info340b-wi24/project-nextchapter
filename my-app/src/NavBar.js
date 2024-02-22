@@ -12,7 +12,7 @@ function NavBar() {
     <ul>
        <li><a href="uploadpage.html">Upload</a></li>
        <li><a href="quizquestion1.html">Quiz</a></li>
-       <li><a href="aboutus.html">About Us</a></li>
+       <li><a href="aboutus.js">About Us</a></li>
        <li><a href="myshelf.html">My Shelf</a></li>
     </ul>
  </nav>
