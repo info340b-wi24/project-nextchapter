@@ -1,5 +1,5 @@
 // Importing image in a React component
-import oldBooksImage from './images/oldbooks.jpg';
+//import oldBooksImage from './oldbooks.jpg';
 
 export function MyComponent(props) {
   return (

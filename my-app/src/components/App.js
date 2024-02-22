@@ -1,7 +1,6 @@
 import React from 'react';
-import NavBar from './NavBar'; 
-import './index.css';
-import MyComponent from './MyComponent'; 
+import { NavBar } from './NavBar'; 
+import { MyComponent } from './MyComponent'; 
 
 function App() {
   const bookData = {
