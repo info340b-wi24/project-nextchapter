@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import briImage from './img/bri.jpg'; // Import images
-import kaylaImage from './img/kayla.jpg';
-import alexisImage from './img/alexis2.jpg';
-import ericaImage from './img/erica.jpg';
+import briImage from '../images/bri.jpg'; // Update the import path
+import kaylaImage from '../images/kayla.jpg';
+import alexisImage from '../images/alexis2.jpg';
+import ericaImage from '../images/erica.jpg';
 
 function Person(props) {
   return (
