@@ -23,7 +23,7 @@ function Bookshelf(props){
 function Book(props){
     return (
         <div className="book">
-            <img src="img/harryp.jpeg" alt="Harry P Book">
+            <img src="img/harryp.jpeg" alt="Harry P Book"/>
         </div>
     );
 }
