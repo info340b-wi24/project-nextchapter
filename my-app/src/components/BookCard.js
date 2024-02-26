@@ -1,28 +1,32 @@
 import React, { useState} from 'react';
 
-
 function BookCard({ imgSrc, altText, title, description }) {
   return (
-    <div className="item">
-      <div className="card">
-        <div className="card-front">
-          <img src={imgSrc} alt={altText} />
-          <h3>{title}</h3>
-          <p>{description}</p>
-        </div>
-      </div>
+    <div className="card">
+      <img src={imgSrc} alt={altText} />
+      <h3>{title}</h3>
+      <p>{description}</p>
     </div>
   );
 }
 
 
 function BookListing() {
+  const [filterGenre, setFilterGenre] = useState('');
+
+  const handleGenreClick = (genre) => {
+    setFilterGenre(genre); 
+  };
+
+  const filteredBooks = filterGenre === '' ? books : books.filter(book => book.genre === filterGenre);
+  
   const [books, setBooks] = useState([
     {
       imgSrc: "img/harryp.jpeg",
       altText: "Harry Potter and The Half-Blood Prince",
       title: "Harry Potter and The Half-Blood Prince",
-      description: "Swap with me!"
+      description: "Swap with me!",
+      genre: "Fantasy"
     },
 
     {
