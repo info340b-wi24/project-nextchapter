@@ -1,6 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 
-function UploadPage(props){
-    return
-}
+function UploadForm({ onBookSubmit }) {
+  const [bookDetails, setBookDetails] = useState({
+    bookTitle: '',
+    author: '',
+    genreTags: [],
+    bookType: '',
+    bookLength: '',
+    bookCondition: '',
+    file: null,
+  });
+
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setBookDetails({
+      ...bookDetails,
+      [name]: value,
+    });
+  };
+
+  
+
+  return (
+    
+   )
+  }

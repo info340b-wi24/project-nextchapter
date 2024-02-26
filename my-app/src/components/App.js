@@ -4,18 +4,21 @@ import NavBar from './NavBar';
 import AboutUs from './AboutUs'; 
 import Home from './Homepage';
 import QuizQuestion1 from './QuizQuestion1';
+import GenreTags from './Tags';
+import BookListing from './BookCard';
 
 function App(props) {
   return (
     <Router>
     <NavBar />
-
-      {/* Routes for each page */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/quizquestion1" element={<QuizQuestion1 />} />
       </Routes>
+
+      <GenreTags />
+      <BookListing />
     </Router>
 
   );

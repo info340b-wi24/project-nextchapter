@@ -21,7 +21,7 @@ function AboutUs(props) {
   return (
     <div>
       <header className="page-title">
-        <h1>About Us</h1>
+        <h2>About Us</h2>
       </header>
       <section className="aboutus-page">
         <h3>What is Next Chapter?</h3>
