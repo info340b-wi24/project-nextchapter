@@ -6,8 +6,8 @@ import Home from './Homepage';
 
 import GenreTags from './Tags';
 import bookData from '../data/books.json';
-import UploadForm from './UploadPage'; // Make sure to adjust the path as necessary
-import BookList from './BookCard'; // Make sure to adjust the path as necessary
+import UploadForm from './UploadPage';
+import BookList from './BookCard';
 import Footer from './Footer';
 import QuizComponent from './QuizQuestion1';
 
@@ -29,4 +29,3 @@ function App(props) {
 }
 
 export default App;
-
