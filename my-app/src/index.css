@@ -635,15 +635,11 @@ div.button-container {
 .search-container {
     max-width: 400px; 
     margin: auto;
-    padding: 2rem;
-    display: flex; /* Add display:flex */
-    justify-content: space-between; /* Add justify-content: space-between */
-    align-items: center; /* Add align-items: center */
+    justify-content: space-between;
+    align-items: center;
   }
   
   .search-input-container {
-    border: 1px solid #7B5F49;
-    border-radius: 5px;
     display: flex;
     flex-grow: 1;
   }
@@ -651,7 +647,6 @@ div.button-container {
   .search-input-container input[type="text"] {
     flex-grow: 1; 
     border: none;
-    padding: 10px; 
     border-radius: 5px 0 0 5px; 
     outline: none; 
   }
@@ -659,13 +654,9 @@ div.button-container {
   .search-input-container button {
     background-color: #7B5F49; 
     color: white;
-    padding: 10px 15px;
+    padding: 20px;
     border: none;
     cursor: pointer;
     border-radius: 0 5px 5px 0;
     font-size: 16px;
-  }
-  
-  .search-input-container button:hover {
-    background-color: #0056b3;
   }
