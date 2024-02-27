@@ -47,7 +47,9 @@ html, body {
     text-decoration: none; 
   }
 
-
+  .nav-links a:hover {
+    color: #7B5F49ff; /* Change text color on hover */
+  }
 
 /* Home page art */
 
@@ -411,10 +413,11 @@ button {
 }
 
 .page-title {
-    margin-top: 0em; 
+    margin-top: 1em; 
     margin-bottom: 0em;
 }
 .page-title header {
+    margin-top: 1em;
     margin-bottom: 0em;
 }
 
