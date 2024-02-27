@@ -5,18 +5,27 @@ import GenreTags from './Tags.js';
 
 function BookList() {
   const location = useLocation();
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('All');
   const books = bookData.books;
- 
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
   const handleGenreClick = (genre) => {
     setSelectedGenre(genre);
   };
 
   const handleResetClick = () => {
     setSelectedGenre('All');
+    setSearchQuery('');
   };
 
-  const filteredBooks = books.filter(book => selectedGenre === 'All' || book.genre === selectedGenre);
+  const filteredBooks = books.filter(book => 
+    (selectedGenre === 'All' || book.genre === selectedGenre) &&
+    book.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const isHomePage = location.pathname === '/';
 
@@ -26,7 +35,18 @@ function BookList() {
 
   return (
     <div>
-      <GenreTags onGenreClick={handleGenreClick} onResetClick={handleResetClick} /> {/* Pass onResetClick function */}
+      <div className="search-container">
+        <div className="search-input-container">
+          <input 
+            type="text" 
+            placeholder="Search by book name..." 
+            value={searchQuery} 
+            onChange={handleSearchInputChange} 
+          />
+          <button>Search</button>
+        </div>
+      </div>
+      <GenreTags onGenreClick={handleGenreClick} onResetClick={handleResetClick} />
       <div className="books-listed">
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
@@ -47,7 +67,7 @@ function BookList() {
       </div>
       <h2>Find your next read!</h2>
       <div className="create">
-      <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
+        <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
       </div>
     </div>
   );
