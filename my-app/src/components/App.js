@@ -14,12 +14,12 @@ import QuizComponent from './QuizQuestion1';
 function App(props) {
   return (
     <Router>
-      <NavBar />
+      <NavBar/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/upload" element={<UploadForm />} />
-        <Route path="/quizquestion1" element={<QuizComponent/>}/>
+        <Route path="/" element={<Home/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/upload" element={<UploadForm/>} />
+        <Route path="/quizquestion1" element={<QuizComponent/>} />
       </Routes>
       
       <BookList/>

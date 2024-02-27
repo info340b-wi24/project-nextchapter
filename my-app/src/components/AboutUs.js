@@ -39,10 +39,6 @@ function AboutUs(props) {
         <Person name="Alexis Nguyen" description="Senior studying Informatics specializing in frontend development." image={alexisImage} />
         <Person name="Erica Luo" description="Second year studying Psychology with a minor in Informatics." image={ericaImage} />
       </section>
-      <footer>
-        <p>2024 Next Chapter | Erica Luo, Alexis Nguyen, Brianna Pak, Kayla Tounalom</p>
-        <p>Story Book icon by <a href="https://icons8.com">Icons8</a></p>
-      </footer>
     </div>
   );
 }

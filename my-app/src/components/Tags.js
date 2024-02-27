@@ -1,6 +1,14 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 function GenreTags({ onGenreClick }) {
+  const location = useLocation();
+
+  const isHomePage = location.pathname === '/';
+
+  if (!isHomePage) {
+    return null;
+  }
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
     { name: 'Non-Fiction', className: 'type-button-non' },

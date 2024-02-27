@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import bookData from '../data/books.json';
 import GenreTags from './Tags.js'; 
 
 function BookList() {
+  const location = useLocation();
   const [selectedGenre, setSelectedGenre] = useState('All');
   const books = bookData.books;
-
  
   const handleGenreClick = (genre) => {
     setSelectedGenre(genre);
@@ -13,9 +14,15 @@ function BookList() {
 
   const filteredBooks = books.filter(book => selectedGenre === 'All' || book.genre === selectedGenre);
 
+  const isHomePage = location.pathname === '/';
+
+  if (!isHomePage) {
+    return null;
+  }
+
   return (
     <div>
-      <GenreTags onGenreClick={handleGenreClick} /> {/* Pass handleGenreClick to GenreTags */}
+      <GenreTags onGenreClick={handleGenreClick} />
       <div className="books-listed">
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
