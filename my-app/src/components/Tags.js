@@ -12,7 +12,7 @@ function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
     { name: 'Non-Fiction', className: 'type-button-non' },
-    { name: 'Fantasy', className: 'type-button-fantasy' },
+    { name: 'Horror', className: 'type-button-horror' },
     { name: 'Mystery', className: 'type-button-mystery' },
     { name: 'Romance', className: 'type-button-romance' },
     { name: 'Narrative', className: 'type-button-nar' },
