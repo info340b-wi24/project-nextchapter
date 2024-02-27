@@ -1,12 +1,6 @@
 import React from 'react';
 
-
-const handleGenreClick = (genre) => {
-  console.log(`Filter by: ${genre}`);
-
-};
-
-const GenreTags = () => {
+function GenreTags({ onGenreClick }) {
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
     { name: 'Non-Fiction', className: 'type-button-non' },
@@ -24,15 +18,14 @@ const GenreTags = () => {
 
   return (
     <div className="types-of-books row">
-        <h2>Filter through Genres</h2>
+      <h2>Filter through Genres</h2>
       <div className="filter-types row">
         <div className="tags">
           {genres.map((genre) => (
             <button
               key={genre.name}
               className={genre.className}
-              value={genre.name}
-              onClick={() => handleGenreClick(genre.name)}
+              onClick={() => onGenreClick(genre.name)}
             >
               {genre.name}
             </button>
@@ -41,6 +34,6 @@ const GenreTags = () => {
       </div>
     </div>
   );
-};
+}
 
 export default GenreTags;

@@ -1,84 +1,36 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
+import bookData from '../data/books.json';
+import GenreTags from './Tags.js'; 
 
-function BookCard({ imgSrc, altText, title, description }) {
+function BookList() {
+  const [selectedGenre, setSelectedGenre] = useState('All');
+  const books = bookData.books;
+
+ 
+  const handleGenreClick = (genre) => {
+    setSelectedGenre(genre);
+  };
+
+  const filteredBooks = books.filter(book => selectedGenre === 'All' || book.genre === selectedGenre);
+
   return (
-    <div className="card">
-      <img src={imgSrc} alt={altText} />
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div>
+      <GenreTags onGenreClick={handleGenreClick} /> {/* Pass handleGenreClick to GenreTags */}
+      <div className="books-listed">
+        {filteredBooks.map((book, index) => ( 
+          <div key={index} className="item">
+            <div className="card">
+              <img src={book.imgSrc} alt={book.altText} />
+              <h3>{book.title}</h3>
+              <p>{book.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
 
-
-function BookListing() {
-  const [filterGenre, setFilterGenre] = useState('');
-
-  const handleGenreClick = (genre) => {
-    setFilterGenre(genre); 
-  };
-
-  const filteredBooks = filterGenre === '' ? books : books.filter(book => book.genre === filterGenre);
-  
-  const [books, setBooks] = useState([
-    {
-      imgSrc: "img/harryp.jpeg",
-      altText: "Harry Potter and The Half-Blood Prince",
-      title: "Harry Potter and The Half-Blood Prince",
-      description: "Swap with me!",
-      genre: "Fantasy"
-    },
-
-    {
-      imgSrc: "img/maze.jpg",
-      altText:"Maze Runner: Book 1",
-      title: "Maze Runner",
-      description: "I am giving this book away"
-    },
-
-    {
-      imgSrc:"img/it.jpg",
-      altText:"Stephen King's IT",
-      title: "IT",
-      description: "Swap with me!"
-    }
-  ]);
-
-  const [newBook, setNewBook] = useState({
-    imgSrc: '',
-    altText: '',
-    title: '',
-    description: ''
-  });
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (!newBook.title || !newBook.description) return; 
-    addBook(newBook);
-    setNewBook({ imgSrc: '', altText: '', title: '', description: '' });
-  };
-
-  const addBook = (book) => {
-    setBooks([...books, book]);
-  };
+export default BookList;
 
 
-  return (
-    <section>
-      <h2>Discover the Latest Listings</h2>
-      <div className="books-listed">
-        {books.map((book, index) => (
-          <BookCard
-            key={index}
-            imgSrc={book.imgSrc}
-            altText={book.altText}
-            title={book.title}
-            description={book.description}
-          />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-export default BookListing;

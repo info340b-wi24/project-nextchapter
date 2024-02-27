@@ -3,25 +3,26 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs'; 
 import Home from './Homepage';
-import QuizQuestion1 from './QuizQuestion1';
+
 import GenreTags from './Tags';
-import BookListing from './BookCard';
+import bookData from '../data/books.json';
+import UploadForm from './UploadPage'; // Make sure to adjust the path as necessary
+import BookList from './BookCard'; // Make sure to adjust the path as necessary
 
 function App(props) {
   return (
     <Router>
-    <NavBar />
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/quizquestion1" element={<QuizQuestion1 />} />
+        <Route path="/upload" element={<UploadForm />} />
       </Routes>
-
-      <GenreTags />
-      <BookListing />
+      
+      <BookList />
     </Router>
-
   );
 }
 
 export default App;
+
