@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-function GenreTags({ onGenreClick }) {
+function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
   const location = useLocation();
 
   const isHomePage = location.pathname === '/';
@@ -38,6 +38,9 @@ function GenreTags({ onGenreClick }) {
               {genre.name}
             </button>
           ))}
+          <button className="reset-button" onClick={onResetClick}>
+            Reset
+          </button>
         </div>
       </div>
     </div>

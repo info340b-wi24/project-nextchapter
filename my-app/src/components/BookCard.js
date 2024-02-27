@@ -12,6 +12,10 @@ function BookList() {
     setSelectedGenre(genre);
   };
 
+  const handleResetClick = () => {
+    setSelectedGenre('All');
+  };
+
   const filteredBooks = books.filter(book => selectedGenre === 'All' || book.genre === selectedGenre);
 
   const isHomePage = location.pathname === '/';
@@ -22,7 +26,7 @@ function BookList() {
 
   return (
     <div>
-      <GenreTags onGenreClick={handleGenreClick} />
+      <GenreTags onGenreClick={handleGenreClick} onResetClick={handleResetClick} /> {/* Pass onResetClick function */}
       <div className="books-listed">
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
@@ -44,4 +48,5 @@ function BookList() {
     </div>
   );
 }
+
 export default BookList;
