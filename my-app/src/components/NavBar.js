@@ -10,8 +10,10 @@ function NavBar(props) {
         </Link>
       </div>
       <ul className="nav-links">
+        <li><Link to="/upload">Upload</Link></li>
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/quizquestion1">Quiz</Link></li>
+        <li><Link to="/myshelf">My Shelf</Link></li>
       </ul>
     </nav>
   );
