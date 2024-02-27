@@ -7,6 +7,8 @@ import UploadForm from './UploadPage'; // Make sure to adjust the path as necess
 import BookList from './BookCard'; // Make sure to adjust the path as necessary
 import Footer from './Footer';
 import QuizComponent from './QuizQuestion1';
+import QuizComponent2 from './QuizQuestion2';
+import QuizComponent3 from './QuizQuestion3';
 
 function App(props) {
   return (
@@ -17,6 +19,8 @@ function App(props) {
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/upload" element={<UploadForm/>} />
         <Route path="/quizquestion1" element={<QuizComponent/>} />
+        <Route path="/quizquestion2" element={<QuizComponent2/>} />
+        <Route path="/quizquestion3" element={<QuizComponent3/>} />
       </Routes>
       
       <BookList/>
