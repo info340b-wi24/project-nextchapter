@@ -30,6 +30,13 @@ function BookList() {
               <img src={book.imgSrc} alt={book.altText} />
               <h3>{book.title}</h3>
               <p>{book.description}</p>
+              {selectedGenre && (
+                <div 
+                  className={`genre-box type-button-${book.genre.toLowerCase()}`} 
+                >
+                  {book.genre}
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -37,5 +44,4 @@ function BookList() {
     </div>
   );
 }
-
 export default BookList;

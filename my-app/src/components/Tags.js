@@ -17,7 +17,7 @@ function GenreTags({ onGenreClick }) {
     { name: 'Romance', className: 'type-button-romance' },
     { name: 'Narrative', className: 'type-button-nar' },
     { name: 'Informative', className: 'type-button-informative' },
-    { name: 'Children', className: 'type-button-chid' },
+    { name: 'Children', className: 'type-button-children' },
     { name: 'Science', className: 'type-button-science' },
     { name: 'Biography', className: 'type-button-biography' },
     { name: 'Fairy tale', className: 'type-button-fairy' },

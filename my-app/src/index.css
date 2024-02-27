@@ -196,6 +196,19 @@ section {
 /*Genre Filter*/
 /*Tag sizes*/
 
+.genre-box {
+    color:white;
+    padding: 10px 70px !important;
+    font-size: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    cursor: default !important; 
+    text-align: center !important;
+    font-weight: bold !important;
+    display: block !important;
+    width: auto !important;
+}
+
 .types-of-books h2 {
     text-align: left;
     margin-left: 35px;
@@ -218,7 +231,7 @@ section {
 .type-button-romance,
 .type-button-nar,
 .type-button-informative,
-.type-button-chid,
+.type-button-children,
 .type-button-fairy,
 .type-button-science,
 .type-button-fantasy,
@@ -237,6 +250,10 @@ section {
 
 
 /*Colors of tags*/
+
+.type-button-horror {
+    background-color: #bf6773;
+}
 
 .type-button-fiction {
     background-color: #c6def1;
@@ -266,8 +283,8 @@ section {
     background-color: coral;
 }
 
-.type-button-chid {
-    background-color: rgb(205, 196, 230); 
+.type-button-children {
+    background-color: plum;
 }
 
 .type-button-fairy {
