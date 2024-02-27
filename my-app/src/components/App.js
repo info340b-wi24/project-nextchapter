@@ -8,6 +8,7 @@ import GenreTags from './Tags';
 import bookData from '../data/books.json';
 import UploadForm from './UploadPage'; // Make sure to adjust the path as necessary
 import BookList from './BookCard'; // Make sure to adjust the path as necessary
+import Footer from './Footer';
 
 function App(props) {
   return (
@@ -19,7 +20,8 @@ function App(props) {
         <Route path="/upload" element={<UploadForm />} />
       </Routes>
       
-      <BookList />
+      <BookList/>
+      <Footer/>
     </Router>
   );
 }
