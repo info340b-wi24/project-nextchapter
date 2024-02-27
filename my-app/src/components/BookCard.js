@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import bookData from '../data/books.json';
 import GenreTags from './Tags.js'; 
 
@@ -44,6 +44,10 @@ function BookList() {
             </div>
           </div>
         ))}
+      </div>
+      <h2>Find your next read!</h2>
+      <div className="create">
+      <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
       </div>
     </div>
   );

@@ -135,6 +135,7 @@ section {
 .create {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .create button {
