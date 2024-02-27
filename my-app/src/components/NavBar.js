@@ -13,7 +13,11 @@ function NavBar(props) {
         <li><Link to="/upload">Upload</Link></li>
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/quizquestion1">Quiz</Link></li>
+<<<<<<< Updated upstream
         <li><Link to="/myshelf">My Shelf</Link></li>
+=======
+        <li><Link to="/Upload">Upload</Link></li>
+>>>>>>> Stashed changes
       </ul>
     </nav>
   );
