@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function QuizComponent2({ onSubmit }) {
+function QuizComponent2({ onGenreSelect }) {
+  const [selectedGenre, setSelectedGenre] = useState('');
+
+  const handleGenreSelect = (event) => {
+    setSelectedGenre(event.target.value);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(event);
   };
 
   return (
@@ -57,8 +62,8 @@ function QuizComponent2({ onSubmit }) {
             <label htmlFor="acceptable">Acceptable</label>
           </div>
           <div className="submit">
-            <button type="submit">Next</button>
-          </div>
+                 <button onClick={() => {window.location.href='/quizquestion3';}}>Next</button>
+              </div>
         </form>
       </section>
 </div>
