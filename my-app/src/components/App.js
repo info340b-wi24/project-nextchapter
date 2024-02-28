@@ -1,16 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import NavBar from './navbar';
-import AboutUs from './aboutus';
-import Home from './homepage';
-import UploadForm from './uploadpage'; // Make sure to adjust the path as necessary
-import BookList from './bookcard'; // Make sure to adjust the path as necessary
-import Footer from './footer';
-import QuizComponent from './quizquestion1';
-import QuizComponent2 from './quizquestion2';
-import QuizComponent3 from './quizquestion3';
+import NavBar from './NavBar';
+import AboutUs from './AboutUs';
+import Home from './HomePage';
+import UploadForm from './UploadPage'; // Make sure to adjust the path as necessary
+import BookList from './BookCard'; // Make sure to adjust the path as necessary
+import Footer from './Footer';
+import QuizComponent from './QuizQuestion1';
+import QuizComponent2 from './QuizQuestion2';
+import QuizComponent3 from './QuizQuestion3';
 
-function app(props) {
+function App(props) {
   return (
     <Router>
       <NavBar/>
