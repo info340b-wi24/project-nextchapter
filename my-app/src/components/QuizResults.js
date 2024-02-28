@@ -1,9 +1,10 @@
 import React from 'react';
+import bookData from '../data/books.json';
 
-function QuizResults({ books }) {
+function QuizResults({ bookData }) {
   return (
     <section className="books-listed">
-      {books.map((book, index) => (
+      {bookData.books.map((book, index) => (
         <div className="item" key={index}>
           <div className="card">
             <div className="card-front">
