@@ -67,8 +67,8 @@ function QuizComponent({ onGenreSelect }) {
             <label htmlFor="romance">Romance</label>
           </div>
           <div className="submit">
-            <button type="submit">Next</button>
-          </div>
+                 <button onClick={() => {window.location.href='/quizquestion2';}}>Next</button>
+              </div>
         </form>
       </section>
     </div>
