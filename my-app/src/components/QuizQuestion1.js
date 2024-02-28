@@ -73,3 +73,4 @@ function QuizComponent({ onGenreSelect }) {
 }
 
 export default QuizComponent;
+
