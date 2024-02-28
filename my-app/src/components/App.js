@@ -11,6 +11,7 @@ import QuizComponent2 from './QuizQuestion2';
 import QuizComponent3 from './QuizQuestion3';
 import Shelf from './MyShelf';
 import QuizResults from './QuizResults';
+import BookDetail from './Bookdetails';
 
 function App(props) {
   return (
@@ -20,6 +21,7 @@ function App(props) {
         <Route path="/" element={<Home/>} />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/upload" element={<UploadForm/>} />
+        <Route path="/books/:bookId" element={<BookDetail />} />
         <Route path="/quizquestion1" element={<QuizComponent/>} />
         <Route path="/quizquestion2" element={<QuizComponent2/>} />
         <Route path="/quizquestion3" element={<QuizComponent3/>} />

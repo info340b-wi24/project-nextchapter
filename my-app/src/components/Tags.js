@@ -28,6 +28,11 @@ function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
     <div className="types-of-books row">
       <h2>Filter through Genres</h2>
       <div className="filter-types row">
+      <div className="reset-button">
+        <button onClick={onResetClick}> 
+          Reset
+        </button>
+        </div>
         <div className="tags">
           {genres.map((genre) => (
             <button
@@ -38,11 +43,6 @@ function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
               {genre.name}
             </button>
           ))}
-          <div className=">
-          <button onClick={onResetClick}> 
-          Reset
-          </button>
-          </div>
         </div>
       </div>
     </div>

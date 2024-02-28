@@ -178,16 +178,16 @@ section {
 
 .search-container input[type="text"] {
     flex-grow: 1; 
-    border: none;
-    padding: 10px; 
-    border-radius: 5px 0 0 5px; 
-    outline: none; 
+    padding: 10px;
+    border: 2px solid #7B5F49; 
+    border-radius: 0;
 }
 
 .search-container button {
     background-color: #7B5F49; 
     color: white;
     max-width:100px;
+    max-height: 70px;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -219,6 +219,7 @@ section {
 .types-of-books h2 {
     text-align: left;
     margin-left: 35px;
+    margin-bottom: 2rem;
 }
 
 .tags {
@@ -255,6 +256,25 @@ section {
     display: block; 
 }
 
+.reset-button {
+    padding: 10px 7px;
+    background-color: #93B78F !important;
+    color: white !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: 150px !important;
+    height: 40px;
+    border-radius: 5px !important;
+    font-size: 10px !important;
+    text-align: center !important;
+    display: block !important;
+    position:absolute;
+    top:975px;
+    left:300px;
+}
+
+
+
 
 /*Colors of tags*/
 
@@ -271,7 +291,7 @@ section {
 }
 
 .type-button-mystery {
-    background-color: rgb(170, 212, 171); 
+    background-color: rgb(250, 244, 157); 
 }
 
 .type-button-romance {
@@ -379,30 +399,15 @@ button {
     background-color: #93B78F;
     color: white;
     border: none;
-    padding: 10px;
+    /* padding: 10px; */
     cursor: pointer;
     width: 50%;
     border-radius: 10px;
-    margin-top: 20px;
-    font-size: 30px;
+    /* margin-top: 20px; */
+    /* font-size: 30px; */
     font-weight: bold;
 }
 
-.reset-button {
-    background-color: #93B78F;
-    color: white;
-    border: none;
-    padding: 1px;
-    cursor: pointer;
-    width: 10%;
-    border-radius:10px;
-    font-size: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: auto;
-}
 
 .quiz {
     font-family: 'Poppins', sans-serif;
@@ -655,31 +660,3 @@ div.button-container {
     margin-top:1.5rem;
 }
 
-.search-container {
-    max-width: 400px; 
-    margin: auto;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .search-input-container {
-    display: flex;
-    flex-grow: 1;
-  }
-  
-  .search-input-container input[type="text"] {
-    flex-grow: 1; 
-    border: none;
-    border-radius: 5px 0 0 5px; 
-    outline: none; 
-  }
-  
-  .search-input-container button {
-    background-color: #7B5F49; 
-    color: white;
-    padding: 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    font-size: 16px;
-  }

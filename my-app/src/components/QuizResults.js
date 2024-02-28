@@ -3,7 +3,12 @@ import booksData from '../data/books.json';
 
 function QuizResults({ bookData }) {
   return (
+
     <section className="books-listed">
+    <header className="page-title">
+    <h1>Our Reccomendations for you</h1>
+    <p>Based on your choices....</p>
+    </header>
       {booksData.books.map((book, index) => (
         <div className="item" key={index}>
           <div className="card">

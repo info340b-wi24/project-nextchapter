@@ -50,6 +50,7 @@ function BookList() {
       <div className="books-listed">
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
+             <Link to={`/books/${book.title}`} style={{  textDecoration: 'none', color: 'inherit' }}>
             <div className="card">
               <img src={book.imgSrc} alt={book.altText} />
               <h3>{book.title}</h3>
@@ -62,6 +63,7 @@ function BookList() {
                 </div>
               )}
             </div>
+            </Link>
           </div>
         ))}
       </div>
