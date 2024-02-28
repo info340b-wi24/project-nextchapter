@@ -8,7 +8,7 @@ function MyComponent(props) {
                  <h1>Next Chapter</h1>
                  <p>Swap Your Shelf: Discover New Reads, Share Old Favorites!</p>
                  <div className="create">
-                  <button onclick="location.href='/loginpage';">Start Swapping</button>
+                 <button onClick={() => {window.location.href='/myshelf';}}>Start Swapping</button>
               </div>
                  </div>
            </section>

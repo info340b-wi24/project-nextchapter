@@ -62,13 +62,6 @@
         "title": "Maze Runner",
         "description": "I am giving away this book!",
         "genre": "Fantasy"
-      },
-      {
-        "imgSrc": "img/treehouse.jpg",
-        "altText": "Magic Tree House",
-        "title": "Magic Tree House",
-        "description": "I am giving away this book!",
-        "genre": "Children"
       }
     ]
   }

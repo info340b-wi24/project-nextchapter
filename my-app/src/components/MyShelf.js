@@ -1,31 +1,29 @@
-import React, { useState} from 'react';
+import React from 'react';
+import booksData from '../data/books.json';
 
-export function myShelf(props){
-    <body>
-    <header className="page-title">
-        <h1>My Shelf</h1>
-        <p>@book-worm</p>
-        <p>Your listed swaps and giveaways</p>
-    </header>
-
-   <Bookshelf />
-   </body>
-}
-
-function Bookshelf(props){
-    return (
-        <div className="bookshelf">
-            <Book />
+function MyShelf() {
+  
+  return (
+    <div className="myshelfcontainer">
+      <h3>@book-worm Shelf</h3>
+      <p>Your List Swaps & Giveaways!</p>
+    <div className="bookshelf">
+      {booksData.books.map((book, index) => (
+        <div className="book" key={index}>
+          <img src={book.imgSrc} alt={book.altText} />
         </div>
-    ); 
+      ))}
+    </div>
+    </div>
+  );
+};
+
+function Shelf(props) {
+  return (
+    <MyShelf />
+  );
 }
 
-function Book(props){
-    return (
-        <div className="book">
-            <img src="img/harryp.jpeg" alt="Harry P Book"/>
-        </div>
-    );
-}
+export default Shelf;
 
-export default myShelf;
+
