@@ -43,29 +43,28 @@ function BookUploadForm() {
 
                     <label htmlFor="bookTypeInput">Book Type:</label>
                     <select id="bookTypeInput" className="upload-form" name="bookTypeInput" defaultValue="" required>
-    <option value="" disabled>Select Book Type</option>
+                    <option value="" disabled>Select Book Type</option>
                         <option value="Hard cover">Hard Cover</option>
                         <option value="Soft cover">Soft Cover</option>
                     </select>
 
                     <label className="upload-spec" htmlFor="bookLengthInput">Book Length:</label>
                     <select id="bookLengthInput" className="upload-form" name="bookLengthInput" defaultValue="" required>
-    <option value="" disabled>Select Book Length</option>
-    <option value="Short">Short</option>
-    <option value="Medium">Medium</option>
-    <option value="Long">Long</option>
-</select>
+                    <option value="" disabled>Select Book Length</option>
+                    <option value="Short">Short</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Long">Long</option>
+                    </select>
 
-<select id="bookConditionInput" className="upload-form" name="bookConditionInput" defaultValue="" required>
-    <option value="" disabled>Select Book Condition</option>
-    <option value="New">New</option>
-    <option value="Like New">Like New</option>
-    <option value="Very Good">Very Good</option>
-    <option value="Good">Good</option>
-    <option value="Fair">Fair</option>
-    <option value="Poor">Poor</option>
-</select>
-
+                    <select id="bookConditionInput" className="upload-form" name="bookConditionInput" defaultValue="" required>
+                        <option value="" disabled>Select Book Condition</option>
+                        <option value="New">New</option>
+                        <option value="Like New">Like New</option>
+                        <option value="Very Good">Very Good</option>
+                        <option value="Good">Good</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Poor">Poor</option>
+                    </select>
 
                     <label htmlFor="fileInput">Choose a file:</label>
                     <input type="file" id="fileInput" name="fileInput" accept="image/*" />
