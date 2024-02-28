@@ -37,7 +37,7 @@ function QuizComponent3({ onSubmit }) {
             <label htmlFor="hardback">Hardback</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizquestion3';}}>Submit</button>
+                 <button onClick={() => {window.location.href='/quizresults';}}>Submit</button>
               </div>
         </form>
       </section>
