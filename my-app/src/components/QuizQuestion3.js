@@ -3,7 +3,7 @@ import React from 'react';
 function QuizComponent3({ onSubmit }) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit(event);
+    //onSubmit(event);
   };
 
   return (
@@ -37,8 +37,8 @@ function QuizComponent3({ onSubmit }) {
             <label htmlFor="hardback">Hardback</label>
           </div>
           <div className="submit">
-            <button type="submit">Next</button>
-          </div>
+                 <button onClick={() => {window.location.href='/quizquestion3';}}>Submit</button>
+              </div>
         </form>
       </section>
     </div>
