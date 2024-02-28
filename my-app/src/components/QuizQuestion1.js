@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
 
 function QuizComponent({ onGenreSelect }) {
-  const [selectedGenre, setSelectedGenre] = useState('');
-
   const handleGenreSelect = (event) => {
-    setSelectedGenre(event.target.value);
+    onGenreSelect(event.target.value);
   };
 
   const handleSubmit = (event) => {
@@ -67,8 +64,8 @@ function QuizComponent({ onGenreSelect }) {
             <label htmlFor="romance">Romance</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizquestion2';}}>Next</button>
-              </div>
+            <button onClick={() => { window.location.href = '/quizquestion2'; }}>Next</button>
+          </div>
         </form>
       </section>
     </div>
