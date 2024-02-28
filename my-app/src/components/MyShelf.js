@@ -5,8 +5,10 @@ function MyShelf() {
   
   return (
     <div className="myshelfcontainer">
-      <h3>@book-worm Shelf</h3>
-      <p>Your List Swaps & Giveaways!</p>
+      <header className="page-title">
+        <h1>@book-worm Shelf</h1>
+        <h2>Your List Swaps & Giveaways!</h2>
+      </header>
     <div className="bookshelf">
       {booksData.books.map((book, index) => (
         <div className="book" key={index}>
