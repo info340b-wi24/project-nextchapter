@@ -10,228 +10,66 @@ html, body {
     max-width: 100vw;
 }
 
-nav {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    background-color:#93B78F;
-    padding: 1rem 1rem;
+/* NavBar Styles */
+.navbar {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
-    z-index: 1;
-
-}
-
-nav ul {
-    list-style: none; 
-    padding: 0;
-    margin: 0;
-    display: flex; 
-    justify-content: center; 
-    align-items: center;
-}
-
-nav ul li {
-    margin: 0 1rem; 
-}
-
-nav a {
+    background-color: #93B78F;
     color: white;
+    padding: 1rem 1rem;
+  }
+  
+  .navbar .project-name a {
+    color: white; 
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  
+  .navbar .project-name img {
+    margin-right: 8px; 
+  }
+  
+  .nav-links {
+    list-style: none; 
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 16px; 
+  }
+  
+  .nav-links a {
+    color: white;
+    font-weight: 700;
     text-decoration: none; 
-    font-weight: 550;
-    text-align: center;
-    font-size:22px;
-}
+  }
 
-
-@media (max-width: 769px) {
-    nav {
-        padding: 1rem 0.5rem; 
-    }
-
-    .project-name a {
-        font-size: 1.2rem; 
-    }
-
-    .project-name a img {
-        width: 30px; 
-        height: 30px;
-    }
-
-    .header-content {
-        margin-top: 10vh; 
-    }
-
-    header .custom-section .header-content h1 {
-        font-size: 5rem; 
-    }
-
-    header .custom-section .header-content p {
-        font-size: 1rem;
-    }
-
-   header .custom-section .header-content .create button {
-        padding:0.5rem 2rem;
-        font-size:1rem;
-        max-width:20rem;
-        height:3.5rem;
-    }
-
-    header .header-content, nav ul li a {
-        font-size: 1rem; 
-    }
-
-    .custom-section {
-        height: auto;
-    }
-
-    img {
-        max-height: 50vh; 
-    }
-
-    .tags button {
-        padding:10px 10px;
-        font-size:0.5rem;
-    }
-
-}
-
-
-@media (max-width: 480px) {
-    nav {
-        padding: 1.5rem 0.25rem; 
-    }
-
-    nav ul li {
-        margin: 0 0.5rem; 
-    }
-
-    .project-name a {
-        font-size: 0.8rem; 
-        gap: 1px;
-    }
-
-    .project-name a img {
-        width: 20px; 
-        height: 20px;
-    }
-
-    header .custom-section .header-content h1 {
-        font-size: 3rem; 
-    }
-
-    header .custom-section .header-content p {
-        font-size: 0.7rem;
-    }
-
-   header .custom-section .header-content .create button {
-        padding: 5px 5px; 
-        font-size: 0.8rem;
-        max-width: 15rem;
-        height:3rem;
-    }
-
-    header .header-content, nav ul li a {
-        font-size: 0.7rem; 
-    }
-
-    img {
-        max-height: 40vh; 
-    }
-
-    .tags button {
-        width: calc((100% - 80px) / 4);
-        padding: 0.5rem 0.25rem; 
-        font-size:0.5rem; 
-    }
-
-    body h2 {
-        font-size:1.2rem;
-        text-align: center;
-    }
-
-    .search-container input[type="text"], .search-container button {
-        font-size: 12px; 
-        padding: 6px 10px; 
-    }
-    
-    .search-container {
-        margin: 1rem; 
-        padding: 0.25rem; 
-    }
-    
-    .search-container form {
-        max-width:20rem;
-    }
-
-    .search-container button {
-        width: 100%; 
-    }
-
-
-    .tagButtons {
-        justify-content: center;
-    }
-
-    .tagButtons button {
-        padding: 5px 10px; 
-        font-size: 7px; 
-        height: 2rem; 
-        min-width: 50px; 
-        text-align: center; 
-    }
-
-    .center-button, .finalcenter-button {
-        min-width: 5rem; 
-        padding: 0.5rem; 
-    }
-
-    .books-listed {
-        display: flex;
-        flex-direction: column;
-        align-items: center; 
-        gap: 20px;
-    }
-
-    .item {
-        width: 100%; 
-    }
-
-    .card {
-        width: auto;
-        height: auto; 
-    }
-
-    .card img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .card-front, .card-back {
-        width: 100%; 
-        height: auto; 
-    }
-}
-
+  .nav-links a:hover {
+    color: #7B5F49ff /* Change text color on hover */
+  }
 
 /* Home page art */
 
 .custom-section {
-    background-image: url('../img/oldbooks.jpg');
+    background-image: url('/src/images/oldbooks.jpg');
     display: flex;
     width: 100vw;
     height: 100vh; 
     background-size: cover;
-    background-position: center 65%; 
-    margin-bottom: 2rem;
+    background-position: center 65%;
+    margin-top:0; 
 }
 
-header {
-    padding-top:3rem;
-    align-items: center;
+.page-title h1,
+.header-content h1,
+.header-content h2,
+.quiz h2 {
+    font-size: 30px; /* Adjust the font size as needed */
 }
+
 
 .header-content {
     text-align: center;
@@ -263,23 +101,23 @@ header {
     margin: auto;
     width: 100%; 
     text-align: center;
-    padding-top: 8rem;
-    padding-bottom: 2.5rem;
-    font-size: 50px;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    color:#7B5F49ff;
 }
 
 header h2 {
     font-family:'Poppins', sans-serif;
-    margin-bottom:0.5rem ;
+    margin-bottom:0rem ;
     font-weight:700;
     text-align:center;
-    margin-top:3em;
+    margin-top:1em;
     color:#7B5F49ff;
 }
 
 body h2 {
     color:#7B5F49ff;
-    margin-bottom:0.5rem;
+    margin-bottom:0rem;
     text-align: center;
     font-weight:600;
 }
@@ -305,6 +143,7 @@ section {
 .create {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .create button {
@@ -314,8 +153,6 @@ section {
     background-color:#93B78F;
     border-radius: 10px;
     margin-top:1rem;
-    margin-left: auto;
-    margin-right: auto;
     color:white;
     font-size:23px;
     box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
@@ -366,6 +203,24 @@ section {
 /*Genre Filter*/
 /*Tag sizes*/
 
+.genre-box {
+    color:white;
+    padding: 10px 70px !important;
+    font-size: 15px !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    cursor: default !important; 
+    text-align: center !important;
+    font-weight: bold !important;
+    display: block !important;
+    width: auto !important;
+}
+
+.types-of-books h2 {
+    text-align: left;
+    margin-left: 35px;
+}
+
 .tags {
     display: flex;
     flex-wrap: wrap;
@@ -383,17 +238,17 @@ section {
 .type-button-romance,
 .type-button-nar,
 .type-button-informative,
-.type-button-chid,
+.type-button-children,
 .type-button-fairy,
 .type-button-science,
-.type-button-fantasy,
+.type-button-horror,
 .type-button-biography,
 .type-button-poetry {
     padding: 10px 7px;
     width: calc((100% - 120px) / 6);
     font-size: 15px;
     border-radius: 5px;
-    margin-bottom: 20px; 
+    margin-bottom: 15px; 
     cursor: pointer;
     text-align: center;
     font-weight: bold;
@@ -402,6 +257,10 @@ section {
 
 
 /*Colors of tags*/
+
+.type-button-horror {
+    background-color: #991224;
+}
 
 .type-button-fiction {
     background-color: #c6def1;
@@ -431,8 +290,8 @@ section {
     background-color: coral;
 }
 
-.type-button-chid {
-    background-color: rgb(205, 196, 230); 
+.type-button-children {
+    background-color: plum;
 }
 
 .type-button-fairy {
@@ -462,75 +321,43 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px; 
+    gap: 20px;
     padding: 20px;
-}
-
-.books-listed h3 {
-    font-size:20px;
-    margin-bottom:1rem;
-    text-align: center;
-}
-
-
-.item {
-    flex-basis: calc(20% - 20px); 
-    perspective: 1000px;
-}
-
-/* Card Styling */
-
-h3 {
-    margin-bottom: 5rem;
-    margin-left: 20px;
-}
-.card {
-    width: 100%;
-    height: 500px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
-}
-
-.card:hover {
-    transform: rotateY(180deg); 
-}
-
-.card-front, .card-back {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    backface-visibility: hidden; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 20px;
-}
-
-.card-front {
+  }
+  
+  .item {
+    flex-basis: calc(20% - 20px);
+    box-sizing: border-box; 
+  }
+  
+  /* Card Styling */
+  .card {
+    border: 1px solid rgba(0, 0, 0, 0.31);
     background: white;
-}
-
-.card-back {
-    background: #f1f1f1;
-    transform: rotateY(180deg); 
-}
-
-.card img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    height: auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .card img {
     max-width: 100%;
     max-height: 300px;
-    width:auto;
-    height:auto;
-    margin-bottom: 15px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-h3, p {
+    display: block;
+  }
+  
+  .card h3, .card p {
     margin: 10px 0;
-    font-size:20px;
-}
+    font-size: 15px;
+    text-align: center;
+  }
+  
 
 /* End of card flip section */
 /* Quiz button on home page */
@@ -567,8 +394,9 @@ button {
 
 .quiz {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
     display: flex; /*added*/
+    margin-top: 0px;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -586,10 +414,26 @@ button {
 .custom-body {
     position: relative;
     background-color:white;
-    padding-bottom: 10px;
     min-height: 100vh;
+    
 }
 
+.page-title {
+    margin-top: 1em; 
+    margin-bottom: 0em;
+}
+.page-title header {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-size: 30px;
+}
+
+.page-title h2 {
+    color:#7B5F49;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 
 .aboutus-page {
     color: #7B5F49ff;
@@ -652,7 +496,7 @@ footer {
     justify-content: center;
     align-items: start; 
     position:relative;
-    background-image: url('../img/shelfhold.jpg');
+    background-image: url('/src/images/shelfhold.jpg');
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -696,12 +540,12 @@ footer {
 
 /* Upload Book Page */
 
-.page-title h2 {
+/* .page-title h2 {
     margin-top:4rem;
     margin-bottom:2rem;
     font-weight: bold;
     color:#7B5F49ff;
-}
+} */
 
 .upload-box {
     flex-direction: column;
@@ -787,3 +631,32 @@ div.button-container {
     border-radius:10px;
     margin-top:1.5rem;
 }
+
+.search-container {
+    max-width: 400px; 
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-input-container {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .search-input-container input[type="text"] {
+    flex-grow: 1; 
+    border: none;
+    border-radius: 5px 0 0 5px; 
+    outline: none; 
+  }
+  
+  .search-input-container button {
+    background-color: #7B5F49; 
+    color: white;
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 16px;
+  }
