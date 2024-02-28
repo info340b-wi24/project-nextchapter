@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 
 function QuizComponent({ onGenreSelect }) {
   const [selectedGenre, setSelectedGenre] = useState('');
-  //const history = useHistory();
 
   const handleGenreSelect = (event) => {
     setSelectedGenre(event.target.value);
@@ -11,7 +10,6 @@ function QuizComponent({ onGenreSelect }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //history.push('/quizquestion2');
   };
 
   return (
