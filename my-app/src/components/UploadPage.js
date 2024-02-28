@@ -33,7 +33,7 @@ function BookUploadForm() {
                             <button className="type-button-romance" value="Romance">Romance</button>
                             <button className="type-button-nar" value="Narrative">Narrative</button>
                             <button className="type-button-informative" value="Informative">Informative</button>
-                            <button className="type-button-chid" value="Children">Children</button>
+                            <button className="type-button-children" value="Children">Children</button>
                             <button className="type-button-science" value="Science">Science</button>
                             <button className="type-button-biography" value="Biography">Biography</button>
                             <button className="type-button-fairy" value="Fairy tale">Fairy tale</button>
