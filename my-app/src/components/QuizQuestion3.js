@@ -15,7 +15,7 @@ function QuizComponent3({ onSubmit }) {
 
       <section className="quiz">
         <form onSubmit={handleSubmit}>
-          <h2>Paperback or Hardback?</h2> {/* Updated question */}
+          <h2>Paperback or Hardback?</h2>
           <div className="option">
             <input
               type="radio"
