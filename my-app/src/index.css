@@ -388,6 +388,22 @@ button {
     font-weight: bold;
 }
 
+.reset-button {
+    background-color: #93B78F;
+    color: white;
+    border: none;
+    padding: 1px;
+    cursor: pointer;
+    width: 10%;
+    border-radius:10px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
+
 .quiz {
     font-family: 'Poppins', sans-serif;
     font-size: 30px;

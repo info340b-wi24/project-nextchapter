@@ -38,9 +38,9 @@ function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
               {genre.name}
             </button>
           ))}
-          <div className="create">
+          <div className=">
           <button onClick={onResetClick}> 
-            Reset
+          Reset
           </button>
           </div>
         </div>
