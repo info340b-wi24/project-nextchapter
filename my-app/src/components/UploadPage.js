@@ -14,6 +14,9 @@ function BookUploadForm() {
                         <button className="center-button">Swap Book</button>
                     </div>
 
+                    <label htmlFor="emailInput">Your Email Address:</label>
+                    <input id="emailInput" className="upload-form" name="emailInput" type="email" required />
+
                     <label className="upload-spec" htmlFor="bookTitleInput">Book Title:</label>
                     <input id="bookTitleInput" className="upload-form" name="bookTitleInput" required />
 
