@@ -9,6 +9,7 @@ import Footer from './Footer';
 import QuizComponent from './QuizQuestion1';
 import QuizComponent2 from './QuizQuestion2';
 import QuizComponent3 from './QuizQuestion3';
+import Shelf from './MyShelf';
 
 function App(props) {
   return (
@@ -21,8 +22,10 @@ function App(props) {
         <Route path="/quizquestion1" element={<QuizComponent/>} />
         <Route path="/quizquestion2" element={<QuizComponent2/>} />
         <Route path="/quizquestion3" element={<QuizComponent3/>} />
+        <Route path="/my-shelf" element={<Shelf />} />
       </Routes>
       
+
       <BookList/>
       <Footer/>
     </Router>
