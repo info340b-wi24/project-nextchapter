@@ -80,8 +80,3 @@ function BookUploadForm() {
 }
 
 export default BookUploadForm;
-
-
-
-
-
