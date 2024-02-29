@@ -22,7 +22,7 @@ a {
     align-items: center;
     background-color: #93B78F;
     color: white;
-    padding: 1rem 1rem;
+    padding: 1rem 1.5rem;
   }
   
   .navbar .project-name a {
@@ -58,10 +58,12 @@ a {
 
   .hamburger {
     display: none;
+    background-color: #93B78F;
   }
 
   .hamburger-links {
     display: none;
+    background-color: #93B78F;
   }
 
   .bar {
@@ -91,7 +93,7 @@ a {
 .header-content h1,
 .header-content h2,
 .quiz h2 {
-    font-size: 10rem; /* Adjust the font size as needed */
+    font-size: 3rem; /* Adjust the font size as needed */
 }
 
 
@@ -727,13 +729,13 @@ div.button-container {
         display: block; 
         align-content: center;
         cursor: pointer;
-        background-color: #93b78f;
+        background-color: #93b78f !important;
     }
 
     .hamburger-links{
         text-align: center;
         display: inline;
-        background-color: #93B78F;
+        background-color: #93B78F !important;
     }
 
     .hamburger-links a {
@@ -799,11 +801,7 @@ div.button-container {
         background-color: white;
         border-radius: 5px;
         border: 0.5px solid black;
-        display: flex;
         padding: 0.2rem; 
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start; 
     }
     
     .tagButtons {
