@@ -89,7 +89,7 @@ a {
 .header-content h1,
 .header-content h2,
 .quiz h2 {
-    font-size: 3rem; /* Adjust the font size as needed */
+    font-size: 10rem; /* Adjust the font size as needed */
 }
 
 
@@ -107,7 +107,7 @@ a {
     margin-right: auto;
     margin-bottom:1rem;
     font-weight:bold;
-    font-size: 2rem;
+    font-size: 10rem;
 }
 
 .header-content p {
@@ -646,6 +646,7 @@ div.button-container {
 .center-button {
     background-color: #7B5F49ff;
     width: 15rem;
+    height: 2rem;
     margin: 0 5px;
     border-radius: 10px;
     margin-top: 1rem;
@@ -667,6 +668,7 @@ div.button-container {
     display: block; 
     background-color: #7B5F49ff;
     width: 20rem;
+    height: 2rem;
     margin-left: auto;
     margin-right: auto;
     border-radius:10px;
@@ -690,15 +692,17 @@ div.button-container {
     }
 
     .header-content h1 {
-        font-size: 80px;
+        font-size: 5rem;
     }
 
     .header-content p {
-        font-size: 16px;
+        font-size: 1rem;
+        margin-right: 0.4rem;
     }
 
-    .tags {
-        margin-left: 0;
+    .page-title h1,
+    .quiz h2 {
+        font-size: 2rem; /* Adjust the font size as needed */
     }
 
     .bookshelf {
@@ -710,6 +714,80 @@ div.button-container {
         width: 300px;
         height: 50px;
         font-size: 14px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block; 
+        align-content: center;
+        cursor: pointer;
+        background-color: rgb(147, 183, 143);
+    }
+
+    .hamburger-links{
+        text-align: center;
+        display: inline;
+        background-color: #93B78F;
+    }
+
+    .hamburger-links a {
+        margin: 0.4rem;
+        color: #7B5F49;
+        background-color: #93B78F;
+    }
+
+    .genre-box {
+        padding: 0.3rem;
+    }
+
+    .tags {
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .type-button-fiction,
+    .type-button-non,
+    .type-button-fantasy,
+    .type-button-mystery,
+    .type-button-romance,
+    .type-button-nar,
+    .type-button-informative,
+    .type-button-children,
+    .type-button-fairy,
+    .type-button-science,
+    .type-button-horror,
+    .type-button-biography,
+    .type-button-poetry {
+        padding: 10px 7px;
+        width: 25vw;
+        height: 3rem;
+        font-size: 15px;
+        border-radius: 5px;
+        margin-bottom: 15px; 
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        display: block; 
+    }
+
+    .create button {
+        width: fit-content;
+    }
+
+    .header-content {
+        margin-top: 5vh;
+    }
+
+    .bookshelf {
+        background-image: none;
     }
 }
 
@@ -726,64 +804,3 @@ div.button-container {
     }
 }
 
-/* Toggles for the hamburger menu in mobile */
-@media only screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #00000046;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgb(255, 255, 255);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block; 
-        align-content: center;
-        cursor: pointer;
-    }
-
-    .hamburger-links{
-        text-align: center;
-        display: inline;
-        color: #7B5F49;
-        background-color: #93B78F;
-    }
-
-    .hamburger-links a {
-        margin: 0.4rem;
-    }
-
-    * {
-        align-items: center;
-    }
-
-    .tags {
-        flex-direction: column;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .create button {
-        width: fit-content;
-    }
-
-    .header-content {
-        margin-top: 5vh;
-    }
-
-
-}
