@@ -29,7 +29,7 @@ function NavBar(props) {
         <li><Link to="/my-shelf">My Shelf</Link></li>
       </ul>
       
-      <div className="hamburger" onClick={() => toggleHamburger()} display={hamburgerOpen}> 
+      <div className="hamburger" onClick={() => toggleHamburger()}> 
             <span className="bar"></span>
             <span className="bar"></span> 
             <span className="bar"></span>   
