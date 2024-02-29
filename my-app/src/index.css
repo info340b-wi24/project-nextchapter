@@ -729,20 +729,17 @@ div.button-container {
         display: block; 
         align-content: center;
         cursor: pointer;
-        background-color: #93b78f !important;
     }
 
     .hamburger-links{
-        text-align: center;
+        text-align: right;
         display: inline;
-        background-color: #93B78F !important;
     }
 
     .hamburger-links a {
         margin: 0.4rem;
-        color: white;
+        color: #93B78F;
         font-size: 1.3rem;
-        background-color: #93B78F;
     }
 
     .genre-box {
