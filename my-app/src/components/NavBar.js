@@ -38,10 +38,10 @@ function NavBar(props) {
     </nav>
     {hamburgerOpen &&
       (<div className="hamburger-links">
-            <div><Link to="/upload">Upload</Link></div>
-            <div><Link to="/quizquestion1">Quiz</Link></div>
-            <div><Link to="/about-us">About Us</Link></div>
-            <div><Link to="/my-shelf">My Shelf</Link></div>
+            <div><Link onClick={() => toggleHamburger()} to="/upload">Upload</Link></div>
+            <div><Link onClick={() => toggleHamburger()} to="/quizquestion1">Quiz</Link></div>
+            <div><Link onClick={() => toggleHamburger()} to="/about-us">About Us</Link></div>
+            <div><Link onClick={() => toggleHamburger()} to="/my-shelf">My Shelf</Link></div>
         </div>)}
     </header>
   );

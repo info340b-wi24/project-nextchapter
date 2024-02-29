@@ -1,6 +1,7 @@
 html, body {
     min-height: 100vh;
     overflow-x: hidden;
+    max-width: 100vw;
 }
 
 * {
@@ -71,53 +72,6 @@ a {
     background-color: #ffffff;
 }
 
-@media only screen and (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        left: -100%;
-        top: 5rem;
-        flex-direction: column;
-        background-color: #00000046;
-        width: 100%;
-        border-radius: 10px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:
-            0 10px 27px rgb(255, 255, 255);
-    }
-
-    .nav-links.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 2.5rem 0;
-    }
-
-    .hamburger {
-        display: block; 
-        align-content: center;
-        cursor: pointer;
-    }
-
-    .hamburger-links{
-        text-align: center;
-        display: inline;
-        color: #7B5F49;
-        background-color: #93B78F;
-    }
-
-    .hamburger-links a {
-        margin: 0.4rem;
-    }
-
-    .tags {
-        padding-left: 1rem;
-        padding-right: 1rem;
-    }
-
-
-}
 
 /* Home page art */
 
@@ -135,13 +89,13 @@ a {
 .header-content h1,
 .header-content h2,
 .quiz h2 {
-    font-size: 30px; /* Adjust the font size as needed */
+    font-size: 3rem; /* Adjust the font size as needed */
 }
 
 
 .header-content {
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -153,7 +107,7 @@ a {
     margin-right: auto;
     margin-bottom:1rem;
     font-weight:bold;
-    font-size: 120px;
+    font-size: 2rem;
 }
 
 .header-content p {
@@ -215,8 +169,8 @@ section {
 }
 
 .create button {
-    width: 30rem;
-    height: 4rem;
+    width: 35vw;
+    height: 10vh;
     text-decoration: none;
     background-color:#93B78F;
     border-radius: 10px;
@@ -315,6 +269,7 @@ section {
 .type-button-poetry {
     padding: 10px 7px;
     width: calc((100% - 120px) / 6);
+    height: fit-content;
     font-size: 15px;
     border-radius: 5px;
     margin-bottom: 15px; 
@@ -337,9 +292,8 @@ section {
     font-size: 10px !important;
     text-align: center !important;
     display: block !important;
-    position:absolute;
-    top:975px;
-    left:300px;
+    margin-left: auto;
+    margin-right:auto;
 }
 
 /*Colors of tags*/
@@ -770,4 +724,66 @@ div.button-container {
         height: 60px;
         font-size: 16px;
     }
+}
+
+/* Toggles for the hamburger menu in mobile */
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #00000046;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgb(255, 255, 255);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block; 
+        align-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger-links{
+        text-align: center;
+        display: inline;
+        color: #7B5F49;
+        background-color: #93B78F;
+    }
+
+    .hamburger-links a {
+        margin: 0.4rem;
+    }
+
+    * {
+        align-items: center;
+    }
+
+    .tags {
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .create button {
+        width: fit-content;
+    }
+
+    .header-content {
+        margin-top: 5vh;
+    }
+
+
 }
