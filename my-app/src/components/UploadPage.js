@@ -56,6 +56,7 @@ function BookUploadForm() {
                         <option value="Long">Long</option>
                     </select>
 
+                    <label className="upload-spec" htmlFor="bookLengthInput">Book Condition:</label>
                     <select id="bookConditionInput" className="upload-form" name="bookConditionInput" defaultValue="" required>
                         <option value="" disabled>Select Book Condition</option>
                         <option value="New">New</option>
@@ -66,12 +67,12 @@ function BookUploadForm() {
                         <option value="Poor">Poor</option>
                     </select>
 
-                    <label htmlFor="fileInput">Choose a file:</label>
+                    <label htmlFor="fileInput">Upload Book Image:</label>
                     <input type="file" id="fileInput" name="fileInput" accept="image/*" />
 
                     <div className="upload-book">
-                        <button className="finalcenter-button" type="submit">Upload</button>
-                    </div>
+                       <button className="finalcenter-button" type="submit">Upload</button>
+                    </div> 
                 </form>
             </div>
         </div>
