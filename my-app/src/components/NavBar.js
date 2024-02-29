@@ -7,18 +7,13 @@ function NavBar(props) {
 
   function toggleHamburger(){
     setHamburger(!hamburgerOpen)
-    if(hamburgerOpen === true){
-      return("active");
-    } else {
-      return("none");
-    }
   }
 
   return (
     <header>
     <nav className="navbar">
       <div className="project-name">
-        <Link to="/">
+        <Link onClick={() => setHamburger(false)} to="/">
           <img width="48" height="48" src="https://img.icons8.com/doodle/48/book-shelf--v1.png" alt="book-shelf--v1"/> Next Chapter
         </Link>
       </div>
