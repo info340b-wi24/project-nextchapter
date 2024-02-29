@@ -303,7 +303,7 @@ section {
 }
 
 .type-button-fiction {
-    background-color: #c6def1;
+    background-color: #589acf;
 }
 
 .type-button-non {
@@ -311,7 +311,7 @@ section {
 }
 
 .type-button-mystery {
-    background-color: rgb(250, 244, 157); 
+    background-color: rgb(226, 205, 19); 
 }
 
 .type-button-romance {
@@ -319,7 +319,7 @@ section {
 }
 
 .type-button-nar {
-    background-color: #7dc1c5; 
+    background-color: #257372; 
 }
 
 .type-button-informative {
@@ -335,7 +335,7 @@ section {
 }
 
 .type-button-fantasy {
-    background-color: #f3eb83;
+    background-color: #fbba5f;
 }
 
 .type-button-science  {
@@ -679,6 +679,7 @@ div.button-container {
 @media (max-width: 768px) {
     .navbar {
         padding: 0.5rem 1rem;
+        font-size: 1.3rem;
     }
 
     .nav-links {
@@ -736,6 +737,7 @@ div.button-container {
     .hamburger-links a {
         margin: 0.4rem;
         color: white;
+        font-size: 1.3rem;
         background-color: #93B78F;
     }
 
@@ -780,6 +782,11 @@ div.button-container {
 
     .create button {
         width: fit-content;
+        font-size: 1.8rem;
+    }
+    
+    .reset-button {
+        font-size: 3rem;
     }
 
     .header-content {
