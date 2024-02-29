@@ -673,7 +673,7 @@ div.button-container {
 }
 
 /*smaller screens*/
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .navbar {
         padding: 0.5rem 1rem;
     }
@@ -710,6 +710,7 @@ div.button-container {
         height: 50px;
         font-size: 14px;
     }
+    
 }
 
 /*larger screens*/
@@ -783,6 +784,4 @@ div.button-container {
     .header-content {
         margin-top: 5vh;
     }
-
-
 }
