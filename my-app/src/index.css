@@ -1,13 +1,15 @@
 html, body {
     min-height: 100vh;
-    max-width: 100vw;
     overflow-x: hidden;
 }
 
 * {
     box-sizing:border-box;
     font-family:'Poppins', sans-serif;
-    max-width: 100vw;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* NavBar Styles */
@@ -50,6 +52,72 @@ html, body {
   .nav-links a:hover {
     color: #7B5F49ff /* Change text color on hover */
   }
+
+  .hamburger {
+    display: none;
+  }
+
+  .hamburger-links {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #00000046;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgb(255, 255, 255);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block; 
+        align-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger-links{
+        text-align: center;
+        display: inline;
+        color: #7B5F49;
+        background-color: #93B78F;
+    }
+
+    .hamburger-links a {
+        margin: 0.4rem;
+    }
+
+    .tags {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+
+}
 
 /* Home page art */
 
