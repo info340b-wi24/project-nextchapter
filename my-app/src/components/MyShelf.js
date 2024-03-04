@@ -20,12 +20,4 @@ function MyShelf() {
   );
 };
 
-function Shelf(props) {
-  return (
-    <MyShelf />
-  );
-}
-
-export default Shelf;
-
-
+export default MyShelf;
