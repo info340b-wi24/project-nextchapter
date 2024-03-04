@@ -14,7 +14,7 @@ function QuizComponent({ onGenreSelect }) {
     <div>
       <header className="page-title">
         <h1>Find Your Next Book!</h1>
-        <h2>Question 1/3</h2>
+        <h2>Question 1/4</h2>
       </header>
 
       <section className="quiz">
@@ -64,6 +64,39 @@ function QuizComponent({ onGenreSelect }) {
             />
             <label htmlFor="romance">Romance</label>
           </div>
+          <div className="option">
+            <input
+              type="radio"
+              id="fiction"
+              name="genre"
+              value="fiction"
+              onChange={handleGenreSelect}
+              required
+            />
+            <label htmlFor="fiction">Fiction</label>
+          </div>
+          <div className="option">
+            <input
+              type="radio"
+              id="children"
+              name="genre"
+              value="children"
+              onChange={handleGenreSelect}
+              required
+            />
+            <label htmlFor="children">Children</label>
+          </div>
+          <div className="option">
+            <input
+              type="radio"
+              id="fairytale"
+              name="genre"
+              value="fairytale"
+              onChange={handleGenreSelect}
+              required
+            />
+            <label htmlFor="fairytale">Fairytale</label>
+          </div>
           <div className="submit">
             <button onClick={() => { window.location.href = '/quizquestion2'; }}>Next</button>
           </div>
@@ -74,4 +107,3 @@ function QuizComponent({ onGenreSelect }) {
 }
 
 export default QuizComponent;
-

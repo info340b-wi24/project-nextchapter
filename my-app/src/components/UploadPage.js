@@ -44,8 +44,8 @@ function BookUploadForm() {
                     <label htmlFor="bookTypeInput">Book Type:</label>
                     <select id="bookTypeInput" className="upload-form" name="bookTypeInput" defaultValue="" required>
                         <option value="" disabled>Select Book Type</option>
-                            <option value="Hard cover">Hard Cover</option>
-                            <option value="Soft cover">Soft Cover</option>
+                            <option value="Hard cover">Hardcover</option>
+                            <option value="Soft cover">Paperback</option>
                     </select>
 
                     <label className="upload-spec" htmlFor="bookLengthInput">Book Length:</label>
@@ -61,10 +61,8 @@ function BookUploadForm() {
                         <option value="" disabled>Select Book Condition</option>
                         <option value="New">New</option>
                         <option value="Like New">Like New</option>
-                        <option value="Very Good">Very Good</option>
                         <option value="Good">Good</option>
-                        <option value="Fair">Fair</option>
-                        <option value="Poor">Poor</option>
+                        <option value="Poor">Acceptable</option>
                     </select>
 
                     <label htmlFor="fileInput">Upload Book Image:</label>

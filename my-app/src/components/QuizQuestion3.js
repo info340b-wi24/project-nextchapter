@@ -10,12 +10,12 @@ function QuizComponent3({ onSubmit }) {
     <div>
       <header className="page-title">
         <h1>Find Your Next Book!</h1>
-        <h2>Question 3/3</h2>
+        <h2>Question 3/4</h2>
       </header>
 
       <section className="quiz">
         <form onSubmit={handleSubmit}>
-          <h2>Paperback or Hardback?</h2>
+          <h2>Paperback or Hardcover?</h2>
           <div className="option">
             <input
               type="radio"
@@ -29,15 +29,15 @@ function QuizComponent3({ onSubmit }) {
           <div className="option">
             <input
               type="radio"
-              id="hardback"
+              id="hardcover"
               name="type"
-              value="hardback"
+              value="hardcover"
               required
             />
-            <label htmlFor="hardback">Hardback</label>
+            <label htmlFor="hardcover">Hardcover</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizresults';}}>Submit</button>
+                 <button onClick={() => {window.location.href='/quizquestion4';}}>Next</button>
               </div>
         </form>
       </section>
