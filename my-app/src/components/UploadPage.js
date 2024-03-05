@@ -130,7 +130,7 @@ const Form = () => {
                         <option value='Short'>Short</option>
                         <option value='Medium'>Medium</option>
                         <option value='Long'>Long</option>
-                        <option value='testing'>testing</option>
+
                     </select>
                     <select
                         name='Condition'
