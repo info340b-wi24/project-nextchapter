@@ -10,7 +10,7 @@ function QuizComponent3({ onSubmit }) {
     <div>
       <header className="page-title">
         <h1>Find Your Next Book!</h1>
-        <h2>Question 3/4</h2>
+        <h2>Question 3/3</h2>
       </header>
 
       <section className="quiz">
@@ -37,7 +37,7 @@ function QuizComponent3({ onSubmit }) {
             <label htmlFor="hardcover">Hardcover</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizquestion4';}}>Next</button>
+                 <button onClick={() => {window.location.href='/quizresults';}}>Next</button>
               </div>
         </form>
       </section>

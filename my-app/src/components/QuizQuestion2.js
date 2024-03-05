@@ -15,7 +15,7 @@ function QuizComponent2({ onGenreSelect }) {
     <div>
       <header className="page-title">
         <h1>Find Your Next Book!</h1>
-        <h2>Question 2/4</h2>
+        <h2>Question 2/3</h2>
       </header>
 
       <section className="quiz">
