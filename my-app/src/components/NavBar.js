@@ -28,7 +28,6 @@ function NavBar(props) {
             <span className="bar"></span>
             <span className="bar"></span> 
             <span className="bar"></span>   
-        
       </div> 
     </nav>
     {hamburgerOpen &&

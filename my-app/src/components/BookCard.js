@@ -50,7 +50,7 @@ function BookList() {
       <div className="books-listed">
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
-             <Link to={`/books/${book.title}`} style={{  textDecoration: 'none', color: 'inherit' }}>
+             <Link to={`/books/${book.title}`} className="book-link">
             <div className="card">
               <img src={book.imgSrc} alt={book.altText} />
               <h3>{book.title}</h3>

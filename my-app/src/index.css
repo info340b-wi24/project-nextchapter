@@ -505,6 +505,7 @@ button {
 }
 
 .person-container img {
+    object-fit: cover;
     height: auto;
     width: 220px;
 }
