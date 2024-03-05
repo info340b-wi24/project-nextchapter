@@ -503,7 +503,7 @@ button {
     margin-right: 20px;
 }
 
-.aboutus-page h3 {
+.aboutus-page h2 {
     margin-top:1rem;
     margin-bottom:2rem;
 }
@@ -518,7 +518,6 @@ button {
 }
 
 .person-container img {
-    object-fit: cover;
     height: auto;
     width: 220px;
 }

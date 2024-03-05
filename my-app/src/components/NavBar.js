@@ -9,6 +9,19 @@ function NavBar(props) {
     setHamburger(!hamburgerOpen)
   }
 
+  function hamburgerLinks(status){
+    if(status){
+      return(
+        <div className="hamburger-links">
+              <div><Link onClick={() => toggleHamburger()} to="/upload">Upload</Link></div>
+              <div><Link onClick={() => toggleHamburger()} to="/quizquestion1">Quiz</Link></div>
+              <div><Link onClick={() => toggleHamburger()} to="/about-us">About Us</Link></div>
+              <div><Link onClick={() => toggleHamburger()} to="/my-shelf">My Shelf</Link></div>
+          </div>
+      );
+    }
+  }
+
   return (
     <header>
     <nav className="navbar">
@@ -30,13 +43,7 @@ function NavBar(props) {
             <span className="bar"></span>   
       </div> 
     </nav>
-    {hamburgerOpen &&
-      (<div className="hamburger-links">
-            <div><Link onClick={() => toggleHamburger()} to="/upload">Upload</Link></div>
-            <div><Link onClick={() => toggleHamburger()} to="/quizquestion1">Quiz</Link></div>
-            <div><Link onClick={() => toggleHamburger()} to="/about-us">About Us</Link></div>
-            <div><Link onClick={() => toggleHamburger()} to="/my-shelf">My Shelf</Link></div>
-        </div>)}
+    {hamburgerLinks(hamburgerOpen)}
     </header>
   );
 }
