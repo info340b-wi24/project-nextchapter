@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function QuizComponent1({ onGenreSelect }) {
+function QuizComponent({ onGenreSelect }) {
   const handleGenreSelect = (event) => {
     onGenreSelect(event.target.value);
   };
@@ -106,4 +106,4 @@ export function QuizComponent1({ onGenreSelect }) {
   );
 }
 
-export default QuizComponent1;
+export default QuizComponent;

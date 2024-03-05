@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import QuizComponent1 from './QuizComponent';
+import QuizComponent from './QuizComponent';
 import QuizComponent2 from './QuizComponent2';
 import QuizComponent3 from './QuizComponent3';
 import QuizResults from './QuizResults';
@@ -34,7 +34,7 @@ function QuizPage() {
 
   return (
     <div>
-      <QuizComponent1/>
+      <QuizComponent onGenreSelect={handleGenreSelect}/>
       <QuizComponent2 onConditionSelect={handleConditionSelect} />
       <QuizComponent3 onTypeSelect={handleTypeSelect} />
     </div>

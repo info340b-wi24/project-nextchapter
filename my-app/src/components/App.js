@@ -13,6 +13,7 @@ import QuizComponent4 from './QuizQuestion4';
 import Shelf from './MyShelf';
 import QuizResults from './QuizResults';
 import BookDetail from './Bookdetails';
+import QuizPage from './QuizPage';
 
 function App(props) {
   return (
