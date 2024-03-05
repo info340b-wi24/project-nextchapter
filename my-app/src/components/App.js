@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs';
 import Home from './Homepage';
-import UploadForm from './UploadPage';
 import BookList from './BookCard';
 import Footer from './Footer';
 import QuizComponent from './QuizQuestion1';
@@ -14,6 +13,7 @@ import Shelf from './MyShelf';
 import QuizResults from './QuizResults';
 import BookDetail from './Bookdetails';
 import QuizPage from './QuizPage';
+import Form from './UploadPage';
 
 function App(props) {
   return (
@@ -22,7 +22,7 @@ function App(props) {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/about-us" element={<AboutUs/>} />
-        <Route path="/upload" element={<UploadForm/>} />
+        <Route path="/upload" element={<Form/>} />
         <Route path="/books/:bookId" element={<BookDetail />} />
         <Route path="/quizquestion1" element={<QuizComponent/>} />
         <Route path="/quizquestion2" element={<QuizComponent2/>} />

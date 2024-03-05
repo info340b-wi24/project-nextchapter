@@ -67,7 +67,7 @@ function BookList() {
           </div>
         ))}
       </div>
-      <h2>Find your next read!</h2>
+      <h3>Find your next read!</h3>
       <div className="create">
         <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
       </div>

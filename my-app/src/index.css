@@ -98,11 +98,12 @@ header h2 {
     color:#7B5F49ff;
 }
 
-body h2 {
+h3 {
     color:#7B5F49ff;
-    margin-bottom:0rem;
-    text-align: center;
+    margin-bottom:2rem;
     font-weight:600;
+    margin-left:2rem;
+    font-size:25px;
 }
 
 header p {
@@ -339,28 +340,25 @@ section {
     padding: 2rem;
 }
 
-.search-container form {
+.search-input-container {
     display: flex;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.search-container input[type="text"] {
+.search-input-container input[type="text"] {
     flex-grow: 1; 
     padding: 10px;
-    border: 2px solid #7B5F49; 
-    border-radius: 0;
+    border: none; 
 }
 
-.search-container button {
+.search-input-container button {
     background-color: #7B5F49; 
     color: white;
-    max-width:100px;
-    max-height: 70px;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0; 
     font-size: 16px;
 }
 
@@ -446,18 +444,7 @@ section {
     color: white;
 }
 
-button {
-    background-color: #93B78F;
-    color: white;
-    border: none;
-    /* padding: 10px; */
-    cursor: pointer;
-    width: 50%;
-    border-radius: 10px;
-    /* margin-top: 20px; */
-    /* font-size: 30px; */
-    font-weight: bold;
-}
+
 
 
 .quiz {
@@ -506,6 +493,11 @@ button {
 .aboutus-page h2 {
     margin-top:1rem;
     margin-bottom:2rem;
+    color:#7B5F49
+}
+
+.aboutus-page p {
+    color:#7B5F49;
 }
 
 .person-container {
@@ -538,17 +530,6 @@ button {
     width: 200px;
     margin-right: 40px;
     margin-left: 40px;
-}
-
-footer {
-    position:relative;
-    margin-top:1rem;
-    margin-bottom: 0;
-    left: 0;
-    padding-top: 1rem;
-    font-size: 100%;
-    padding-left: 20px;
-    color: #7B5F49;
 }
 
 /*BOOKSHELF*/
@@ -639,65 +620,6 @@ footer {
     height: 8vh;
 }
 
-/* Upload Book Page */
-
-div.button-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-}
-
-.upload-box {
-    flex-direction: column;
-    align-items: center;
-    max-width:90vw;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #93B78F;
-    color:white;
-}
-
-.upload-form {
-    width: 100%;
-    align-items:center;
-    margin-bottom: 10px;
-    padding: 8px;
-    
-}
-
-.center-button {
-    background-color: #7B5F49ff;
-    width: 15rem;
-    height: 2rem;
-    margin: 0 5px;
-    border-radius: 10px;
-    margin-top: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.center-button:hover {
-    background-color: white;
-    color: #7B5F49ff;
-}
-
-.upload-book {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-}
-
-.finalcenter-button {
-    display: block; 
-    background-color: #7B5F49ff;
-    width: 20rem;
-    height: 2rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:10px;
-    margin-top:1.5rem;
-}
 
 /*individual book pages*/
     /* Card Styling */
@@ -729,7 +651,81 @@ div.button-container {
         margin: 4px 0;
     }
 
+/*upload*/
 
+    .form {
+        margin-top:2.5rem;
+        margin-left:22rem;
+        width: 50%;
+        padding: 20px;
+        background-color: #93B78F;
+        position: relative;
+    }
+
+    .form-info {
+        text-align: center;
+        color:white;
+        font-size:20px;
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type='text'],
+    select {
+        margin-bottom: 20px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%; 
+    }
+    
+    .submit-button {
+        background-color: white;
+        color: green;
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        width:120px;
+    }
+
+    .button-container {
+        text-align: center; 
+    }
+
+    .choice-button {
+        background-color: white;
+        color: rgb(135, 180, 135);
+        border: none;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top:2rem;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block; 
+        width:120px;
+    }
+    
+    .choice-button.clicked {
+        background-color:green;
+    }
+
+    button {
+        background-color: #93B78F;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+    }
 
 @media (min-width: 768px) {
 
@@ -909,4 +905,15 @@ div.button-container {
         height: 60px;
         font-size: 16px;
     }*/
+}
+
+footer {
+    position:relative;
+    margin-top:1rem;
+    margin-bottom: 0;
+    left: 0;
+    padding-top: 1rem;
+    font-size: 100%;
+    padding-left: 20px;
+    color: #7B5F49;
 }
