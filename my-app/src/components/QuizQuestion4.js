@@ -39,7 +39,7 @@ function QuizComponent4({ onGenreSelect }) {
               onChange={handleGenreSelect}
               required
             />
-            <label htmlFor="mystery">Medium</label>
+            <label htmlFor="Medium">Medium</label>
           </div>
           <div className="option">
             <input
@@ -50,7 +50,7 @@ function QuizComponent4({ onGenreSelect }) {
               onChange={handleGenreSelect}
               required
             />
-            <label htmlFor="science-fiction">Science Fiction</label>
+            <label htmlFor="Long">Long</label>
           </div>
           <div className="submit">
                  <button onClick={() => {window.location.href='/quizresults';}}>Submit</button>
