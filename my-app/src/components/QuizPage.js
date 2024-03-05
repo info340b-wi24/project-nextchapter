@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import QuizComponent from './QuizComponent';
-import QuizComponent2 from './QuizComponent2';
-import QuizComponent3 from './QuizComponent3';
-import QuizResults from './QuizResults';
+//import QuizComponent from './QuizComponent';
+//import QuizComponent2 from './QuizComponent2';
+//import QuizComponent3 from './QuizComponent3';
+//import QuizResults from './QuizResults';
 import booksData from '../data/books.json';
 
 function QuizPage() {
@@ -29,14 +29,15 @@ function QuizPage() {
   const filteredBooks = booksData.books.filter((book) => {
     // Add your filtering logic here based on the genre, condition, and type
     // For example:
+    //<QuizComponent onGenreSelect={handleGenreSelect}/>
+    //<QuizComponent2 onConditionSelect={handleConditionSelect} />
+    //<QuizComponent3 onTypeSelect={handleTypeSelect} />
     return book.genre.toLowerCase() === answers.genre.toLowerCase();
   });
 
   return (
     <div>
-      <QuizComponent onGenreSelect={handleGenreSelect} />
-      <QuizComponent2 onConditionSelect={handleConditionSelect} />
-      <QuizComponent3 onTypeSelect={handleTypeSelect} />
+      
     </div>
   );
 }
