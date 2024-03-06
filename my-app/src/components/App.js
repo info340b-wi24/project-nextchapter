@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import NavBar from './NavBar';
 import AboutUs from './AboutUs';
 import Home from './Homepage';
@@ -11,7 +11,6 @@ import QuizComponent3 from './QuizQuestion3';
 import Shelf from './MyShelf';
 import QuizResults from './QuizResults';
 import BookDetail from './Bookdetails';
-import QuizPage from './QuizPage';
 import Form from './UploadPage';
 
 function App(props) {
