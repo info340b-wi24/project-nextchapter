@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function QuizComponent({ onGenreSelect }) {
-  const handleGenreSelect = (event) => {
-    onGenreSelect(event.target.value);
+function QuizComponent(props) {
+  const [selectedGenre, setSelectedGenre] = useState('');
+
+  const handleGenreChange = (event) => {
+    setSelectedGenre(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNextButtonClick = () => {
+    if (selectedGenre) {
+      window.location.href = '/quizquestion2';
+    } else {
+      alert('Please select a genre');
+    }
   };
 
   return (
@@ -17,7 +23,7 @@ function QuizComponent({ onGenreSelect }) {
       </header>
 
       <section className="quiz">
-        <form onSubmit={handleSubmit}>
+        <form>
           <h2>What Kind of Genre do You Like?</h2>
           <div className="option">
             <input
@@ -25,8 +31,8 @@ function QuizComponent({ onGenreSelect }) {
               id="fantasy"
               name="genre"
               value="fantasy"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'fantasy'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="fantasy">Fantasy</label>
           </div>
@@ -36,8 +42,8 @@ function QuizComponent({ onGenreSelect }) {
               id="mystery"
               name="genre"
               value="mystery"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'mystery'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="mystery">Mystery</label>
           </div>
@@ -47,8 +53,8 @@ function QuizComponent({ onGenreSelect }) {
               id="science-fiction"
               name="genre"
               value="science fiction"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'science fiction'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="science-fiction">Science Fiction</label>
           </div>
@@ -58,8 +64,8 @@ function QuizComponent({ onGenreSelect }) {
               id="romance"
               name="genre"
               value="romance"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'romance'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="romance">Romance</label>
           </div>
@@ -69,8 +75,8 @@ function QuizComponent({ onGenreSelect }) {
               id="fiction"
               name="genre"
               value="fiction"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'fiction'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="fiction">Fiction</label>
           </div>
@@ -80,8 +86,8 @@ function QuizComponent({ onGenreSelect }) {
               id="children"
               name="genre"
               value="children"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'children'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="children">Children</label>
           </div>
@@ -91,13 +97,13 @@ function QuizComponent({ onGenreSelect }) {
               id="fairytale"
               name="genre"
               value="fairytale"
-              onChange={handleGenreSelect}
-              required
+              checked={selectedGenre === 'fairytale'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="fairytale">Fairytale</label>
           </div>
           <div className="submit">
-            <button onClick={() => { window.location.href = '/quizquestion2'; }}>Next</button>
+            <button type="button" onClick={handleNextButtonClick}>Next</button>
           </div>
         </form>
       </section>

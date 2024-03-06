@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function QuizComponent3({ onSubmit }) {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    //onSubmit(event);
+function QuizComponent3(props) {
+  const [selectedGenre, setSelectedGenre] = useState('');
+
+  const handleGenreChange = (event) => {
+    setSelectedGenre(event.target.value);
+  };
+
+  const handleNextButtonClick = () => {
+    if (selectedGenre) {
+      window.location.href = '/quizresults';
+    } else {
+      alert('Please select a type');
+    }
   };
 
   return (
@@ -14,7 +23,7 @@ function QuizComponent3({ onSubmit }) {
       </header>
 
       <section className="quiz">
-        <form onSubmit={handleSubmit}>
+        <form>
           <h2>Paperback or Hardcover?</h2>
           <div className="option">
             <input
@@ -22,7 +31,8 @@ function QuizComponent3({ onSubmit }) {
               id="paperback"
               name="type"
               value="paperback"
-              required
+              checked={selectedGenre === 'paperback'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="paperback">Paperback</label>
           </div>
@@ -32,17 +42,18 @@ function QuizComponent3({ onSubmit }) {
               id="hardcover"
               name="type"
               value="hardcover"
-              required
+              checked={selectedGenre === 'hardcover'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="hardcover">Hardcover</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizresults';}}>Next</button>
-              </div>
+            <button type="button" onClick={handleNextButtonClick}>Submit</button>
+          </div>
         </form>
       </section>
     </div>
   );
-};
+}
 
 export default QuizComponent3;

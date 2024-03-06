@@ -12,34 +12,9 @@ function QuizPage() {
     type: ''
   });
 
-  // Handlers to update the state with each answer
-  const handleGenreSelect = (genre) => {
-    setAnswers((prev) => ({ ...prev, genre }));
-  };
-
-  const handleConditionSelect = (condition) => {
-    setAnswers((prev) => ({ ...prev, condition }));
-  };
-
-  const handleTypeSelect = (type) => {
-    setAnswers((prev) => ({ ...prev, type }));
-  };
-
-  // Filter books based on answers
   const filteredBooks = booksData.books.filter((book) => {
-    // Add your filtering logic here based on the genre, condition, and type
-    // For example:
-    //<QuizComponent onGenreSelect={handleGenreSelect}/>
-    //<QuizComponent2 onConditionSelect={handleConditionSelect} />
-    //<QuizComponent3 onTypeSelect={handleTypeSelect} />
     return book.genre.toLowerCase() === answers.genre.toLowerCase();
   });
-
-  return (
-    <div>
-      
-    </div>
-  );
 }
 
 export default QuizPage;

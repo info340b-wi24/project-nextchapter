@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 
-function QuizComponent2({ onGenreSelect }) {
+function QuizComponent2(props) {
   const [selectedGenre, setSelectedGenre] = useState('');
 
-  const handleGenreSelect = (event) => {
+  const handleGenreChange = (event) => {
     setSelectedGenre(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNextButtonClick = () => {
+    if (selectedGenre) {
+      window.location.href = '/quizquestion3';
+    } else {
+      alert('Please select a condition');
+    }
   };
 
   return (
@@ -19,7 +23,7 @@ function QuizComponent2({ onGenreSelect }) {
       </header>
 
       <section className="quiz">
-        <form onSubmit={handleSubmit}>
+        <form>
           <h2>What Condition do You Want Your Book In?</h2>
           <div className="option">
             <input
@@ -27,7 +31,8 @@ function QuizComponent2({ onGenreSelect }) {
               id="new"
               name="condition"
               value="new"
-              required
+              checked={selectedGenre === 'new'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="new">New</label>
           </div>
@@ -37,7 +42,8 @@ function QuizComponent2({ onGenreSelect }) {
               id="like-new"
               name="condition"
               value="like_new"
-              required
+              checked={selectedGenre === 'like_new'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="like-new">Like New</label>
           </div>
@@ -47,7 +53,8 @@ function QuizComponent2({ onGenreSelect }) {
               id="good"
               name="condition"
               value="good"
-              required
+              checked={selectedGenre === 'good'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="good">Good</label>
           </div>
@@ -57,16 +64,17 @@ function QuizComponent2({ onGenreSelect }) {
               id="acceptable"
               name="condition"
               value="acceptable"
-              required
+              checked={selectedGenre === 'acceptable'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="acceptable">Acceptable</label>
           </div>
           <div className="submit">
-                 <button onClick={() => {window.location.href='/quizquestion3';}}>Next</button>
-              </div>
+            <button type="button" onClick={handleNextButtonClick}>Next</button>
+          </div>
         </form>
       </section>
-</div>
+    </div>
   );
 };
 
