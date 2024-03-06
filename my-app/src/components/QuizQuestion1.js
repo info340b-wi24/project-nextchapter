@@ -9,7 +9,6 @@ function QuizComponent({ onGenreSelect }) {
     event.preventDefault();
   };
 
-
   return (
     <div>
       <header className="page-title">
