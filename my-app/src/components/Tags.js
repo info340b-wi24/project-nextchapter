@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
+function GenreTags({ onGenreClick, onResetClick }) {
   const location = useLocation();
-
   const isHomePage = location.pathname === '/';
 
   if (!isHomePage) {
     return null;
   }
+
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
     { name: 'Non-Fiction', className: 'type-button-non' },
@@ -24,25 +24,25 @@ function GenreTags({ onGenreClick, onResetClick }) { // Define onResetClick prop
     { name: 'Poetry', className: 'type-button-poetry' },
   ];
 
+  const genreButtons = genres.map((genre) => (
+    <button
+      key={genre.name}
+      className={genre.className}
+      onClick={() => onGenreClick(genre.name)}
+    >
+      {genre.name}
+    </button>
+  ));
+
   return (
     <div>
       <h3>Filter through Genres</h3>
-    <div className="types-of-books row">
-      
-      <div className="filter-types row">
-      
-        <div className="tags">
-          {genres.map((genre) => (
-            <button
-              key={genre.name}
-              className={genre.className}
-              onClick={() => onGenreClick(genre.name)}
-            >
-              {genre.name}
-            </button>
-          ))}
+      <div className="types-of-books row">
+        <div className="filter-types row">
+          <div className="tags">
+            {genreButtons}
+          </div>
         </div>
-      </div>
         <button className="reset-button" onClick={onResetClick}> 
           Reset
         </button>
