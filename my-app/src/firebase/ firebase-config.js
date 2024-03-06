@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { getStorage } from "firebase/storage";
 import { getDatabase, ref} from 'firebase/database';
 
 
@@ -13,12 +13,10 @@ const firebaseConfig = {
   measurementId: "G-MDK1XJ1SVE"
 };
 
-// Initialize Firebase app
+
 const app = initializeApp(firebaseConfig);
-//const analytics = getAnalytics(app);
 
-// Get a reference to the database
-const db = getDatabase();
+const storage = getStorage(app);
+const db = getDatabase(app);
 
-// Get a reference to the "books" data
-//const booksRef = ref(db, 'books');
+export { app, storage, db, firebaseConfig };

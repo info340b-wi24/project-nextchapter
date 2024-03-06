@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { getDatabase, ref, set } from 'firebase/database';
 
 function QuizComponent(props) {
   const [selectedGenre, setSelectedGenre] = useState('');
@@ -9,7 +10,17 @@ function QuizComponent(props) {
 
   const handleNextButtonClick = () => {
     if (selectedGenre) {
-      window.location.href = '/quizquestion2';
+      const db = getDatabase();
+      const userRef = ref(db, 'UserData/' + props.userId);
+      set(userRef, {
+        selectedGenre: selectedGenre
+      })
+      .then(() => {
+        window.location.href = `/quizquestion2?genre=${selectedGenre}`;
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
     } else {
       alert('Please select a genre');
     }

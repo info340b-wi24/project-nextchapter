@@ -1,14 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import bookData from '../data/books.json';
+import { ref, onValue, getDatabase } from 'firebase/database';
+import { storage } from '../firebase/ firebase-config';
 import GenreTags from './Tags.js'; 
 
 function BookList() {
   const location = useLocation();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedGenre, setSelectedGenre] = useState('All');
-  const books = bookData.books;
+  const [books, setBooks] = useState([]);
 
+  useEffect(() => {
+    const db = getDatabase();
+    const booksRef = ref(db, 'UserData');
+  
+    const unsubscribe = onValue(booksRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const booksArray = Object.values(data).map(book => ({
+          ...book,
+          title: book.BookTitle, 
+          genre: book.Genre, 
+          imgSrc: book.Photo,
+          decision: book.Decision,
+          altText: `Cover of ${book.BookTitle}`, 
+        }));
+        setBooks(booksArray);
+      } else {
+        setBooks([]);
+      }
+    }, (error) => {
+      console.error(error);
+      setBooks([]);
+    });
+
+    /* we might get points off for the unsubscribe ? since its in the reutrn but we will figure that out latersss*/
+    return () => unsubscribe();
+  }, []);
+  
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -22,10 +51,11 @@ function BookList() {
     setSearchQuery('');
   };
 
-  const filteredBooks = books.filter(book => 
+  const filteredBooks = books.filter(book =>
     (selectedGenre === 'All' || book.genre === selectedGenre) &&
-    book.title.toLowerCase().includes(searchQuery.toLowerCase())
+    (book.title ? book.title.toLowerCase().includes(searchQuery.toLowerCase()) : false)
   );
+  
 
   const isHomePage = location.pathname === '/';
 
@@ -51,10 +81,10 @@ function BookList() {
         {filteredBooks.map((book, index) => ( 
           <div key={index} className="item">
              <Link to={`/books/${book.title}`} className="book-link">
-            <div className="card">
+             <div className="card">
               <img src={book.imgSrc} alt={book.altText} />
               <h3>{book.title}</h3>
-              <p>{book.description}</p>
+              <p>{book.Decision}</p>
               {selectedGenre && (
                 <div 
                   className={`genre-box type-button-${book.genre.toLowerCase()}`} 

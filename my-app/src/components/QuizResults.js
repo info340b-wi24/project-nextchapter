@@ -1,35 +1,68 @@
-import React from 'react';
-import booksData from '../data/books.json';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { ref, onValue, getDatabase } from 'firebase/database';
 
 function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
-  // Filter the books based on selected genre, condition, and type
-  const filteredBooks = booksData.books.filter(book => {
-    return (
-      book.genre === selectedGenre &&
-      book.condition === selectedCondition &&
-      book.type === selectedType
-    );
-  });
+  const location = useLocation();
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const db = getDatabase();
+      const booksRef = ref(db, 'UserData'); 
+
+      onValue(booksRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const filteredBooks = Object.values(data).filter(book => (
+            book.Genre === selectedGenre &&
+            book.Condition === selectedCondition &&
+            book.CoverType === selectedType
+          ));
+          setBooks(filteredBooks);
+        } else {
+          setBooks([]);
+        }
+      }, (error) => {
+        console.error(error);
+        setBooks([]);
+      });
+    };
+
+    fetchData();
+
+  }, [selectedGenre, selectedCondition, selectedType]);
+
+  const isQuizResultsPage = location.pathname === '/quizresults';
+
+  if (!isQuizResultsPage) {
+    return null;
+  }
 
   return (
-    <section className="books-listed">
-      <header className="page-title">
-        <h1>Our Recommendations for you</h1>
-        <p>Based on your choices....</p>
-      </header>
-      {filteredBooks.map((book, index) => (
-        <div className="item" key={index}>
-          <div className="card">
-            <div className="card-front">
-              <img src={book.imgSrc} alt={book.altText} />
-              <h3>{book.title}</h3>
-              <p>{book.description}</p>
+    <div>
+      <h3>Our Recommendations for you</h3>
+      <div className="books-listed">
+        {books.map((book, index) => (
+          <div key={index} className="item">
+            <div className="card">
+              <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
+              <h3>{book.BookTitle}</h3>
+              <p>Author: {book.Author}</p>
+              <p>Condition: {book.Condition}</p>
+              <p>Cover Type: {book.CoverType}</p>
+              <p>Genre: {book.Genre}</p>
+              <p>Length: {book.Length}</p>
+              <p>Name: {book.Name}</p>
             </div>
           </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </div>
+    </div>
   );
 }
 
 export default QuizResults;
+
+
+

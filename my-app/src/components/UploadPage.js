@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { storage } from '../firebase/ firebase-config';
+
 
 const Form = () => {
     const [user, setUser] = useState({
-        Decision: '', // This will be set based on the button clicked
-        Name: '',
+        Decision: '', 
         BookTitle: '',
         Author: '',
         Genre: '',
@@ -19,8 +21,15 @@ const Form = () => {
         console.log(user);
     };
 
+    const [image, setImage] = useState(null);
     const [giveawayClicked, setGiveawayClicked] = useState(false);
     const [swapClicked, setSwapClicked] = useState(false);
+
+    const handleImageChange = e => {
+        if (e.target.files[0]) {
+            setImage(e.target.files[0]); 
+        }
+    };
     
     const handleGiveaway = () => {
         setUser({ ...user, Decision: 'Giveaway' });
@@ -34,28 +43,45 @@ const Form = () => {
         setGiveawayClicked(false); 
     };
 
-
     const getData = async (e) => { 
         e.preventDefault();
-        const { Decision, Name, BookTitle, Author, Genre, Length, Condition, CoverType } = user;
-        const options = {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ Decision, Name, BookTitle, Author, Genre, Length, Condition, CoverType })
-        };
-        try {
-            const res = await fetch('https://project-nextchapter-f60bb-default-rtdb.firebaseio.com/UserData.json', options);
-            if (!res.ok) {
-                throw new Error('Failed to post data');
+    
+        // First, upload the image to Firebase Storage if an image is selected
+        if (image) {
+            const storageRef = ref(storage, `images/${image.name}`);
+            
+            try {
+                const snapshot = await uploadBytes(storageRef, image);
+                const downloadURL = await getDownloadURL(snapshot.ref);
+    
+            
+                const formData = {
+                    ...user,
+                    Photo: downloadURL, 
+                };
+    
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                };
+    
+                const response = await fetch('https://project-nextchapter-f60bb-default-rtdb.firebaseio.com/UserData.json', options);
+    
+                if (!response.ok) {
+                    throw new Error('Failed to post data');
+                }
+                alert('Your book has been successfully submitted!');
+            } catch (error) {
+                alert('Error submitting your book. Please try again.');
             }
-            alert('Your book has been successfully submitted!');
-        } catch (error) {
-            console.error('Error posting data:', error);
-            alert('Failed to submit your book. Please try again.');
+        } else {
+            alert('Please select an image for the book.');
         }
     };
+    
 
     return (
         <div>
@@ -120,6 +146,7 @@ const Form = () => {
                         <option value='Biography'>Biography</option>
                         <option value='Fairy tale'>Fairy tale</option>
                         <option value='Poetry'>Poetry</option>
+                        <option value='Horror'>Horror</option>
                     </select>
                     <select
                         name='Length'
@@ -155,6 +182,7 @@ const Form = () => {
                         <option value='Hardcover'>Hardcover</option>
                         <option value='Paperback'>Paperback</option>
                     </select>
+                    <input type="file" onChange={handleImageChange} />
                     <button type="submit" className="submit-button" >Submit</button>
                 </form>
             </div>

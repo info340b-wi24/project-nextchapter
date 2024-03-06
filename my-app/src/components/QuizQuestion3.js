@@ -1,19 +1,33 @@
 import React, { useState } from 'react';
+import { getDatabase, ref, set } from 'firebase/database';
 
 function QuizComponent3(props) {
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedType, setSelectedType] = useState('');
 
-  const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
+  const handleTypeChange = (event) => {
+    setSelectedType(event.target.value);
   };
 
-  const handleNextButtonClick = () => {
-    if (selectedGenre) {
-      window.location.href = '/quizresults';
-    } else {
-      alert('Please select a type');
-    }
-  };
+const handleNextButtonClick = () => {
+  if (selectedType) {
+    const db = getDatabase();
+    const userRef = ref(db, 'UserData/' + props.userId);
+    set(userRef, {
+      ...props.userData,
+      selectedType: selectedType
+    })
+    .then(() => {
+      window.location.href = `/quizresults?genre=${props.selectedGenre}&condition=${props.selectedCondition}&type=${selectedType}`;
+    })
+    .catch((error) => {
+      console.error("Error writing document: ", error);
+    });
+  } else {
+    alert('Please select a type');
+  }
+};
+
+  
 
   return (
     <div>
@@ -31,8 +45,8 @@ function QuizComponent3(props) {
               id="paperback"
               name="type"
               value="paperback"
-              checked={selectedGenre === 'paperback'}
-              onChange={handleGenreChange}
+              checked={selectedType === 'paperback'}
+              onChange={handleTypeChange} 
             />
             <label htmlFor="paperback">Paperback</label>
           </div>
@@ -42,8 +56,8 @@ function QuizComponent3(props) {
               id="hardcover"
               name="type"
               value="hardcover"
-              checked={selectedGenre === 'hardcover'}
-              onChange={handleGenreChange}
+              checked={selectedType === 'hardcover'}
+              onChange={handleTypeChange} 
             />
             <label htmlFor="hardcover">Hardcover</label>
           </div>

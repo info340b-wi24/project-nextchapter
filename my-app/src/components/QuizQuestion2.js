@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
+import { getDatabase, ref, set } from 'firebase/database';
 
 function QuizComponent2(props) {
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedCondition, setSelectedCondition] = useState('');
 
-  const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
+  const handleConditionChange = (event) => {
+    setSelectedCondition(event.target.value);
   };
 
   const handleNextButtonClick = () => {
-    if (selectedGenre) {
-      window.location.href = '/quizquestion3';
+    if (selectedCondition) {
+      const db = getDatabase();
+      const userRef = ref(db, 'UserData/' + props.userId);
+      set(userRef, {
+        ...props.userData, // Include previous data
+        selectedCondition: selectedCondition
+      })
+      .then(() => {
+        window.location.href = `/quizquestion3?genre=${props.selectedGenre}&condition=${selectedCondition}`;
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
     } else {
       alert('Please select a condition');
     }
@@ -31,8 +43,8 @@ function QuizComponent2(props) {
               id="new"
               name="condition"
               value="new"
-              checked={selectedGenre === 'new'}
-              onChange={handleGenreChange}
+              checked={selectedCondition === 'new'}
+              onChange={handleConditionChange}
             />
             <label htmlFor="new">New</label>
           </div>
@@ -42,8 +54,8 @@ function QuizComponent2(props) {
               id="like-new"
               name="condition"
               value="like_new"
-              checked={selectedGenre === 'like_new'}
-              onChange={handleGenreChange}
+              checked={selectedCondition === 'like_new'}
+              onChange={handleConditionChange}
             />
             <label htmlFor="like-new">Like New</label>
           </div>
@@ -53,8 +65,8 @@ function QuizComponent2(props) {
               id="good"
               name="condition"
               value="good"
-              checked={selectedGenre === 'good'}
-              onChange={handleGenreChange}
+              checked={selectedCondition === 'good'}
+              onChange={handleConditionChange}
             />
             <label htmlFor="good">Good</label>
           </div>
@@ -64,8 +76,8 @@ function QuizComponent2(props) {
               id="acceptable"
               name="condition"
               value="acceptable"
-              checked={selectedGenre === 'acceptable'}
-              onChange={handleGenreChange}
+              checked={selectedCondition === 'acceptable'}
+              onChange={handleConditionChange}
             />
             <label htmlFor="acceptable">Acceptable</label>
           </div>
