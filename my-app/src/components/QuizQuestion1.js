@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function QuizComponent(props) {
+function QuizComponent() {
   const [selectedGenre, setSelectedGenre] = useState('');
+  const navigate = useNavigate();
 
   const handleGenreChange = (event) => {
     setSelectedGenre(event.target.value);
   };
 
-  const handleNextButtonClick = () => {
+  const handleNextButtonClick = async () => {
     if (selectedGenre) {
-      window.location.href = '/quizquestion2';
+      navigate('/quizquestion2');
     } else {
       alert('Please select a genre');
     }

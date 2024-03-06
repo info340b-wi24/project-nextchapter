@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function QuizComponent3(props) {
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedType, setSelectedType] = useState('');
+  const navigate = useNavigate();
 
-  const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
+  const handleTypeChange = (event) => {
+    setSelectedType(event.target.value);
   };
 
   const handleNextButtonClick = () => {
-    if (selectedGenre) {
-      window.location.href = '/quizresults';
+    if (selectedType) {
+      navigate('/quizresults');
     } else {
       alert('Please select a type');
     }
@@ -31,8 +33,8 @@ function QuizComponent3(props) {
               id="paperback"
               name="type"
               value="paperback"
-              checked={selectedGenre === 'paperback'}
-              onChange={handleGenreChange}
+              checked={selectedType === 'paperback'}
+              onChange={handleTypeChange}
             />
             <label htmlFor="paperback">Paperback</label>
           </div>
@@ -42,8 +44,8 @@ function QuizComponent3(props) {
               id="hardcover"
               name="type"
               value="hardcover"
-              checked={selectedGenre === 'hardcover'}
-              onChange={handleGenreChange}
+              checked={selectedType === 'hardcover'}
+              onChange={handleTypeChange}
             />
             <label htmlFor="hardcover">Hardcover</label>
           </div>

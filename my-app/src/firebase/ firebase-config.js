@@ -13,7 +13,6 @@ const firebaseConfig = {
   measurementId: "G-MDK1XJ1SVE"
 };
 
-
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -23,5 +22,3 @@ const db = getDatabase();
 
 // Get a reference to the "books" data
 const booksRef = ref(db, 'books');
-
-
