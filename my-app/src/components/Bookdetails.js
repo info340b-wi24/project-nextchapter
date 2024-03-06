@@ -18,7 +18,7 @@ function BookDetail() {
         <div className={`genre-box type-button-${book.genre.toLowerCase()}`}>
           {book.genre}
           </div>
-        <p>Book Condition:</p>
+        <p>Book Condition: </p>
         <p>Book Type:</p>
         <p>Book Length:</p>
         <p>{book.description}</p> 

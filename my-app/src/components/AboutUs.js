@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import briImage from '../images/bri.jpg'; // Update the import path
 import kaylaImage from '../images/kayla.jpg';
 import alexisImage from '../images/alexis2.jpg';
