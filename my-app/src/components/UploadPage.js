@@ -9,7 +9,8 @@ const Form = () => {
         Genre: '',
         Length: '',
         Condition: '',
-        CoverType: ''
+        CoverType: '',
+        Photo: null,
     });
 
     const data = (e) => {
@@ -142,7 +143,7 @@ const Form = () => {
                         <option value='New'>New</option>
                         <option value='Like New'>Like New</option>
                         <option value='Good'>Good</option>
-                        <option value='Poor'>Acceptable</option>
+                        <option value='Acceptable'>Acceptable</option>
                     </select>
                     <select
                         name='CoverType'
