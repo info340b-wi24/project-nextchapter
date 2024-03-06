@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function QuizComponent2(props) {
-  const [selectedCondition, setSelectedCondition] = useState('');
-  const navigate = useNavigate();
+  const [selectedGenre, setSelectedGenre] = useState('');
 
-  const handleConditionChange = (event) => {
-    setSelectedCondition(event.target.value);
+  const handleGenreChange = (event) => {
+    setSelectedGenre(event.target.value);
   };
 
   const handleNextButtonClick = () => {
-    if (selectedCondition) {
-      navigate('/quizquestion3');
+    if (selectedGenre) {
+      window.location.href = '/quizquestion3';
     } else {
       alert('Please select a condition');
     }
@@ -33,8 +31,8 @@ function QuizComponent2(props) {
               id="new"
               name="condition"
               value="new"
-              checked={selectedCondition === 'new'}
-              onChange={handleConditionChange}
+              checked={selectedGenre === 'new'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="new">New</label>
           </div>
@@ -44,8 +42,8 @@ function QuizComponent2(props) {
               id="like-new"
               name="condition"
               value="like_new"
-              checked={selectedCondition === 'like_new'}
-              onChange={handleConditionChange}
+              checked={selectedGenre === 'like_new'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="like-new">Like New</label>
           </div>
@@ -55,8 +53,8 @@ function QuizComponent2(props) {
               id="good"
               name="condition"
               value="good"
-              checked={selectedCondition === 'good'}
-              onChange={handleConditionChange}
+              checked={selectedGenre === 'good'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="good">Good</label>
           </div>
@@ -66,8 +64,8 @@ function QuizComponent2(props) {
               id="acceptable"
               name="condition"
               value="acceptable"
-              checked={selectedCondition === 'acceptable'}
-              onChange={handleConditionChange}
+              checked={selectedGenre === 'acceptable'}
+              onChange={handleGenreChange}
             />
             <label htmlFor="acceptable">Acceptable</label>
           </div>

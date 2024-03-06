@@ -6,3 +6,5 @@ const db = getDatabase();
 
 // Get a reference to the "books" data
 const booksRef = ref(db, 'books');
+
+export {db, booksRef};
