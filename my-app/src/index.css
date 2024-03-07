@@ -717,6 +717,17 @@ section {
         font-weight: bold;
     }
 
+footer {
+    position:relative;
+    margin-top:1rem;
+    margin-bottom: 0;
+    left: 0;
+    padding-top: 1rem;
+    font-size: 100%;
+    padding-left: 20px;
+    color: #7B5F49;
+}
+
 /*Desktop screen and larger styling */
 @media (min-width: 768px) {
 
@@ -874,7 +885,7 @@ section {
         grid-gap: 12px;
         width: 100%; 
     }
-    
+
 }
 
 
@@ -884,20 +895,15 @@ section {
         padding-left: 10rem;
     }
 
-    /*.option {
-        width: 400px;
-        height: 60px;
-        font-size: 16px;
-    }*/
+    
 }
 
-footer {
-    position:relative;
-    margin-top:1rem;
-    margin-bottom: 0;
-    left: 0;
-    padding-top: 1rem;
-    font-size: 100%;
-    padding-left: 20px;
-    color: #7B5F49;
+@media (min-width: 1440px ) {
+    .form {
+        width: 60vw;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
 }
+
+
