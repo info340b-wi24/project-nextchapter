@@ -51,7 +51,7 @@ a {
     display: none;
 }
 
-.hamburger {
+.hamburger-menu{
     display: block; 
     align-content: center;
     cursor: pointer;
@@ -763,7 +763,7 @@ footer {
         color: #7B5F49ff /* Change text color on hover */
     }
 
-    .hamburger {
+    .hamburger-menu{
         display: none;
     }
 
