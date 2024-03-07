@@ -396,7 +396,6 @@ section {
 }
 
 /* Card Styling */
-
 .card {
     border: 1px solid rgba(0, 0, 0, 0.31);
     background: white;
@@ -534,7 +533,7 @@ section {
     margin-left: 40px;
 }
 
-/*Book Shelf*/
+/*BOOKSHELF*/
 
 .myshelfcontainer h3 {
     text-align: center;
@@ -729,6 +728,13 @@ footer {
     color: #7B5F49;
 }
 
+/*Smaller screen format */
+@media (min-width: 480px) {
+    .quiz {
+        padding: 40px; 
+    }
+}
+
 /*Desktop screen and larger styling */
 @media (min-width: 768px) {
 
@@ -849,11 +855,6 @@ footer {
     }
     
 
-    @media (min-width: 480px) {
-        .quiz {
-            padding: 40px; 
-        }
-    }
 
 
     /*Book Shelf*/
@@ -899,6 +900,7 @@ footer {
     
 }
 
+/*adjusting form box view for larger screens*/
 @media (min-width: 1440px ) {
     .form {
         width: 60vw;
