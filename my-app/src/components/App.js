@@ -21,7 +21,7 @@ function App(props) {
         <Route path="/" element={<Home/>} />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/upload" element={<Form/>} />
-        <Route path="/books/:bookId" element={<BookDetail />} />
+        <Route path="/books/:bookTitle" element={<BookDetail />} />
         <Route path="/quizquestion1" element={<QuizComponent/>} />
         <Route path="/quizquestion2" element={<QuizComponent2/>} />
         <Route path="/quizquestion3" element={<QuizComponent3/>} />

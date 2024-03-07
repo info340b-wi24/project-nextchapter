@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { ref, onValue, getDatabase } from 'firebase/database';
-import { storage } from '../firebase/ firebase-config';
 import GenreTags from './Tags.js'; 
 
 function BookList() {
@@ -55,7 +54,6 @@ function BookList() {
     (selectedGenre === 'All' || book.genre === selectedGenre) &&
     (book.title ? book.title.toLowerCase().includes(searchQuery.toLowerCase()) : false)
   );
-  
 
   const isHomePage = location.pathname === '/';
 

@@ -53,7 +53,7 @@ function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
               <p>Cover Type: {book.CoverType}</p>
               <p>Genre: {book.Genre}</p>
               <p>Length: {book.Length}</p>
-              <p>Name: {book.Name}</p>
+              <p>Contact Owner: {book.Name}</p>
             </div>
           </div>
         ))}
@@ -63,6 +63,3 @@ function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
 }
 
 export default QuizResults;
-
-
-
