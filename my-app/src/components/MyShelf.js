@@ -1,23 +1,51 @@
-import React from 'react';
-import booksData from '../data/books.json';
+import React, { useState, useEffect } from 'react';
+import { ref, onValue, getDatabase } from 'firebase/database';
 
 function MyShelf() {
+  const [books, setBooks] = useState([]);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const booksRef = ref(db, 'UserData');
   
+    const unsubscribe = onValue(booksRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        // Correctly chaining the .map() with .sort() before setting the state
+        const booksArray = Object.values(data).map(book => ({
+          ...book,
+          imgSrc: book.Photo,
+          altText: `Cover of ${book.BookTitle}`, 
+        })).sort((a, b) => b.uploadTimestamp - a.uploadTimestamp); // Corrected line
+
+        setBooks(booksArray);
+      } else {
+        setBooks([]);
+      }
+    }, (error) => {
+      console.error(error);
+      setBooks([]);
+    });
+
+    
+    return () => unsubscribe(); // This is correctly placed for cleanup
+  }, []);
+
   return (
     <div className="myshelfcontainer">
       <header className="page-title">
         <h1>@book-worm Shelf</h1>
         <h2>Your List Swaps & Giveaways!</h2>
       </header>
-    <div className="bookshelf">
-      {booksData.books.map((book, index) => (
-        <div className="book" key={index}>
-          <img src={book.imgSrc} alt={book.altText} />
-        </div>
-      ))}
-    </div>
+      <div className="bookshelf">
+        {books.map((book, index) => (
+          <div className="book" key={index}>
+            <img src={book.imgSrc} alt={book.altText || "Book cover"} />
+          </div>
+        ))}
+      </div>
     </div>
   );
-};
+}
 
 export default MyShelf;
