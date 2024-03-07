@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MyComponent(props) { //WE NEED TO CHANGE THE NAME OF MYCOMPONENT!
+function MyComponent(props) { //WE NEED TO CHANGE THE NAME OF MYCOMPONENT!- KAYLAAAA
     return (
       <header>
            <section className="custom-section">
