@@ -27,6 +27,7 @@ function App(props) {
         <Route path="/quizquestion3" element={<QuizComponent3/>} />
         <Route path="/quizresults" element={<QuizResults/>} />
         <Route path="/my-shelf" element={<Shelf/>} />
+        <Route path="*" element={<Navigate to="/"/>}></Route>
       </Routes>
 
       <BookList/>

@@ -34,7 +34,7 @@ function BookList() {
       setBooks([]);
     });
 
-    /* we might get points off for the unsubscribe ? since its in the reutrn but we will figure that out latersss*/
+    /* we might get points off for the unsubscribe ? since its in the reutun but we will figure that out latersss*/
     return () => unsubscribe();
   }, []);
   
@@ -62,7 +62,6 @@ function BookList() {
   if (!isHomePage) {
     return null;
   }
-
   return (
     <div>
       <div className="search-container">

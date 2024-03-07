@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar(props) {
-
   const [hamburgerOpen, setHamburger] = useState(false);
 
   function toggleHamburger(){

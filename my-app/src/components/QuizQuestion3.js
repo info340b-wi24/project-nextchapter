@@ -8,24 +8,24 @@ function QuizComponent3(props) {
     setSelectedType(event.target.value);
   };
 
-const handleNextButtonClick = () => {
-  if (selectedType) {
-    const db = getDatabase();
-    const userRef = ref(db, 'UserData/' + props.userId);
-    set(userRef, {
-      ...props.userData,
-      selectedType: selectedType
-    })
-    .then(() => {
-      window.location.href = `/quizresults?genre=${props.selectedGenre}&condition=${props.selectedCondition}&type=${selectedType}`;
-    })
-    .catch((error) => {
-      console.error("Error writing document: ", error);
-    });
-  } else {
-    alert('Please select a type');
-  }
-};
+  const handleNextButtonClick = () => {
+    if (selectedType) {
+      const db = getDatabase();
+      const userRef = ref(db, 'UserData/' + props.userId);
+      set(userRef, {
+        ...props.userData,
+        selectedType: selectedType
+      })
+      .then(() => {
+        window.location.href = `/quizresults?genre=${props.selectedGenre}&condition=${props.selectedCondition}&type=${selectedType}`;
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+    } else {
+      alert('Please select a type');
+    }
+  };
 
   
 
