@@ -42,22 +42,26 @@ function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
   return (
     <div>
       <h3>Our Recommendations for you</h3>
-      <div className="books-listed">
-        {books.map((book, index) => (
-          <div key={index} className="item">
-            <div className="card">
-              <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
-              <h3>{book.BookTitle}</h3>
-              <p>Author: {book.Author}</p>
-              <p>Condition: {book.Condition}</p>
-              <p>Cover Type: {book.CoverType}</p>
-              <p>Genre: {book.Genre}</p>
-              <p>Length: {book.Length}</p>
-              <p>Contact Owner: {book.Name}</p>
+      {books.length === 0 ? (
+        <p>No matching books found.</p>
+      ) : (
+        <div className="books-listed">
+          {books.map((book, index) => (
+            <div key={index} className="item">
+              <div className="card">
+                <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
+                <h3>{book.BookTitle}</h3>
+                <p>Author: {book.Author}</p>
+                <p>Condition: {book.Condition}</p>
+                <p>Cover Type: {book.CoverType}</p>
+                <p>Genre: {book.Genre}</p>
+                <p>Length: {book.Length}</p>
+                <p>Contact Owner: {book.Name}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

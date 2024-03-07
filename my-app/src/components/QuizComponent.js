@@ -1,117 +1,66 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getDatabase, ref, set } from 'firebase/database';
 
-function QuizComponent({ index, question, options, onGenreSelect }) {
-  const handleGenreSelect = (event) => {
-    onGenreSelect(event.target.value);
+function QuizComponent(props) {
+  const { userId, userData, questionNumber, questionText, options } = props;
+  const [selectedOption, setSelectedOption] = useState('');
+  const navigate = useNavigate();
+
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleNextButtonClick = () => {
+    if (selectedOption) {
+      const db = getDatabase();
+      const userRef = ref(db, 'UserData/' + userId);
+      set(userRef, {
+        ...userData,
+        [`selectedOption${questionNumber}`]: selectedOption
+      })
+      .then(() => {
+        const nextQuestionNumber = questionNumber + 1;
+        if (nextQuestionNumber <= 3) {
+          navigate(`/quizquestion${nextQuestionNumber}`);
+        } else {
+          navigate('/quizresults');
+        }
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+    } else {
+      alert('Please select an option');
+    }
   };
-
-  const optionElements = options.map((option, index) => (
-    <div className='option' key={index}>
-      <input type="radio"
-        id={option}
-        name={option}
-        value={option}
-        onChange={handleGenreSelect}
-        required
-      />
-      <label htmlFor={option}>{option}</label>
-    </div>
-  ));
 
   return (
-  <div>
-    <header className='page-title'>
-        <h1>Find Your Next Book</h1>
-        <h2>Question {index}/3</h2>
-    </header>
+    <div>
+      <header className="page-title">
+        <h1>Find Your Next Book!</h1>
+        <h2>Question {questionNumber}/3</h2>
+      </header>
 
-    <section className="quiz">
-        <form onSubmit={handleSubmit}>
-            <h2>Question</h2>
-            <div className="option">
-            <input
-              type="radio"
-              id="fantasy"
-              name="genre"
-              value="fantasy"
-              checked={selectedGenre === 'fantasy'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="fantasy">Fantasy</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="mystery"
-              name="genre"
-              value="mystery"
-              checked={selectedGenre === 'mystery'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="mystery">Mystery</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="science-fiction"
-              name="genre"
-              value="science fiction"
-              checked={selectedGenre === 'science fiction'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="science-fiction">Science Fiction</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="romance"
-              name="genre"
-              value="romance"
-              checked={selectedGenre === 'romance'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="romance">Romance</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="fiction"
-              name="genre"
-              value="fiction"
-              checked={selectedGenre === 'fiction'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="fiction">Fiction</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="children"
-              name="genre"
-              value="children"
-              checked={selectedGenre === 'children'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="children">Children</label>
-          </div>
-          <div className="option">
-            <input
-              type="radio"
-              id="fairytale"
-              name="genre"
-              value="fairytale"
-              checked={selectedGenre === 'fairytale'}
-              onChange={handleGenreChange}
-            />
-            <label htmlFor="fairytale">Fairytale</label>
-          </div>
+      <section className="quiz">
+        <form>
+          <h2>{questionText}</h2>
+          {options.map(option => (
+            <div className="option" key={option.value}>
+              <input
+                type="radio"
+                id={option.value}
+                name={`option${questionNumber}`}
+                value={option.value}
+                checked={selectedOption === option.value}
+                onChange={handleOptionChange}
+              />
+              <label htmlFor={option.value}>{option.label}</label>
+            </div>
+          ))}
           <div className="submit">
             <button type="button" onClick={handleNextButtonClick}>Next</button>
-            </div>
+          </div>
         </form>
       </section>
     </div>
