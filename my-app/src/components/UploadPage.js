@@ -187,7 +187,7 @@ const Form = () => {
                         type='text'
                         name='Comment'
                         placeholder='Leave a Comment'
-                        value={user.Name}
+                        value={user.Comment}
                         onChange={data}
                         autoComplete='off'
                         required
