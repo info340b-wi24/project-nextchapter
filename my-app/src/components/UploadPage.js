@@ -186,7 +186,7 @@ const Form = () => {
                     <input
                         type='text'
                         name='Comment'
-                        placeholder='Add a Comment About the Book'
+                        placeholder='Leave a Comment'
                         value={user.Name}
                         onChange={data}
                         autoComplete='off'
@@ -194,6 +194,7 @@ const Form = () => {
                     />
 
                     <input type="file" onChange={handleImageChange} />
+                    
                     <button type="submit" className="submit-button" >Submit</button>
                 </form>
             </div>
