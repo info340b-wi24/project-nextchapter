@@ -182,6 +182,17 @@ const Form = () => {
                         <option value='Hardcover'>Hardcover</option>
                         <option value='Paperback'>Paperback</option>
                     </select>
+
+                    <input
+                        type='text'
+                        name='Comment'
+                        placeholder='Add a Comment About the Book'
+                        value={user.Name}
+                        onChange={data}
+                        autoComplete='off'
+                        required
+                    />
+
                     <input type="file" onChange={handleImageChange} />
                     <button type="submit" className="submit-button" >Submit</button>
                 </form>
