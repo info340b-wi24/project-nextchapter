@@ -1,47 +1,39 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { ref, onValue, getDatabase } from 'firebase/database';
+import { ref, get, getDatabase } from 'firebase/database';
 
-function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
+function QuizResults() {
   const location = useLocation();
   const [books, setBooks] = useState([]);
+  // Retrieve the quiz selections from the location state
+  const { selectedGenre, selectedCondition, selectedType } = location.state || {};
 
   useEffect(() => {
-    const fetchData = async () => {
-      const db = getDatabase();
-      const booksRef = ref(db, 'UserData'); 
+    const db = getDatabase();
+    const booksRef = ref(db, 'UserData');
 
-      onValue(booksRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-          const filteredBooks = Object.values(data).filter(book => (
-            book.Genre === selectedGenre &&
-            book.Condition === selectedCondition &&
-            book.CoverType === selectedType
-          ));
-          setBooks(filteredBooks);
-        } else {
-          setBooks([]);
-        }
-      }, (error) => {
-        console.error(error);
+    // Fetch data once instead of listening for changes
+    get(booksRef).then((snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const filteredBooks = Object.values(data).filter(book => (
+          book.Genre === selectedGenre &&
+          book.Condition === selectedCondition &&
+          book.CoverType === selectedType
+        ));
+        setBooks(filteredBooks);
+      } else {
         setBooks([]);
-      });
-    };
-
-    fetchData();
-
+      }
+    }).catch((error) => {
+      console.error(error);
+      setBooks([]);
+    });
   }, [selectedGenre, selectedCondition, selectedType]);
-
-  const isQuizResultsPage = location.pathname === '/quizresults';
-
-  if (!isQuizResultsPage) {
-    return null;
-  }
 
   return (
     <div>
-      <h3>Our Recommendations for you</h3>
+      <h3>Our Recommendations for You</h3>
       {books.length === 0 ? (
         <p>No matching books found.</p>
       ) : (
@@ -51,12 +43,7 @@ function QuizResults({ selectedGenre, selectedCondition, selectedType }) {
               <div className="card">
                 <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
                 <h3>{book.BookTitle}</h3>
-                <p>Author: {book.Author}</p>
-                <p>Condition: {book.Condition}</p>
-                <p>Cover Type: {book.CoverType}</p>
-                <p>Genre: {book.Genre}</p>
-                <p>Length: {book.Length}</p>
-                <p>Contact Owner: {book.Name}</p>
+                {/* ... other book details */}
               </div>
             </div>
           ))}

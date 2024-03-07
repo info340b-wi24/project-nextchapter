@@ -13,7 +13,7 @@ function NavBar(props) {
       return(
         <div className="hamburger-links">
               <div><Link onClick={() => toggleHamburger()} to="/upload">Upload</Link></div>
-              <div><Link onClick={() => toggleHamburger()} to="/quizquestion1">Quiz</Link></div>
+              <div><Link onClick={() => toggleHamburger()} to="/quizparent">Quiz</Link></div>
               <div><Link onClick={() => toggleHamburger()} to="/about-us">About Us</Link></div>
               <div><Link onClick={() => toggleHamburger()} to="/my-shelf">My Shelf</Link></div>
           </div>
@@ -31,7 +31,7 @@ function NavBar(props) {
       </div>
       <ul className="nav-links">
         <li><Link to="/upload">Upload</Link></li>
-        <li><Link to="/quizquestion1">Quiz</Link></li>
+        <li><Link to="/quizparent">Quiz</Link></li>
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/my-shelf">My Shelf</Link></li>
       </ul>

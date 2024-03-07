@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { storage } from '../firebase/ firebase-config';
+import { serverTimestamp } from 'firebase/database';
 
 
 const Form = () => {
@@ -13,6 +14,8 @@ const Form = () => {
         Condition: '',
         CoverType: '',
         Photo: null,
+
+        createdAt: serverTimestamp(),
     });
 
     const data = (e) => {
