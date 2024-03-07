@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { getDatabase, ref, set } from 'firebase/database';
 
 function QuizComponent(props) {
-  const { userId, userData, questionNumber, questionText, options } = props;
+  const { userId, questionNumber, questionText, options } = props;
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate();
 
@@ -14,11 +14,8 @@ function QuizComponent(props) {
   const handleNextButtonClick = () => {
     if (selectedOption) {
       const db = getDatabase();
-      const userRef = ref(db, 'UserData/' + userId);
-      set(userRef, {
-        ...userData,
-        [`selectedOption${questionNumber}`]: selectedOption
-      })
+      const userRef = ref(db, `UserData/${userId}/selectedOption${questionNumber}`);
+      set(userRef, selectedOption)
       .then(() => {
         const nextQuestionNumber = questionNumber + 1;
         if (nextQuestionNumber <= 3) {
