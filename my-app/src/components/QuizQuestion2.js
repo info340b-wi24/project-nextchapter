@@ -3,10 +3,10 @@ import QuizComponent from './QuizComponent';
 
 function QuizQuestion2(props) {
   const options = [
-    { value: 'new', label: 'New' },
-    { value: 'like_new', label: 'Like New' },
-    { value: 'good', label: 'Good' },
-    { value: 'acceptable', label: 'Acceptable' }
+    { value: 'New', label: 'New' },
+    { value: 'Like_new', label: 'Like New' },
+    { value: 'Good', label: 'Good' },
+    { value: 'Acceptable', label: 'Acceptable' }
   ];
 
   return (

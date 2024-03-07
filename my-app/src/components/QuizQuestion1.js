@@ -3,13 +3,13 @@ import QuizComponent from './QuizComponent';
 
 function QuizQuestion1(props) {
   const options = [
-    { value: 'fantasy', label: 'Fantasy' },
-    { value: 'mystery', label: 'Mystery' },
-    { value: 'science fiction', label: 'Science Fiction' },
-    { value: 'romance', label: 'Romance' },
-    { value: 'fiction', label: 'Fiction' },
-    { value: 'children', label: 'Children' },
-    { value: 'fairytale', label: 'Fairytale' }
+    { value: 'Fantasy', label: 'Fantasy' },
+    { value: 'Mystery', label: 'Mystery' },
+    { value: 'Science Fiction', label: 'Science Fiction' },
+    { value: 'Romance', label: 'Romance' },
+    { value: 'Fiction', label: 'Fiction' },
+    { value: 'Children', label: 'Children' },
+    { value: 'Fairytale', label: 'Fairytale' }
   ];
 
   return (

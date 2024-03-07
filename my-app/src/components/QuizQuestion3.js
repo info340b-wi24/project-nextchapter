@@ -3,8 +3,8 @@ import QuizComponent from './QuizComponent';
 
 function QuizQuestion3(props) {
   const options = [
-    { value: 'paperback', label: 'Paperback' },
-    { value: 'hardcover', label: 'Hardcover' }
+    { value: 'Paperback', label: 'Paperback' },
+    { value: 'Hardcover', label: 'Hardcover' }
   ];
 
   return (
