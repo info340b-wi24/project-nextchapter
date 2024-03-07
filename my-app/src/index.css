@@ -396,6 +396,7 @@ section {
 }
 
 /* Card Styling */
+
 .card {
     border: 1px solid rgba(0, 0, 0, 0.31);
     background: white;
@@ -533,7 +534,7 @@ section {
     margin-left: 40px;
 }
 
-/*BOOKSHELF*/
+/*Book Shelf*/
 
 .myshelfcontainer h3 {
     text-align: center;
