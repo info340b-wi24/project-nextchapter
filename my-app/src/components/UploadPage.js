@@ -103,6 +103,7 @@ const Form = () => {
                     <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway}>Giveaway</button>
                     <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap}>Swap</button>
                 </div>
+                    <label for="Name">Your Name:</label>
                     <input
                         type='text'
                         name='Name'
@@ -112,6 +113,7 @@ const Form = () => {
                         autoComplete='off'
                         required
                     />
+                    <label for="BookTitle">Book Title:</label>
                     <input
                         type='text'
                         name='BookTitle'
@@ -121,6 +123,7 @@ const Form = () => {
                         autoComplete='off'
                         required
                     />
+                    <label for="name">Author Name:</label>
                     <input
                         type='text'
                         name='Author'
@@ -130,6 +133,7 @@ const Form = () => {
                         autoComplete='off'
                         required
                     />
+                    <label for="name">Genre:</label>
                     <select
                         name='Genre'
                         value={user.Genre}
@@ -151,6 +155,7 @@ const Form = () => {
                         <option value='Poetry'>Poetry</option>
                         <option value='Horror'>Horror</option>
                     </select>
+                    <label for="name">Book Length:</label>
                     <select
                         name='Length'
                         value={user.Length}
@@ -163,6 +168,7 @@ const Form = () => {
                         <option value='Long'>Long</option>
 
                     </select>
+                    <label for="name">Book Condition:</label>
                     <select
                         name='Condition'
                         value={user.Condition}
@@ -175,6 +181,7 @@ const Form = () => {
                         <option value='Good'>Good</option>
                         <option value='Acceptable'>Acceptable</option>
                     </select>
+                    <label for="name">Cover Type:</label>
                     <select
                         name='CoverType'
                         value={user.CoverType}
@@ -185,7 +192,7 @@ const Form = () => {
                         <option value='Hardcover'>Hardcover</option>
                         <option value='Paperback'>Paperback</option>
                     </select>
-
+                    <label for="name">Leave a Comment:</label>
                     <input
                         type='text'
                         name='Comment'
@@ -195,7 +202,7 @@ const Form = () => {
                         autoComplete='off'
                         required
                     />
-
+                    <label for="name">Upload Book Image:</label>
                     <input type="file" onChange={handleImageChange} />
                     
                     <button type="submit" className="submit-button" >Submit</button>
