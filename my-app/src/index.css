@@ -516,6 +516,8 @@ section {
 .person-container img {
     height: auto;
     width: 220px;
+    object-fit: cover;
+    
 }
 
 .img-with-text {
