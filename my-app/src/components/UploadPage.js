@@ -26,8 +26,6 @@ const Form = () => {
     };
 
     const [image, setImage] = useState(null);
-    const [giveawayClicked, setGiveawayClicked] = useState(false);
-    const [swapClicked, setSwapClicked] = useState(false);
     const [choice, setChoice] = useState('');
 
     // Event handler for radio button change
@@ -42,17 +40,6 @@ const Form = () => {
         }
     };
     
-    const handleGiveaway = () => {
-        setUser({ ...user, Decision: 'Giveaway' });
-        setGiveawayClicked(true); 
-        setSwapClicked(false); 
-    };
-
-    const handleSwap = () => {
-        setUser({ ...user, Decision: 'Swap' });
-        setSwapClicked(true); 
-        setGiveawayClicked(false); 
-    };
 
     const getData = async (e) => { 
         e.preventDefault();
@@ -72,7 +59,8 @@ const Form = () => {
             
                 const formData = {
                     ...user,
-                    Photo: downloadURL, 
+                    Photo: downloadURL,
+                    Decision: choice, 
                 };
     
                 const options = {
@@ -111,14 +99,13 @@ const Form = () => {
             </div>
             <div className='container'>
             <form onSubmit={getData} method='POST'> 
-            <div className='button-container'>
-            <div className='button-container'>
-            <div className='button-container'>
+            <div className="radioupload">
             <label>
                     <input
                         type="radio"
-                        value="giveaway"
-                        checked={choice === 'giveaway'}
+                        name="decision"
+                        value="Giveaway"
+                        checked={choice === 'Giveaway'}
                         onChange={handleRadioChange}
                         required
                     />
@@ -127,19 +114,18 @@ const Form = () => {
                 <label>
                     <input
                         type="radio"
-                        value="swap"
-                        checked={choice === 'swap'}
+                        name="decision"
+                        value="Swap"
+                        checked={choice === 'Swap'}
                         onChange={handleRadioChange}
                         required
                     />
                     Swap
                 </label>
-            </div>
-            </div>
-            </div>
+                </div>
 
-                    <label htmlFor="Name">Your Email:</label>
-                    <input
+                <label htmlFor="Name">Your Email:</label>
+                <input
                         type='text'
                         name='Email'
                         id='Email'
@@ -149,6 +135,7 @@ const Form = () => {
                         autoComplete='off'
                         required
                     />
+        
                     <label htmlFor="BookTitle">Book Title:</label>
                     <input
                         type='text'
@@ -190,7 +177,7 @@ const Form = () => {
                         <option value='Children'>Children</option>
                         <option value='Science'>Science</option>
                         <option value='Biography'>Biography</option>
-                        <option value='Fairytale'>Fairy tale</option>
+                        <option value='Fairytale'>Fairytale</option>
                         <option value='Poetry'>Poetry</option>
                         <option value='Horror'>Horror</option>
                     </select>
@@ -263,9 +250,9 @@ const Form = () => {
 
                     <button type="submit" className="submit-button" >Submit</button>
                 </form>
+                </div>
             </div>
         </div>
-    </div>
     );
 };
 

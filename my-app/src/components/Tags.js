@@ -11,16 +11,16 @@ function GenreTags({ onGenreClick, onResetClick }) {
 
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
-    { name: 'Non-Fiction', className: 'type-button-non' },
+    { name: 'Non-Fiction', className: 'type-button-non-fiction' },
     { name: 'Horror', className: 'type-button-horror' },
     { name: 'Mystery', className: 'type-button-mystery' },
     { name: 'Romance', className: 'type-button-romance' },
-    { name: 'Narrative', className: 'type-button-nar' },
+    { name: 'Narrative', className: 'type-button-narrative' },
     { name: 'Informative', className: 'type-button-informative' },
     { name: 'Children', className: 'type-button-children' },
     { name: 'Science', className: 'type-button-science' },
     { name: 'Biography', className: 'type-button-biography' },
-    { name: 'Fairy tale', className: 'type-button-fairy' },
+    { name: 'Fairytale', className: 'type-button-fairy' },
     { name: 'Poetry', className: 'type-button-poetry' },
   ];
 
@@ -44,7 +44,7 @@ function GenreTags({ onGenreClick, onResetClick }) {
           </div>
         </div>
         <button className="reset-button" onClick={onResetClick}> 
-          Reset
+          Reset filter
         </button>
       </div>
     </div>
