@@ -5,14 +5,12 @@ import { ref, get, getDatabase } from 'firebase/database';
 function QuizResults() {
   const location = useLocation();
   const [books, setBooks] = useState([]);
-  // Retrieve the quiz selections from the location state
   const { selectedGenre, selectedCondition, selectedType } = location.state || {};
 
   useEffect(() => {
     const db = getDatabase();
     const booksRef = ref(db, 'UserData');
 
-    // Fetch data once instead of listening for changes
     get(booksRef).then((snapshot) => {
       const data = snapshot.val();
       if (data) {
@@ -43,7 +41,6 @@ function QuizResults() {
               <div className="card">
                 <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
                 <h3>{book.BookTitle}</h3>
-                {/* ... other book details */}
               </div>
             </div>
           ))}

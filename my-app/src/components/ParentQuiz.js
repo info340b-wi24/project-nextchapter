@@ -1,6 +1,6 @@
-import { React, useState } from 'react';
+import React, {useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import QuizComponent from './QuizComponent'; // Import your QuizComponent here
+import QuizComponent from './QuizComponent';
 
 function ParentQuiz(props) {
     const [answers, setAnswers] = useState({
@@ -18,19 +18,18 @@ function ParentQuiz(props) {
       };
     
       const handleSubmit = (event) => {
-        event.preventDefault(); // Prevent the default form submission
+        event.preventDefault();
         const { '1': selectedGenre, '2': selectedCondition, '3': selectedType } = answers;
 
         if (!answers.selectedGenre || !answers.selectedCondition || !answers.selectedType) {
             alert('Please answer all questions before submitting.');
             return;
           }
-          
+
         navigate('/quizresults', { state: { selectedGenre, selectedCondition, selectedType } });
 
       };
     
-
   const genreOptions = [
     { value: 'Fantasy', label: 'Fantasy' },
     { value: 'Mystery', label: 'Mystery' },
