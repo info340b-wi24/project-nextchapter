@@ -1,5 +1,5 @@
 import React from 'react';
-import briImage from '../images/bri.jpg'; // Update the import path
+import briImage from '../images/bri.jpg';
 import kaylaImage from '../images/kayla.jpg';
 import alexisImage from '../images/alexis2.jpg';
 import ericaImage from '../images/erica.jpg';
