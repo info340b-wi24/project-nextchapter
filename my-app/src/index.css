@@ -16,6 +16,7 @@ a {
 }
 
 /*Navigation Formatting */
+
 .navbar {
     padding: 0.5rem 1rem;
     font-size: 1.3rem;
@@ -136,11 +137,12 @@ section {
 
 .page-title h1,
 .quiz h2 {
-    font-size: 2rem; /* Adjust the font size as needed */
+    font-size: 2rem;
 }
 
 
 /*Genre Filter Stylings*/
+
 .genre-box {
     color:white;
     padding: 0.3rem;
@@ -294,6 +296,7 @@ section {
 }
 
 /* Homepage art */
+
 .custom-section {
     background-image: url('/src/images/oldbooks.jpg');
     display: flex;
@@ -399,6 +402,7 @@ section {
 }
 
 /* Card Styling */
+
 .card {
     border: 1px solid rgba(0, 0, 0, 0.31);
     background: white;
@@ -430,7 +434,6 @@ section {
     color:black;
 }
 
-/* End of card flip section */
 
 /* Quiz Button On Home Page */
 
