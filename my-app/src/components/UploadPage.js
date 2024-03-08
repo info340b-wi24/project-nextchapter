@@ -103,39 +103,43 @@ const Form = () => {
                     <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway}>Giveaway</button>
                     <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap}>Swap</button>
                 </div>
-                    <label for="Name">Your Name:</label>
+                    <label htmlFor="Name">Your Name:</label>
                     <input
                         type='text'
                         name='Name'
+                        id='Name'
                         placeholder='Your Name'
                         value={user.Name}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
-                    <label for="BookTitle">Book Title:</label>
+                    <label htmlFor="BookTitle">Book Title:</label>
                     <input
                         type='text'
                         name='BookTitle'
+                        id='BookTitle'
                         placeholder='Book Title'
                         value={user.BookTitle}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
-                    <label for="Author">Author Name:</label>
+                    <label htmlFor="Author">Author Name:</label>
                     <input
                         type='text'
                         name='Author'
+                        id='Author'
                         placeholder='Author'
                         value={user.Author}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
-                    <label for="Genre">Genre:
+                    <label htmlFor="Genre">Genre:
                     <select
                         name='Genre'
+                        id = 'Genre'
                         value={user.Genre}
                         onChange={data}
                         required
@@ -157,9 +161,10 @@ const Form = () => {
                     </select>
                     </label>
 
-                    <label for="Length">Book Length:
+                    <label htmlFor="Length">Book Length:
                     <select
                         name='Length'
+                        id='Length'
                         value={user.Length}
                         onChange={data}
                         required
@@ -173,9 +178,10 @@ const Form = () => {
                     </label>
 
 
-                    <label for="Condition">Book Condition:
+                    <label htmlFor="Condition">Book Condition:
                     <select
                         name='Condition'
+                        id="Condition"
                         value={user.Condition}
                         onChange={data}
                         required
@@ -188,9 +194,10 @@ const Form = () => {
                     </select>
                     </label>
 
-                    <label for="Cover">Cover Type:
+                    <label htmlFor="Cover">Cover Type:
                     <select
                         name='CoverType'
+                        id="Cover"
                         value={user.CoverType}
                         onChange={data}
                         required
@@ -201,10 +208,11 @@ const Form = () => {
                     </select>
                     </label>
 
-                    <label for="Comment">Leave a Comment:
+                    <label htmlFor="Comment">Leave a Comment:
                     <input
                         type='text'
                         name='Comment'
+                        id="Comment"
                         placeholder='Leave a Comment'
                         value={user.Comment}
                         onChange={data}
@@ -213,8 +221,8 @@ const Form = () => {
                     />
                     </label>
 
-                    <label for="Book image">Upload Book Image:
-                    <input type="file" onChange={handleImageChange} />
+                    <label htmlFor="Book image">Upload Book Image:
+                    <input id="Book image" type="file" onChange={handleImageChange} />
                     </label>
 
                     <button type="submit" className="submit-button" >Submit</button>
