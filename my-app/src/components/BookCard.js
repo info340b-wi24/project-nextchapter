@@ -96,7 +96,7 @@ function BookList() {
       </div>
       <h2>Find your next read!</h2>
       <div className="create">
-        <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
+        <Link to="/quizParent"><button>Take A Quiz</button></Link>
       </div>
     </div>
   );
