@@ -11,11 +11,11 @@ function GenreTags({ onGenreClick, onResetClick }) {
 
   const genres = [
     { name: 'Fiction', className: 'type-button-fiction' },
-    { name: 'Non-Fiction', className: 'type-button-non' },
+    { name: 'Non-Fiction', className: 'type-button-non-fiction' },
     { name: 'Horror', className: 'type-button-horror' },
     { name: 'Mystery', className: 'type-button-mystery' },
     { name: 'Romance', className: 'type-button-romance' },
-    { name: 'Narrative', className: 'type-button-nar' },
+    { name: 'Narrative', className: 'type-button-narrative' },
     { name: 'Informative', className: 'type-button-informative' },
     { name: 'Children', className: 'type-button-children' },
     { name: 'Science', className: 'type-button-science' },
