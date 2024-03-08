@@ -7,13 +7,14 @@ import { serverTimestamp } from 'firebase/database';
 const Form = () => {
     const [user, setUser] = useState({
         Decision: '', 
+        Email: '',
         BookTitle: '',
         Author: '',
         Genre: '',
         Length: '',
         Condition: '',
         CoverType: '',
-        Photo: null,
+        Photo: null, 
 
         createdAt: serverTimestamp(),
     });
@@ -27,6 +28,13 @@ const Form = () => {
     const [image, setImage] = useState(null);
     const [giveawayClicked, setGiveawayClicked] = useState(false);
     const [swapClicked, setSwapClicked] = useState(false);
+    const [choice, setChoice] = useState('');
+
+    // Event handler for radio button change
+    const handleRadioChange = (event) => {
+        setChoice(event.target.value);
+    };
+
 
     const handleImageChange = e => {
         if (e.target.files[0]) {
@@ -48,6 +56,11 @@ const Form = () => {
 
     const getData = async (e) => { 
         e.preventDefault();
+
+        if (!choice) {
+            alert('Please select either Giveaway or Swap.');
+            return;
+        }
     
         if (image) {
             const storageRef = ref(storage, `images/${image.name}`);
@@ -99,17 +112,39 @@ const Form = () => {
             <div className='container'>
             <form onSubmit={getData} method='POST'> 
             <div className='button-container'>
-            <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway} required>Giveaway</button>
-            <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap} required>Swap</button>
+            <div className='button-container'>
+            <div className='button-container'>
+            <label>
+                    <input
+                        type="radio"
+                        value="giveaway"
+                        checked={choice === 'giveaway'}
+                        onChange={handleRadioChange}
+                        required
+                    />
+                    Giveaway
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        value="swap"
+                        checked={choice === 'swap'}
+                        onChange={handleRadioChange}
+                        required
+                    />
+                    Swap
+                </label>
+            </div>
+            </div>
             </div>
 
-                    <label htmlFor="Name">Your Name:</label>
+                    <label htmlFor="Name">Your Email:</label>
                     <input
                         type='text'
-                        name='Name'
-                        id='Name'
+                        name='Email'
+                        id='Email'
                         placeholder='Your Email (Readers will contact you here for a swap or giveaway!)'
-                        value={user.Name}
+                        value={user.Email}
                         onChange={data}
                         autoComplete='off'
                         required
