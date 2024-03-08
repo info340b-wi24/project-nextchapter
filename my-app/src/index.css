@@ -224,7 +224,7 @@ section {
 .type-button-narrative,
 .type-button-informative,
 .type-button-children,
-.type-button-fairy,
+.type-button-fairytale,
 .type-button-science,
 .type-button-horror,
 .type-button-biography,
@@ -274,7 +274,7 @@ section {
     background-color: rgb(149, 65, 149);
 }
 
-.type-button-fairy {
+.type-button-fairytale {
     background-color: rgb(93, 128, 36); 
 }
 
