@@ -26,9 +26,13 @@ function BookDetail() {
       console.error(error);
       setBook(null);
     });
-  },[bookTitle]);
+  }, [bookTitle]);
 
   const genre = book ? (book.Genre ? book.Genre.toLowerCase() : '') : '';
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText(book.Email);
+  };
 
   return (
     <div>
@@ -42,8 +46,8 @@ function BookDetail() {
           <p>Book Condition: {book.Condition}</p>
           <p>Book Type: {book.CoverType}</p>
           <p>Book Length: {book.Length}</p>
-          <p>{book.Description}</p>
-          <p>Contact Owner: {book.Name}</p>
+          <p>Description: {book.Comment}</p>
+          <button onClick={handleCopyEmail}>Copy Owner Email</button>
         </div>
       )}
     </div>
