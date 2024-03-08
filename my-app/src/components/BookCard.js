@@ -80,7 +80,7 @@ function BookList() {
              <Link to={`/books/${book.title}`} className="book-link">
              <div className="card">
               <img src={book.imgSrc} alt={book.altText} />
-              <h3>{book.title}</h3>
+              <h2>{book.title}</h2>
               <p>{book.Decision}</p>
               {selectedGenre && (
                 <div 
@@ -94,7 +94,7 @@ function BookList() {
           </div>
         ))}
       </div>
-      <h3>Find your next read!</h3>
+      <h2>Find your next read!</h2>
       <div className="create">
         <Link to="/quizquestion1"><button>Take A Quiz</button></Link>
       </div>

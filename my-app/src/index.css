@@ -230,7 +230,7 @@ section {
     padding: 10px 7px;
     width: 25vw;
     height: 3rem;
-    font-size: 15px;
+    font-size: 1rem;
     border-radius: 5px;
     margin-bottom: 15px; 
     cursor: pointer;
@@ -246,15 +246,15 @@ section {
 }
 
 .type-button-fiction {
-    background-color: #4981af;
+    background-color: #0a538e;
 }
 
 .type-button-non {
-    background-color: #c66c6c; 
+    background-color: #aa6161; 
 }
 
 .type-button-mystery {
-    background-color: rgb(199, 149, 0); 
+    background-color: rgb(128, 77, 0); 
 }
 
 .type-button-romance {
@@ -270,23 +270,23 @@ section {
 }
 
 .type-button-children {
-    background-color: rgb(184, 114, 184);
+    background-color: rgb(149, 65, 149);
 }
 
 .type-button-fairy {
-    background-color: rgb(108, 178, 118); 
+    background-color: rgb(93, 128, 36); 
 }
 
 .type-button-fantasy {
-    background-color: #fbba5f;
+    background-color: #914b0a;
 }
 
 .type-button-science  {
-    background-color: #bf6773;
+    background-color: #be06a9;
 }
 
 .type-button-poetry {
-    background-color: #71c4fe;
+    background-color: #2577b1;
 }
 
 .type-button-biography {
