@@ -49,7 +49,6 @@ const Form = () => {
     const getData = async (e) => { 
         e.preventDefault();
     
-        // First, upload the image to Firebase Storage if an image is selected
         if (image) {
             const storageRef = ref(storage, `images/${image.name}`);
             

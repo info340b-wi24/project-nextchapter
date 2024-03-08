@@ -11,12 +11,11 @@ function MyShelf() {
     const unsubscribe = onValue(booksRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Correctly chaining the .map() with .sort() before setting the state
         const booksArray = Object.values(data).map(book => ({
           ...book,
           imgSrc: book.Photo,
           altText: `Cover of ${book.BookTitle}`, 
-        })).sort((a, b) => b.uploadTimestamp - a.uploadTimestamp); // Corrected line
+        })).sort((a, b) => b.uploadTimestamp - a.uploadTimestamp);
 
         setBooks(booksArray);
       } else {
@@ -28,7 +27,7 @@ function MyShelf() {
     });
 
     
-    return () => unsubscribe(); // This is correctly placed for cleanup
+    return () => unsubscribe();
   }, []);
 
   return (

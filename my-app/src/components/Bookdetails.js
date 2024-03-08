@@ -10,7 +10,6 @@ function BookDetail() {
     const db = getDatabase();
     const booksRef = ref(db, 'UserData');
 
-    // Find the book with matching title
     onValue(booksRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
@@ -18,14 +17,14 @@ function BookDetail() {
         if (foundBook) {
           setBook(foundBook);
         } else {
-          setBook(null); // Book not found
+          setBook(null);
         }
       } else {
-        setBook(null); // No books available
+        setBook(null);
       }
     }, (error) => {
       console.error(error);
-      setBook(null); // Error occurred
+      setBook(null);
     });
   },[bookTitle]);
 
