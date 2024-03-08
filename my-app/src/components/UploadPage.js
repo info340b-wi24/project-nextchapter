@@ -89,12 +89,12 @@ const Form = () => {
     return (
         <div>
         <header>
-            <h2>List A Book</h2>
+            <h1>List A Book</h1>
         </header>
 
         <div className='form'>
             <div className="form-info">
-            <h5>Upload a Book to Next Chapter!</h5>
+            <h2>Upload a Book to Next Chapter!</h2>
             <p>Simply fill out the form to share your old stories</p>
             </div>
             <div className='container'>

@@ -36,7 +36,7 @@ function BookDetail() {
       {book && (
         <div className="card">
           <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
-          <h3>{book.BookTitle}</h3>
+          <h2>{book.BookTitle}</h2>
           <div className={`genre-box type-button-${genre}`}>
             {book.Genre}
           </div>

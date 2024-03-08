@@ -22,7 +22,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #93B78F;
+    background-color: #759b71;
     color: white;
 }
 
@@ -35,12 +35,17 @@ a {
     margin-left: 0;
     margin-bottom: 0.5rem;
 }
+
 .navbar .project-name a {
     color: white; 
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 700;
+}
+
+.navbar img {
+    object-fit: cover;
 }
 
 .navbar .project-name img {
@@ -64,7 +69,7 @@ a {
 
 .hamburger-links a {
     margin: 0.4rem;
-    color: #93B78F;
+    color: #759b71;
     font-size: 1.3rem;
 }
 
@@ -90,7 +95,7 @@ a {
     margin-right: 0.4rem;
 }
 
-header h2 {
+header h1 {
     margin-bottom:0rem ;
     font-weight:700;
     text-align:center;
@@ -98,7 +103,7 @@ header h2 {
     color:#7B5F49ff;
 }
 
-h3 {
+h2 {
     color:#7B5F49ff;
     margin-bottom:2rem;
     font-weight:600;
@@ -243,19 +248,19 @@ section {
 }
 
 .type-button-fiction {
-    background-color: #589acf;
+    background-color: #4981af;
 }
 
 .type-button-non {
-    background-color: #fd8a8a; 
+    background-color: #c66c6c; 
 }
 
 .type-button-mystery {
-    background-color: rgb(226, 205, 19); 
+    background-color: rgb(199, 149, 0); 
 }
 
 .type-button-romance {
-    background-color: rgb(242, 162, 183); 
+    background-color: rgb(169, 59, 88); 
 }
 
 .type-button-nar {
@@ -263,11 +268,11 @@ section {
 }
 
 .type-button-informative {
-    background-color: coral;
+    background-color: rgb(170, 60, 38);
 }
 
 .type-button-children {
-    background-color: plum;
+    background-color: rgb(184, 114, 184);
 }
 
 .type-button-fairy {
@@ -287,7 +292,7 @@ section {
 }
 
 .type-button-biography {
-    background-color: #9c89d1;
+    background-color: #5d4896;
 }
 
 /* Homepage art */
@@ -321,7 +326,7 @@ section {
     font-size: 1.8rem;
     height: 10vh;
     text-decoration: none;
-    background-color:#93B78F;
+    background-color:#759b71;
     border-radius: 10px;
     margin-top:1rem;
     color:white;
@@ -367,9 +372,9 @@ section {
 }
 
 .reset-button {
-    font-size: 1rem;
+    font-size: 1.3rem;
     padding: 10px 7px;
-    background-color: #93B78F !important;
+    background-color: #759b71 !important;
     color: white !important;
     border: none !important;
     cursor: pointer !important;
@@ -417,7 +422,7 @@ section {
     display: block;
 }
 
-.card h3 {
+.card h2 {
     margin: 10px 0;
     font-size: 15px;
     text-align: center;
@@ -434,7 +439,7 @@ section {
 .quizlink-home button {
     text-decoration: none;
     border: 2px solid #7B5F49ff;
-    background-color: #93B78F;
+    background-color: #759b71;
     border-radius: 10px;
     color: #7B5F49ff;
 }
@@ -535,7 +540,7 @@ section {
 
 /*BOOKSHELF*/
 
-.myshelfcontainer h3 {
+.myshelfcontainer h2 {
     text-align: center;
     font-size: 50px;
     color:#7B5F49;
@@ -632,7 +637,7 @@ section {
     }
     
     
-    .book-card h3, .card p {
+    .book-card h2, .card p {
         margin: 10px 0;
         font-size: 15px;
         text-align: center;
@@ -648,14 +653,18 @@ section {
         align-items: center;
         width: 80%;
         padding: 20px;
-        background-color: #93B78F;
+        background-color: #759b71;
         position: relative;
+    }
+
+    .form h2 {
+        color: white;
     }
 
     .form-info {
         text-align: center;
         color:white;
-        font-size:20px;
+        font-size:1.7rem;
     }
     
     .container {
@@ -667,7 +676,7 @@ section {
     select {
         margin-bottom: 20px;
         padding: 8px;
-        font-size: 16px;
+        font-size: 1.3rem;
         border: 1px solid #ccc;
         border-radius: 5px;
         width: 100%; 
@@ -678,7 +687,7 @@ section {
         color: green;
         border: none;
         padding: 10px;
-        font-size: 16px;
+        font-size: 1.3rem;
         border-radius: 5px;
         cursor: pointer;
         margin: auto;
@@ -691,10 +700,10 @@ section {
 
     .choice-button {
         background-color: white;
-        color: rgb(135, 180, 135);
+        color: #759b71;
         border: none;
         padding: 8px;
-        font-size: 16px;
+        font-size: 1.3rem;
         border-radius: 5px;
         cursor: pointer;
         margin-top:2rem;
@@ -709,7 +718,7 @@ section {
     }
 
     button {
-        background-color: #93B78F;
+        background-color: #759b71;
         color: white;
         border: none;
         cursor: pointer;
@@ -726,6 +735,10 @@ footer {
     font-size: 100%;
     padding-left: 20px;
     color: #7B5F49;
+}
+
+footer a {
+    text-decoration: underline;
 }
 
 /*Smaller screen format */
@@ -859,7 +872,7 @@ footer {
 
     /*Book Shelf*/
 
-    .myshelfcontainer h3 {
+    .myshelfcontainer h2 {
         text-align: center;
         font-size: 50px;
         color:#7B5F49;
