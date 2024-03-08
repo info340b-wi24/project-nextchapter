@@ -14,7 +14,6 @@ function BookDetail() {
     onValue(booksRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        // Use decodedBookTitle to compare against your database entries
         const foundBook = Object.values(data).find((b) => b.BookTitle.toLowerCase().trim() === decodedBookTitle.toLowerCase().trim());
         if (foundBook) {
           setBook(foundBook);
@@ -25,8 +24,6 @@ function BookDetail() {
         setBook(null);
       }
     });
-
-    // The return statement for cleanup, omitted for brevity
 
   }, [decodedBookTitle]); 
 
