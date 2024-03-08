@@ -23,7 +23,10 @@ function BookList() {
           imgSrc: book.Photo,
           decision: book.Decision,
           altText: `Cover of ${book.BookTitle}`, 
-        }));
+        }))
+        .sort((a, b) => b.createdAt - a.createdAt)
+        .slice(0, 30); 
+
         setBooks(booksArray);
       } else {
         setBooks([]);

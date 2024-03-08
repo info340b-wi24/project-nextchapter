@@ -17,7 +17,8 @@ function BookShelf() {
           altText: `Cover of ${book.BookTitle}`, 
           createdAtNumeric: Number(book.createdAt)
         }))
-        .sort((a, b) => b.createdAtNumeric - a.createdAtNumeric);
+        .sort((a, b) => b.createdAtNumeric - a.createdAtNumeric)
+        .slice(0, 9);
 
         setBooks(booksArray);
       } else {
