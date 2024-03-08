@@ -217,11 +217,11 @@ section {
 
 /*Tag Formatting */
 .type-button-fiction,
-.type-button-non,
+.type-button-non-fiction,
 .type-button-fantasy,
 .type-button-mystery,
 .type-button-romance,
-.type-button-nar,
+.type-button-narrative,
 .type-button-informative,
 .type-button-children,
 .type-button-fairy,
@@ -251,7 +251,7 @@ section {
     background-color: #0a538e;
 }
 
-.type-button-non {
+.type-button-non-fiction {
     background-color: #aa6161; 
 }
 
@@ -263,7 +263,7 @@ section {
     background-color: rgb(169, 59, 88); 
 }
 
-.type-button-nar {
+.type-button-narrative {
     background-color: #257372; 
 }
 
