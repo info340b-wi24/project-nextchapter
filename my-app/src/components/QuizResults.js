@@ -47,10 +47,10 @@ function QuizResults() {
   }, [selectedGenre, selectedCondition, selectedType]);
 
   return (
-    <div>
+    <div className="recommendations-container">
       <h3>Our Recommendations for You</h3>
       {books.length === 0 ? (
-        <p>No matching books found.</p>
+        <p>No matching books found, please fill out the quiz again!</p>
       ) : (
         <div className="books-listed">
           {books.map((book, index) => (

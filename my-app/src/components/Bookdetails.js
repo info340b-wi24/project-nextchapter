@@ -40,6 +40,7 @@ function BookDetail() {
         <div className="card">
           <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
           <h2>{book.BookTitle}</h2>
+          <p>{book.Decision}</p>
           <div className={`genre-box type-button-${genre}`}>
             {book.Genre}
           </div>
