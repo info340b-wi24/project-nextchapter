@@ -89,12 +89,12 @@ const Form = () => {
     return (
         <div>
         <header>
-            <h2>List A Book</h2>
+            <h1>List A Book</h1>
         </header>
 
         <div className='form'>
             <div className="form-info">
-            <h5>Upload a Book to Next Chapter!</h5>
+            <h2>Upload a Book to Next Chapter!</h2>
             <p>Simply fill out the form to share your old stories</p>
             </div>
             <div className='container'>
@@ -103,35 +103,43 @@ const Form = () => {
                     <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway}>Giveaway</button>
                     <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap}>Swap</button>
                 </div>
+                    <label htmlFor="Name">Your Name:</label>
                     <input
                         type='text'
                         name='Name'
+                        id='Name'
                         placeholder='Your Name'
                         value={user.Name}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
+                    <label htmlFor="BookTitle">Book Title:</label>
                     <input
                         type='text'
                         name='BookTitle'
+                        id='BookTitle'
                         placeholder='Book Title'
                         value={user.BookTitle}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
+                    <label htmlFor="Author">Author Name:</label>
                     <input
                         type='text'
                         name='Author'
+                        id='Author'
                         placeholder='Author'
                         value={user.Author}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
+                    <label htmlFor="Genre">Genre:
                     <select
                         name='Genre'
+                        id = 'Genre'
                         value={user.Genre}
                         onChange={data}
                         required
@@ -151,8 +159,12 @@ const Form = () => {
                         <option value='Poetry'>Poetry</option>
                         <option value='Horror'>Horror</option>
                     </select>
+                    </label>
+
+                    <label htmlFor="Length">Book Length:
                     <select
                         name='Length'
+                        id='Length'
                         value={user.Length}
                         onChange={data}
                         required
@@ -163,8 +175,13 @@ const Form = () => {
                         <option value='Long'>Long</option>
 
                     </select>
+                    </label>
+
+
+                    <label htmlFor="Condition">Book Condition:
                     <select
                         name='Condition'
+                        id="Condition"
                         value={user.Condition}
                         onChange={data}
                         required
@@ -175,8 +192,12 @@ const Form = () => {
                         <option value='Good'>Good</option>
                         <option value='Acceptable'>Acceptable</option>
                     </select>
+                    </label>
+
+                    <label htmlFor="Cover">Cover Type:
                     <select
                         name='CoverType'
+                        id="Cover"
                         value={user.CoverType}
                         onChange={data}
                         required
@@ -185,19 +206,25 @@ const Form = () => {
                         <option value='Hardcover'>Hardcover</option>
                         <option value='Paperback'>Paperback</option>
                     </select>
+                    </label>
 
+                    <label htmlFor="Comment">Leave a Comment:
                     <input
                         type='text'
                         name='Comment'
+                        id="Comment"
                         placeholder='Leave a Comment'
                         value={user.Comment}
                         onChange={data}
                         autoComplete='off'
                         required
                     />
+                    </label>
 
-                    <input type="file" onChange={handleImageChange} />
-                    
+                    <label htmlFor="Book image">Upload Book Image:
+                    <input id="Book image" type="file" onChange={handleImageChange} />
+                    </label>
+
                     <button type="submit" className="submit-button" >Submit</button>
                 </form>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function MyComponent(props) { //WE NEED TO CHANGE THE NAME OF MYCOMPONENT!- KAYLAAAA
+function HeaderSection(props) { 
     return (
       <header>
            <section className="custom-section">
@@ -19,7 +19,7 @@ function MyComponent(props) { //WE NEED TO CHANGE THE NAME OF MYCOMPONENT!- KAYL
 
 function Home(props) {
     return (
-        <MyComponent />
+        <HeaderSection />
     );
   }
 

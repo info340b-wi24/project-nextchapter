@@ -36,7 +36,7 @@ function GenreTags({ onGenreClick, onResetClick }) {
 
   return (
     <div>
-      <h3>Filter through Genres</h3>
+      <h2>Filter through Genres</h2>
       <div className="types-of-books row">
         <div className="filter-types row">
           <div className="tags">
