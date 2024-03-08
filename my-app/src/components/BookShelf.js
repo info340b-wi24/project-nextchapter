@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ref, onValue, getDatabase } from 'firebase/database';
 
-function MyShelf() {
+function BookShelf() {
   const [books, setBooks] = useState([]);
 
   useEffect(() => {
@@ -49,4 +49,4 @@ function MyShelf() {
   );
 }
 
-export default MyShelf;
+export default BookShelf;

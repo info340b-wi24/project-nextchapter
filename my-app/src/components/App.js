@@ -6,7 +6,7 @@ import Home from './Homepage';
 import BookList from './BookCard';
 import Footer from './Footer';
 import ParentComponent from './ParentQuiz';
-import Shelf from './MyShelf';
+import BookShelf from './BookShelf';
 import QuizResults from './QuizResults';
 import BookDetail from './Bookdetails';
 import Form from './UploadPage';
@@ -22,7 +22,7 @@ function App(props) {
         <Route path="/books/:bookTitle" element={<BookDetail />} />
         <Route path="/quizparent" element={<ParentComponent/>} />
         <Route path="/quizresults" element={<QuizResults/>} />
-        <Route path="/my-shelf" element={<Shelf/>} />
+        <Route path="/book-shelf" element={<BookShelf/>} />
         <Route path="*" element={<Navigate to="/"/>}></Route>
       </Routes>
 
