@@ -145,8 +145,8 @@ section {
 
 .genre-box {
     color:white;
-    padding: 0.3rem;
-    font-size: 15px !important;
+    padding: 0.3rem; 
+    font-size: 14px !important;
     border-radius: 5px !important;
     margin-bottom: 15px !important;
     cursor: default !important; 
@@ -185,15 +185,14 @@ section {
     padding: 0.2rem;
     max-width: 100%; 
     margin-top: 10px;
-    margin-bottom: 10px; 
+    margin-bottom: 5px; 
 }
 
 .tagButtons {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: flex-start;  
-    margin-left: 0.5rem;
+    align-items: flex-start; 
     width: 25vw; 
 }
 
@@ -230,15 +229,14 @@ section {
 .type-button-biography,
 .type-button-poetry {
     padding: 10px 7px;
-    width: 25vw;
-    height: 3rem;
+    width: calc(16.666% - 10px);
     font-size: 1rem;
     border-radius: 5px;
     margin-bottom: 15px; 
     cursor: pointer;
     text-align: center;
     font-weight: bold;
-    display: block; 
+    display: inline-block; 
 }
 
 /*Colors of tags*/
@@ -428,7 +426,15 @@ section {
     margin: 10px 0;
     font-size: 15px;
     text-align: center;
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    max-height: 3em; 
+    width: 100%; 
 }
+
 
 .card p {
     color:black;
@@ -684,6 +690,12 @@ section {
         border-radius: 5px;
         width: 100%; 
     }
+
+    .radioupload {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
     
     .submit-button {
         background-color: white;

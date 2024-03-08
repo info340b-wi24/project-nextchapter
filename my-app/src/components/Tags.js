@@ -20,7 +20,7 @@ function GenreTags({ onGenreClick, onResetClick }) {
     { name: 'Children', className: 'type-button-children' },
     { name: 'Science', className: 'type-button-science' },
     { name: 'Biography', className: 'type-button-biography' },
-    { name: 'Fairy tale', className: 'type-button-fairy' },
+    { name: 'Fairytale', className: 'type-button-fairy' },
     { name: 'Poetry', className: 'type-button-poetry' },
   ];
 
