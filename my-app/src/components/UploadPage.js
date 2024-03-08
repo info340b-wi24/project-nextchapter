@@ -98,16 +98,17 @@ const Form = () => {
             </div>
             <div className='container'>
             <form onSubmit={getData} method='POST'> 
-                <div className='button-container'>
-                    <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway}>Giveaway</button>
-                    <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap}>Swap</button>
-                </div>
+            <div className='button-container'>
+            <button type="button" className={`choice-button ${giveawayClicked ? 'clicked' : ''}`} onClick={handleGiveaway} required>Giveaway</button>
+            <button type="button" className={`choice-button ${swapClicked ? 'clicked' : ''}`} onClick={handleSwap} required>Swap</button>
+            </div>
+
                     <label htmlFor="Name">Your Name:</label>
                     <input
                         type='text'
                         name='Name'
                         id='Name'
-                        placeholder='Your Name'
+                        placeholder='Your Email (Readers will contact you here for a swap or giveaway!)'
                         value={user.Name}
                         onChange={data}
                         autoComplete='off'
@@ -154,7 +155,7 @@ const Form = () => {
                         <option value='Children'>Children</option>
                         <option value='Science'>Science</option>
                         <option value='Biography'>Biography</option>
-                        <option value='Fairy tale'>Fairy tale</option>
+                        <option value='Fairytale'>Fairy tale</option>
                         <option value='Poetry'>Poetry</option>
                         <option value='Horror'>Horror</option>
                     </select>
@@ -221,7 +222,8 @@ const Form = () => {
                     </label>
 
                     <label htmlFor="Book image">Upload Book Image:
-                    <input id="Book image" type="file" onChange={handleImageChange} />
+                    <input id="Book image" type="file" accept="image/jpeg, image/jpg" onChange={handleImageChange} />
+
                     </label>
 
                     <button type="submit" className="submit-button" >Submit</button>

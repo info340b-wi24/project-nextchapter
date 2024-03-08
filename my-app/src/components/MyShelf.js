@@ -15,7 +15,9 @@ function MyShelf() {
           ...book,
           imgSrc: book.Photo,
           altText: `Cover of ${book.BookTitle}`, 
-        })).sort((a, b) => b.uploadTimestamp - a.uploadTimestamp);
+          createdAtNumeric: Number(book.createdAt)
+        }))
+        .sort((a, b) => b.createdAtNumeric - a.createdAtNumeric);
 
         setBooks(booksArray);
       } else {
@@ -33,8 +35,8 @@ function MyShelf() {
   return (
     <div className="myshelfcontainer">
       <header className="page-title">
-        <h1>@book-worm Shelf</h1>
-        <h2>Your List Swaps & Giveaways!</h2>
+        <h1>Our Community Shelf</h1>
+        <h2>Most recent stories uploaded by our readers!</h2>
       </header>
       <div className="bookshelf">
         {books.map((book, index) => (

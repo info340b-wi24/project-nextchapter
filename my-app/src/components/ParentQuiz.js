@@ -4,31 +4,46 @@ import QuizComponent from './QuizComponent';
 
 function ParentQuiz(props) {
     const [answers, setAnswers] = useState({
-        genre: '',
-        condition: '',
-        coverType: ''
+        Genre: '',
+        Condition: '',
+        CoverType: ''
       });
       const navigate = useNavigate();
     
       const handleCollectAnswers = (questionNumber, selectedOption) => {
-        setAnswers((prevAnswers) => ({
-          ...prevAnswers,
-          [questionNumber]: selectedOption
-        }));
-      };
+        const questionKeyMap = {
+            '1': 'Genre',
+            '2': 'Condition',
+            '3': 'CoverType'
+          };
+        
+        const key = questionKeyMap[questionNumber];
+
+        setAnswers((prevAnswers) => {
+            const updatedAnswers = {
+                ...prevAnswers,
+                [key]: selectedOption
+              };
+          
+              // Lex Debug
+              console.log("Updated answers:", updatedAnswers);
+          
+              return updatedAnswers;
+            });
+          };
     
-      const handleSubmit = (event) => {
-        event.preventDefault();
-        const { '1': selectedGenre, '2': selectedCondition, '3': selectedType } = answers;
-
-        if (!answers.selectedGenre || !answers.selectedCondition || !answers.selectedType) {
-            alert('Please answer all questions before submitting.');
-            return;
-          }
-
-        navigate('/quizresults', { state: { selectedGenre, selectedCondition, selectedType } });
-
-      };
+          const handleSubmit = (event) => {
+            event.preventDefault();
+            
+            const { Genre: selectedGenre, Condition: selectedCondition, CoverType: selectedType } = answers;
+          
+            if (!selectedGenre || !selectedCondition || !selectedType) {
+              alert('Please answer all questions before submitting.');
+              return;
+            }
+            
+            navigate('/quizresults', { state: { selectedGenre, selectedCondition, selectedType } });
+          };
     
   const genreOptions = [
     { value: 'Fantasy', label: 'Fantasy' },
@@ -42,7 +57,7 @@ function ParentQuiz(props) {
 
   const conditionOptions = [
     { value: 'New', label: 'New' },
-    { value: 'Like_new', label: 'Like New' },
+    { value: 'Like new', label: 'Like New' },
     { value: 'Good', label: 'Good' },
     { value: 'Acceptable', label: 'Acceptable' }
   ];

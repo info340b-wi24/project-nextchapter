@@ -8,25 +8,42 @@ function QuizResults() {
   const { selectedGenre, selectedCondition, selectedType } = location.state || {};
 
   useEffect(() => {
-    const db = getDatabase();
-    const booksRef = ref(db, 'UserData');
+    const fetchBooks = async () => {
+      try {
+        const db = getDatabase();
+        const booksRef = ref(db, 'UserData');
 
-    get(booksRef).then((snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const filteredBooks = Object.values(data).filter(book => (
-          book.Genre === selectedGenre &&
-          book.Condition === selectedCondition &&
-          book.CoverType === selectedType
-        ));
-        setBooks(filteredBooks);
-      } else {
+        const snapshot = await get(booksRef);
+        const data = snapshot.val();
+
+        console.log("Data from database:", data);
+        console.log("Filtering with criteria:", selectedGenre, selectedCondition, selectedType);
+
+        if (data) {
+          const filteredBooks = Object.values(data).filter(book => {
+            const isGenreMatch = book.Genre.toLowerCase() === selectedGenre.toLowerCase();
+            const isConditionMatch = book.Condition.toLowerCase() === selectedCondition.toLowerCase();
+            const isCoverTypeMatch = book.CoverType.toLowerCase() === selectedType.toLowerCase();
+
+            // Debug output for each book
+            console.log(`Checking book: ${book.BookTitle}`);
+            console.log(`Genre match: ${isGenreMatch}, Condition match: ${isConditionMatch}, CoverType match: ${isCoverTypeMatch}`);
+
+            return isGenreMatch && isConditionMatch && isCoverTypeMatch;
+          });
+
+          console.log("Filtered books:", filteredBooks);
+          setBooks(filteredBooks);
+        } else {
+          setBooks([]);
+        }
+      } catch (error) {
+        console.error(error);
         setBooks([]);
       }
-    }).catch((error) => {
-      console.error(error);
-      setBooks([]);
-    });
+    };
+
+    fetchBooks();
   }, [selectedGenre, selectedCondition, selectedType]);
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function QuizComponent(props) {
-  const { questionNumber, questionText, options, onCollectAnswers } = props;
+  const {questionNumber, questionText, options, onCollectAnswers } = props;
   const [selectedOption, setSelectedOption] = useState('');
 
   const handleOptionChange = (event) => {
