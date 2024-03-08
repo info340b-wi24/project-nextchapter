@@ -62,6 +62,7 @@ function BookList() {
   if (!isHomePage) {
     return null;
   }
+  
   return (
     <div>
       <div className="search-container">
@@ -83,7 +84,9 @@ function BookList() {
              <div className="card">
               <img src={book.imgSrc} alt={book.altText} />
               <h2>{book.title}</h2>
-              <p>{book.Decision}</p>
+              <div className={`decision-tag ${book.decision.toLowerCase()}`}>
+                {book.decision}
+              </div>
               {selectedGenre && (
                 <div 
                   className={`genre-box type-button-${book.genre.toLowerCase()}`} 

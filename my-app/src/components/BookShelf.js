@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ref, onValue, getDatabase } from 'firebase/database';
+import { Link } from 'react-router-dom';
+
 
 function BookShelf() {
   const [books, setBooks] = useState([]);
@@ -32,7 +34,6 @@ function BookShelf() {
     
     return () => unsubscribe();
   }, []);
-
   return (
     <div className="myshelfcontainer">
       <header className="page-title">
@@ -41,13 +42,15 @@ function BookShelf() {
       </header>
       <div className="bookshelf">
         {books.map((book, index) => (
-          <div className="book" key={index}>
-            <img src={book.imgSrc} alt={book.altText || "Book cover"} />
-          </div>
+          // Correctly wrapping the div with the Link
+          <Link to={`/books/${encodeURIComponent(book.BookTitle)}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="book">
+              <img src={book.imgSrc} alt={book.altText || "Book cover"} />
+            </div>
+          </Link>
         ))}
       </div>
     </div>
   );
-}
-
+  }
 export default BookShelf;

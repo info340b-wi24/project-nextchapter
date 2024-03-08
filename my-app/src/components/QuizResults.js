@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { ref, get, getDatabase } from 'firebase/database';
+import { Link } from 'react-router-dom';
+
 
 function QuizResults() {
   const location = useLocation();
@@ -51,20 +53,21 @@ function QuizResults() {
       <h3>Our Recommendations for You</h3>
       {books.length === 0 ? (
         <p>No matching books found, please fill out the quiz again!</p>
-      ) : (
-        <div className="books-listed">
-          {books.map((book, index) => (
-            <div key={index} className="item">
-              <div className="card">
-                <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
-                <h3>{book.BookTitle}</h3>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
-
+        ) : (
+          <div className="listed-recommendations">
+            {books.map((book, index) => (
+              <Link to={`/books/${encodeURIComponent(book.BookTitle)}`} key={index} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="resultscard">
+                  <div className="recommend">
+                    <img src={book.Photo} alt={`Cover of ${book.BookTitle}`} />
+                    <h6 className="book-title">{book.BookTitle}</h6>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+            }
 export default QuizResults;

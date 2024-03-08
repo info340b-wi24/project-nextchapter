@@ -109,6 +109,7 @@ h2 {
     margin-bottom:2rem;
     font-weight:600;
     font-size:25px;
+    margin-left:2rem;
 }
 
 header p {
@@ -146,7 +147,7 @@ section {
 .genre-box {
     color:white;
     padding: 0.3rem; 
-    font-size: 14px !important;
+    font-size: 12px !important;
     border-radius: 5px !important;
     margin-bottom: 15px !important;
     cursor: default !important; 
@@ -354,10 +355,11 @@ section {
     flex-grow: 1; 
     padding: 10px;
     border: none; 
+    margin-bottom:0;
 }
 
 .search-input-container button {
-    background-color: #7B5F49; 
+    background-color: #759b71; 
     color: white;
     padding: 10px 15px;
     border: none;
@@ -367,7 +369,7 @@ section {
 }
 
 .search-container button:hover {
-    background-color: #0056b3;
+    background-color: #7B5F49;
 }
 
 .reset-button {
@@ -401,6 +403,7 @@ section {
 
 /* Card Styling */
 
+
 .card {
     border: 1px solid rgba(0, 0, 0, 0.31);
     background: white;
@@ -408,7 +411,7 @@ section {
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
-    height: auto; 
+    height: 500px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -424,20 +427,21 @@ section {
 
 .card h2 {
     margin: 10px 0;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
-    max-height: 3em; 
+    max-height: 2em; 
     width: 100%; 
 }
 
 
 .card p {
-    color:black;
+    color:#7B5F49;
+    font-weight:bold;
 }
 
 
@@ -470,6 +474,61 @@ section {
     height: 100%;
     text-align: center;
 }
+
+.recommendations-container {
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+
+.recommend {
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    max-width: 250px; /* Set a max-width to control the size */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Adjust padding as needed */
+    margin: auto; 
+  }
+  
+
+  .recommend img {
+    max-width: 100%;
+    max-height: 300px;
+    display: block;
+}
+
+.listed-recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+    .resultscard {
+        flex-basis: calc(20% - 20px);
+  }
+  
+ 
+
+
+.book-title {
+    font-size: 1rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    width: 70%; 
+    margin-top:20px;
+    margin-bottom:0; 
+  }
 
 /* About Us Page */
 
@@ -506,7 +565,8 @@ section {
 .aboutus-page h2 {
     margin-top:1rem;
     margin-bottom:2rem;
-    color:#7B5F49
+    color:#7B5F49;
+    margin-left:0;
 }
 
 .aboutus-page p {
@@ -623,7 +683,8 @@ section {
 
 /*individual book pages*/
     /* Card Styling */
-    .book-card {
+    .carddetail {
+
         border: 1px solid rgba(0, 0, 0, 0.31);
         background: white;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -636,22 +697,48 @@ section {
         justify-content: center;
         align-items: center;
         padding: 20px;
+    
     }
     
-    .book-card img {
+    .carddetail img {
         max-width: 100%;
         max-height: 300px;
         display: block;
-        object-fit: contain;
     }
     
-    
-    .book-card h2, .card p {
+    .carddetail h2 {
         margin: 10px 0;
-        font-size: 15px;
+        font-size: 20px;
         text-align: center;
-        margin: 4px 0;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        max-height: 2em; 
+        width: 100%; 
     }
+    
+    .carddetail p {
+        color:#7B5F49;
+        font-weight:bold;
+    }
+
+    .copy-email-btn {
+        padding: 10px 20px;
+        margin-top: 20px; 
+        font-size: 16px; 
+        background-color: #759b71; 
+        border: none;
+        border-radius: 10px; 
+        cursor: pointer; 
+        display: inline-block;
+        transition: background-color 0.3s; 
+      }
+      
+      .copy-email-btn:hover {
+        background-color: #283626; /* Darker shade on hover for visual feedback */
+      }
 
 /*upload*/
 
@@ -674,6 +761,8 @@ section {
         text-align: center;
         color:white;
         font-size:1.7rem;
+        font-weight: bold;
+        
     }
     
     .container {
@@ -685,7 +774,7 @@ section {
     select {
         margin-bottom: 20px;
         padding: 8px;
-        font-size: 1.3rem;
+        font-size: 1rem;
         border: 1px solid #ccc;
         border-radius: 5px;
         width: 100%; 
@@ -863,8 +952,24 @@ footer a {
 
     .reset-button {
         font-size: 1rem !important;
+        margin-bottom: 30px !important;
 
     }
+
+    .decision-tag {
+        padding: 8px 16px;
+        margin: 10px 0;
+        border-radius: 20px;
+        text-align: center;
+        background-color: #759b71;
+        color: white;
+        font-weight: bold;
+        display: inline-block;
+      }
+      
+      .decision-tag.giveaway {
+        background-color: #7B5F49;
+      }
 
 
     /*Book Card*/
@@ -941,6 +1046,3 @@ footer a {
     padding-left: 20px;
   }
 
-.recommendations-container {
-    margin-left: 20px;
-}

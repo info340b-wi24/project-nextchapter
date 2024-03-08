@@ -44,7 +44,7 @@ function GenreTags({ onGenreClick, onResetClick }) {
           </div>
         </div>
         <button className="reset-button" onClick={onResetClick}> 
-          Reset
+          Reset filter
         </button>
       </div>
     </div>
