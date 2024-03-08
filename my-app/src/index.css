@@ -922,4 +922,6 @@ footer a {
     }
 }
 
-
+.error-message {
+    padding-left: 20px;
+  }
