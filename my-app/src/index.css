@@ -427,15 +427,16 @@ section {
 
 .card h2 {
     margin: 10px 0;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     overflow: hidden; 
     text-overflow: ellipsis; 
     display: -webkit-box;
     -webkit-line-clamp: 1; 
     -webkit-box-orient: vertical;
-    max-height: 2em; 
+    max-height: 5em; 
     width: 100%; 
+    font-weight:bold;
 }
 
 
@@ -963,7 +964,7 @@ footer a {
         text-align: center;
         background-color: #759b71;
         color: white;
-        font-weight: bold;
+        font-weight: 600;
         display: inline-block;
       }
       
