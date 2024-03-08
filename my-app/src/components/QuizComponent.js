@@ -14,7 +14,7 @@ function QuizComponent(props) {
     <div>
 
       <section className="quiz">
-        <form onSubmit={(e) => e.preventDefault()}>
+        <div onSubmit={(e) => e.preventDefault()}>
           <h2>{questionText}</h2>
           {options.map(option => (
             <div className="option" key={option.value}>
@@ -29,7 +29,7 @@ function QuizComponent(props) {
               <label htmlFor={`option-${questionNumber}-${option.value}`}>{option.label}</label>
             </div>
           ))}
-        </form>
+        </div>
       </section>
     </div>
   );
