@@ -52,7 +52,8 @@ function ParentQuiz(props) {
     { value: 'Romance', label: 'Romance' },
     { value: 'Fiction', label: 'Fiction' },
     { value: 'Children', label: 'Children' },
-    { value: 'Fairytale', label: 'Fairytale' }
+    { value: 'Fairytale', label: 'Fairytale' },
+    { value: 'Non-Fiction', label: 'Non-Fiction'}
   ];
 
   const conditionOptions = [
