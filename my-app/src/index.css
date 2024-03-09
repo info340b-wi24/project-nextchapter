@@ -126,20 +126,20 @@ section {
     font-size:20px;
 }
 
-
 .page-title h1{
     margin: auto;
     width: 100%; 
     text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 0rem;
+    margin-top:3rem;
     color:#7B5F49ff;
-}
-
-.page-title h1,
-.quiz h2 {
     font-size: 2rem;
 }
+
+.quiz h2 {
+    margin-top:0;
+    font-size:1.7rem;
+}
+
 
 
 /*Genre Filter Stylings*/
@@ -218,7 +218,6 @@ section {
 /*Tag Formatting */
 .type-button-fiction,
 .type-button-non-fiction,
-.type-button-fantasy,
 .type-button-mystery,
 .type-button-romance,
 .type-button-narrative,
@@ -276,10 +275,6 @@ section {
 
 .type-button-fairytale {
     background-color: rgb(93, 128, 36); 
-}
-
-.type-button-fantasy {
-    background-color: #914b0a;
 }
 
 .type-button-science  {
@@ -397,7 +392,7 @@ section {
 }
 
 .item {
-    flex-basis: calc(20% - 20px);
+    flex-basis: calc(25% - 20px);
     box-sizing: border-box; 
 }
 
@@ -411,7 +406,7 @@ section {
     border-radius: 5px;
     overflow: hidden;
     width: 100%;
-    height: 500px; 
+    height: 600px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -445,8 +440,77 @@ section {
     font-weight:bold;
 }
 
+.error-message {
+    padding-left: 20px;
+}
 
-/* Quiz Button On Home Page */
+
+/* Quiz Page */
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+.quiz-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 30px; /* Consider adjusting or removing this for smaller screens */
+}
+
+.option {
+    flex-basis: 45%; /* Adjusted for the base layout */
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.option input[type="radio"]{
+    accent-color: #7B5F49;
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+    margin-right: 0.6rem;
+    margin-left: 0.6rem; /* Adjusted for better alignment */
+}
+
+.option label{
+    font-family: 'Poppins', sans-serif;
+    color: #7B5F49;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 20px; 
+    margin-left:10px;
+  }
+  
+  .submit button {
+    border-radius: 15px;
+    background-color: #7B5F49ff;
+    color: #fff; 
+    font-size: 1rem;
+    width: 25vw;
+    height: 8vh;
+    cursor: pointer; 
+    border: none; 
+  }
+
 
 .quizlink-home button {
     text-decoration: none;
@@ -465,16 +529,6 @@ section {
     color: white;
 }
 
-.quiz {
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
-    display: flex;
-    margin-top: 0px;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
-}
 
 .recommendations-container {
     font-size: 30px;
@@ -503,22 +557,21 @@ section {
     max-width: 100%;
     max-height: 300px;
     display: block;
-}
+  }
 
-.listed-recommendations {
+   .listed-recommendations {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
-}
+  }
+
     .resultscard {
         flex-basis: calc(20% - 20px);
   }
   
  
-
-
 .book-title {
     font-size: 1rem; 
     overflow: hidden;
@@ -651,35 +704,6 @@ section {
     display:block;
 }
 
-/* Quiz Page */
-
-.option {
-    padding: 1rem;
-    margin: auto;
-}
-
-.option input[type="radio"]{
-    accent-color:#7B5F49;
-    -ms-transform: scale(1.5); /* IE 9 */
-    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
-    transform: scale(1.5);
-}
-
-.option label{
-    margin-left: 0.6rem;
-    font-family: 'Poppins', sans-serif;
-    color:#7B5F49;
-    
-}
-
-
-.submit button {
-    border-radius: 15px;
-    background-color: #7B5F49ff;
-    font-size: 1rem;
-    width: 25vw;
-    height: 8vh;
-}
 
 
 /*individual book pages*/
@@ -846,18 +870,166 @@ footer a {
     text-decoration: underline;
 }
 
-/*Smaller screen format */
-@media (min-width: 480px) {
-    .quiz {
-        padding: 40px; 
-    }
-}
 
-/*Desktop screen and larger styling */
-@media (min-width: 768px) {
+@media (min-width: 414px) {
+
+    .navbar {
+        padding: 1rem 1.5rem;
+    }
+
+    .type-button-fiction,
+    .type-button-non-fiction,
+    .type-button-mystery,
+    .type-button-romance,
+    .type-button-narrative,
+    .type-button-informative,
+    .type-button-children,
+    .type-button-fairytale,
+    .type-button-science,
+    .type-button-horror,
+    .type-button-biography,
+    .type-button-poetry {
+    width: calc(30% - 10px);
+    font-size: 12px;
+    }
+
+
+    .reset-button {
+        font-size: 1rem !important;
+        margin-bottom: 30px !important;
+    }
+
+
+    .header-content h1{
+        margin-top:6rem;
+        font-size: 4rem;
+    }
+
+    .header-content p {
+        font-size:smaller;
+    }
+
+
+    .create button {
+        margin-top: 2rem;
+        height:4rem;
+        width:10rem;
+        font-size:19px;
+    }
+
+    .genre-box {
+        padding: 5px 10px !important;
+        margin-top:1rem;
+        margin-bottom:0;
+    }
+
+    .decision-tag {
+        padding: 6px 14px;
+        border-radius: 20px;
+        text-align: center;
+        background-color: #759b71;
+        color: white;
+        font-size:smaller;
+        font-weight: 600;
+    }
+
+    .decision-tag.giveaway {
+        background-color: #7B5F49;
+    }
+
+    .item {
+        flex-basis: calc(50% - 10px); 
+    }
+
+    .card {
+        margin-left:6px;
+        width: 90%; 
+        height: 350px;
+    }
+
+    .card h2 {
+        font-size:12px;
+    }
+
+    .card img {
+        max-width: 100%;
+        max-height: 170px; 
+    }
+
+    .submit-button {
+        background-color: white;
+        color: green;
+        margin-top: 20px;
+        margin-left: 5rem;
+        width: 120px;
+    }
+
+    .form-info {
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .person-container {
+        display: inline-block;
+        margin-left: 5.5rem;
+        text-align: center;
+        height: 500px;
+        vertical-align: top;
+    }
+
+    .img-with-text {
+        text-align: center;
+        height: 450px;
+    }
+
+    .quiz h2 {
+        margin-top:1rem;
+        margin-left:1rem;
+        font-size:smaller;
+    }
+
+    .quiz-item {
+        margin-left: 0; 
+    }
+    
+    .option {
+        flex-basis: calc(50% - 20px); 
+    }
+
+
+    .submit button {
+        background-color: #7B5F49ff;
+        color: #fff; 
+        font-size: 1rem;
+        width: 30vw;
+        height: 7vh;
+        
+    }
+
+    .bookshelf {
+        margin-left:1.5rem;
+    }
+
+    .myshelfcontainer h2 {
+        margin-top:8px;
+        text-align: center;
+        font-size: 20px;
+        color: #7B5F49;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+} 
+
+
+
+/* @media (min-width: 768px) { */
 
     /* NavBar Styles */
-    .navbar {
+    /* .navbar {
         padding: 1rem 1.5rem;
     }
     
@@ -868,6 +1040,7 @@ footer a {
     }
     
     .nav-links li {
+        margin-top:1rem;
         margin-left: 16px; 
     }
     
@@ -889,21 +1062,14 @@ footer a {
         display: none;
     }
 
-
     .page-title h1,
-    .header-content h1,
-    .header-content h2,
-    .quiz h2 {
+    .header-content h2 {
         font-size: 3rem;
     }
 
-
-    .header-content {
-        margin-top: 10vh;
-    }
-
     .header-content h1{
-        font-size: 10rem;
+        margin-top:7rem;
+        font-size: 6rem;
     }
 
     .header-content p {
@@ -920,7 +1086,7 @@ footer a {
     /*Genre Filter*/
     /*Tag sizes*/
 
-    .genre-box {
+    /* .genre-box {
         padding: 10px 70px !important;
         margin-top:1rem;
     }
@@ -940,7 +1106,7 @@ footer a {
     .type-button-narrative,
     .type-button-informative,
     .type-button-children,
-    .type-button-fairy,
+    .type-button-fairytale,
     .type-button-science,
     .type-button-horror,
     .type-button-biography,
@@ -948,6 +1114,7 @@ footer a {
         padding: 10px 7px;
         width: calc((100% - 120px) / 6);
         height: fit-content;
+        font-size:12px;
     }
 
 
@@ -974,7 +1141,7 @@ footer a {
 
 
     /*Book Card*/
-
+/* 
     .books-listed {
         display: flex;
         flex-wrap: wrap;
@@ -984,16 +1151,46 @@ footer a {
     }
     
     .item {
-        flex-basis: calc(20% - 20px);
+        flex-basis: calc(50% - 10px - 20px);
         box-sizing: border-box; 
     }
     
 
+    /* About Us */
+
+    /* .person-container {
+        display: inline-block;;
+        margin-right: 22px;
+        margin-left: 10px;
+        text-align: center;
+        height: 500px;
+        vertical-align: top;
+    }
+
+    .person-container img {
+        height: auto;
+        width: 170px;
+        object-fit: cover;
+        
+    }
+
+    .img-with-text {
+    text-align: center;
+    width: 150px;
+    height: 350px;
+    font-size:smaller;
+    }
+
+    .img-with-text img {
+        display: block;
+        margin: 0 auto;
+        height: 280px;
+    } */
 
 
     /*Book Shelf*/
 
-    .myshelfcontainer h2 {
+    /* .myshelfcontainer h2 {
         text-align: center;
         font-size: 50px;
         color:#7B5F49;
@@ -1005,10 +1202,22 @@ footer a {
 
     .bookshelf {
         grid-template-columns: repeat(3, 250px);
-        grid-template-rows: repeat(3, 250px);
+        grid-template-rows: repeat(3, 190px);
         padding-left:7rem;
         background-image: url('/src/images/shelfhold.jpg');
     }
+
+    .book {
+        width: auto;
+        height: 100px;
+        margin-top:4.5rem;
+    }
+    
+    .book img {
+        max-height: 175px;
+        width: 100px; 
+        display:block; */
+    /* }
 
     .tagsInBox {
         padding: 2rem; 
@@ -1022,28 +1231,192 @@ footer a {
         width: 100%; 
     }
 
-}
+} */
 
 
-/*larger screens*/
+/* 
 @media (min-width: 1200px) {
+
     .bookshelf {
         padding-left: 10rem;
     }
 
+    .bookshelf {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+        grid-template-rows: repeat(3, 250px);
+        justify-content: center;
+        align-items: start; 
+        position:relative;
+        background-image: none;
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height:700px;
+        overflow: visible;
+        padding-top:2rem;
+    }
+
+    .item {
+        flex-basis: calc(25% - 20px);
+        box-sizing: border-box; 
+    }
+    
+    .book {
+        width: auto;
+        height: 200px;
+        margin-top:2.5rem;
+    }
+    
+    .book img {
+        max-height: 175px;
+        width: auto; 
+        display:block;
+    }
+
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.31);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        height: 600px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .card img {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+    }
+    
+    .card h2 {
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        max-height: 5em; 
+        width: 100%; 
+        font-weight:bold;
+    }
+    
+    
+    .card p {
+        color:#7B5F49;
+        font-weight:bold;
+    }
+
+    .person-container {
+        display: inline-block;;
+        margin-right: 70px;
+        margin-left: 70px;
+        text-align: center;
+        height: 500px;
+        vertical-align: top;
+    }
+    
+    .person-container img {
+        height: auto;
+        width: 200px;
+        object-fit: cover;
+        
+    }
+    
+    .img-with-text {
+        text-align: center;
+        width: 200px;
+        height: 450px;
+    }
+    
+    .img-with-text img {
+        display: block;
+        margin: 0 auto;
+        height: 280px;
+    }
+    
+    .image-container img {
+        width: 200px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quiz {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-bottom:10px;
+  }
+  
+ 
+  .quiz-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    margin-left: 30px;
+  }
+  
+
+  .option {
+    flex-basis: 45%; 
+    margin: 10px; 
+    display: flex;
+    align-items: row;
+    justify-content: center;
+  }
+  
+
+.option input[type="radio"]{
+    accent-color:#7B5F49;
+    -ms-transform: scale(1.5); /* IE 9 */
+    /* -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+    margin-right: 0.6rem;
+    margin-left: 5rem;
+}
+
+.option label{
+    font-family: 'Poppins', sans-serif;
+    color: #7B5F49;
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 10px;
     
 }
 
-/*adjusting form box view for larger screens*/
-@media (min-width: 1440px ) {
-    .form {
-        width: 60vw;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-}
-
-.error-message {
-    padding-left: 20px;
+.submit {
+    display: flex;
+    justify-content: center; 
+    width: 100%; 
+    margin-top: 20px; 
+    margin-left:10px;
+  }
+  
+  .submit button {
+    border-radius: 15px;
+    background-color: #7B5F49ff;
+    color: #fff; 
+    font-size: 1rem;
+    width: 25vw;
+    height: 8vh;
+    cursor: pointer; 
+    border: none; 
   }
 
+}  */

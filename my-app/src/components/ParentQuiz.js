@@ -46,14 +46,19 @@ function ParentQuiz(props) {
           };
     
   const genreOptions = [
-    { value: 'Fantasy', label: 'Fantasy' },
     { value: 'Mystery', label: 'Mystery' },
-    { value: 'Science Fiction', label: 'Science Fiction' },
     { value: 'Romance', label: 'Romance' },
     { value: 'Fiction', label: 'Fiction' },
     { value: 'Children', label: 'Children' },
+    { value: 'Horror', label: 'Horror' },
+    { value: 'Narrative', label: 'Narrative' },
+    { value: 'Biography', label: 'Biography' },
     { value: 'Fairytale', label: 'Fairytale' },
-    { value: 'Non-Fiction', label: 'Non-Fiction'}
+    { value: 'Science', label: 'Science' },
+    { value: 'Informative', label: 'Informative' },
+    { value: 'Non-Fiction', label: 'Non-fiction' },
+    { value: 'Poetry', label: 'Poetry'}
+
   ];
 
   const conditionOptions = [
@@ -80,14 +85,14 @@ function ParentQuiz(props) {
             <QuizComponent
             userData={props.userData}
             questionNumber={1}
-            questionText="What Kind of Genre do You Like?"
+            questionText="What Kind of Genre Do You Like?"
             options={genreOptions}
             onCollectAnswers={handleCollectAnswers}
             />
             <QuizComponent
             userData={props.userData}
             questionNumber={2}
-            questionText="What Condition do You Want Your Book In?"
+            questionText="What Condition Do You Want Your Book In?"
             options={conditionOptions}
             onCollectAnswers={handleCollectAnswers}
             />
