@@ -123,9 +123,8 @@ const Form = () => {
                     Swap
                 </label>
                 </div>
-
-                <label htmlFor="Name">Your Email:</label>
-                <input
+                    <label htmlFor="Email">Your Email:</label>
+                    <input
                         type='text'
                         name='Email'
                         id='Email'
@@ -242,9 +241,14 @@ const Form = () => {
                     />
                     </label>
 
-                    <label htmlFor="Book image">Upload Book Image:
-                    <input id="Book image" type="file" accept="image/jpeg, image/jpg" onChange={handleImageChange} />
-
+                    <label htmlFor="BookImage">Upload Book Image:
+                    <input 
+                        type="file" 
+                        id="BookImage" 
+                        accept="image/jpeg, image/jpg" 
+                        onChange={handleImageChange} 
+                        required
+                        />
                     </label>
 
                     <button type="submit" className="submit-button" >Submit</button>
