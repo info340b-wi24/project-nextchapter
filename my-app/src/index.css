@@ -23,7 +23,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: #759b71;
+        background-color: #638a5e;
         color: white;
     }
 
@@ -70,7 +70,7 @@
 
     .hamburger-links a {
         margin: 0.4rem;
-        color: #759b71;
+        color: #638a5e;
         font-size: 1.3rem;
     }
 
@@ -321,7 +321,7 @@
         font-size: 1.8rem;
         height: 10vh;
         text-decoration: none;
-        background-color:#759b71;
+        background-color:#638a5e;
         border-radius: 10px;
         margin-top:1rem;
         color:white;
@@ -354,13 +354,13 @@
     }
 
     .search-input-container button {
-        background-color: #759b71; 
+        background-color: #638a5e; 
         color: white;
         padding: 10px 15px;
         border: none;
         cursor: pointer;
         border-radius: 0 5px 5px 0; 
-        font-size: 16px;
+        font-size: 1.3rem;
     }
 
     .search-container button:hover {
@@ -370,7 +370,7 @@
     .reset-button {
         font-size: 1.3rem;
         padding: 10px 7px;
-        background-color: #759b71 !important;
+        background-color: #638a5e !important;
         color: white !important;
         border: none !important;
         cursor: pointer !important;
@@ -515,7 +515,7 @@
     .quizlink-home button {
         text-decoration: none;
         border: 2px solid #7B5F49ff;
-        background-color: #759b71;
+        background-color: #638a5e;
         border-radius: 10px;
         color: #7B5F49ff;
     }
@@ -775,7 +775,7 @@
         align-items: center;
         width: 80%;
         padding: 20px;
-        background-color: #759b71;
+        background-color: #638a5e;
         position: relative;
     }
 
@@ -830,7 +830,7 @@
 
 /* Universal button styling */
     button {
-        background-color: #759b71;
+        background-color: #638a5e;
         color: white;
         border: none;
         cursor: pointer;
@@ -913,10 +913,14 @@
             padding: 6px 14px;
             border-radius: 20px;
             text-align: center;
-            background-color: #759b71;
+            
             color: white;
             font-size:smaller;
             font-weight: 600;
+        }
+
+        .decision-tag.swap{
+            background-color: #1b4b36;
         }
 
         .decision-tag.giveaway {
@@ -1077,6 +1081,7 @@
         .genre-box {
             padding: 10px 70px !important;
             margin-top:1rem;
+            
         }
 
         .type-button-fiction,
@@ -1095,20 +1100,21 @@
             padding: 10px 7px;
             width: calc((100% - 120px) / 6);
             height: fit-content;
-            font-size:12px;
+            font-size:1rem;
         }
 
 
         .reset-button {
-            font-size: 1rem !important;
+            font-size: 1.2rem !important;
             margin-bottom: 30px !important;
 
         }
 
         .decision-tag {
             padding: 8px 14px;
+            font-size: 1.3rem;
             border-radius: 20px;
-            background-color: #759b71;
+            background-color: #638a5e;
             color: white;
             font-weight: 600;
         }
@@ -1128,6 +1134,13 @@
         }
 
         /* Upload */
+        .form-info h2 {
+            font-size: 2.3rem;
+        }
+        .form-info p {
+            font-size: 2rem;
+        }
+
         /* Centering submit button */
 
         .submit-button {
