@@ -24,10 +24,6 @@ function ParentQuiz(props) {
                 ...prevAnswers,
                 [key]: selectedOption
               };
-          
-              // Lex Debug
-              console.log("Updated answers:", updatedAnswers);
-          
               return updatedAnswers;
             });
           };

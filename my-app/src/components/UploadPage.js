@@ -22,7 +22,6 @@ const Form = () => {
     const data = (e) => {
         const { name, value } = e.target;
         setUser({ ...user, [name]: value });
-        console.log(user);
     };
 
     const [image, setImage] = useState(null);

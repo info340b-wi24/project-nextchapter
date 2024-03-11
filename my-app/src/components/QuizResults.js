@@ -18,8 +18,6 @@ function QuizResults() {
         const snapshot = await get(booksRef);
         const data = snapshot.val();
 
-        console.log("Data from database:", data);
-        console.log("Filtering with criteria:", selectedGenre, selectedCondition, selectedType);
 
         if (data) {
           const filteredBooks = Object.values(data).filter(book => {
@@ -27,14 +25,9 @@ function QuizResults() {
             const isConditionMatch = book.Condition.toLowerCase() === selectedCondition.toLowerCase();
             const isCoverTypeMatch = book.CoverType.toLowerCase() === selectedType.toLowerCase();
 
-            // Debug output for each book
-            console.log(`Checking book: ${book.BookTitle}`);
-            console.log(`Genre match: ${isGenreMatch}, Condition match: ${isConditionMatch}, CoverType match: ${isCoverTypeMatch}`);
-
             return isGenreMatch && isConditionMatch && isCoverTypeMatch;
           });
-
-          console.log("Filtered books:", filteredBooks);
+          
           setBooks(filteredBooks);
         } else {
           setBooks([]);
