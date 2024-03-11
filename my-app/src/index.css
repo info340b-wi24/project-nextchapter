@@ -141,7 +141,6 @@
     }
 
 
-
 /*Genre Filter Stylings*/
 
     .genre-box {
@@ -215,6 +214,7 @@
         background-color: #ffffff;
     }
 
+
 /*Tag Formatting */
     .type-button-fiction,
     .type-button-non-fiction,
@@ -238,6 +238,7 @@
         font-weight: bold;
         display: inline-block; 
     }
+
 
 /*Colors of tags*/
 
@@ -289,6 +290,7 @@
         background-color: #5d4896;
     }
 
+
 /* Homepage art */
 
     .custom-section {
@@ -307,6 +309,7 @@
         margin-right: auto;
         margin-top: 5vh;
     }
+
 
 /* Homepage- Join Our Community Button */
 
@@ -331,6 +334,7 @@
     .create button:hover {
         background-color: #7B5F49ff;
     }
+
 
 /* Homepage Search Bar */
 
@@ -395,6 +399,7 @@
         flex-basis: calc(25% - 20px);
         box-sizing: border-box; 
     }
+
 
 /* Card Styling */
 
@@ -529,6 +534,7 @@
         color: white;
     }
 
+
 /* Book Reccomendations */
 
 
@@ -585,6 +591,7 @@
         margin-top:20px;
         margin-bottom:0; 
     }
+
 
 /* About Us Page */
 
@@ -663,6 +670,7 @@
         margin-left: 40px;
     }
 
+    
 /*BOOKSHELF*/
 
     .myshelfcontainer h2 {
