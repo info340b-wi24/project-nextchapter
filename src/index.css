@@ -1,0 +1,1298 @@
+    html, body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        min-width: 100vw;
+        margin: 0px;
+
+    }
+
+    * {
+        box-sizing:border-box;
+        font-family:'Poppins', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+/*Navigation Formatting */
+
+    .navbar {
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #638a5e;
+        color: white;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar .project-name a {
+        color: white; 
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .navbar img {
+        object-fit: cover;
+    }
+
+    .navbar .project-name img {
+        margin-right: 8px; 
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: block; 
+        align-content: center;
+        cursor: pointer;
+    }
+
+    .hamburger-links{
+        text-align: right;
+        display: inline;
+    }
+
+    .hamburger-links a {
+        margin: 0.4rem;
+        color: #638a5e;
+        font-size: 1.3rem;
+    }
+
+/*Font Formating */
+
+    .header-content h1 {
+        color: white;
+        margin-top: 17px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:1rem;
+        font-weight:bold;
+        font-size: 5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+        color:#7B5F49ff;
+        margin-top:15px;
+        margin-bottom:1rem;
+        text-align: center;
+        font-weight:bold;
+        margin-right: 0.4rem;
+    }
+
+    header h1 {
+        margin-bottom:0rem ;
+        font-weight:700;
+        text-align:center;
+        margin-top:1em;
+        color:#7B5F49ff;
+    }
+
+    h2 {
+        color:#7B5F49ff;
+        margin-bottom:2rem;
+        font-weight:600;
+        font-size:25px;
+        margin-left:2rem;
+    }
+
+    header p {
+        font-weight:bold;
+        font-size:26px;
+        top:255px;
+        left:75px;
+        margin-top:0.5rem;
+        margin-bottom:1rem;
+    }
+
+    section {
+        font-family:'Poppins', sans-serif;
+        font-size:20px;
+    }
+
+    .page-title h1{
+        margin: auto;
+        width: 100%; 
+        text-align: center;
+        margin-top:3rem;
+        color:#7B5F49ff;
+        font-size: 2rem;
+    }
+
+    .quiz h2 {
+        margin-top:0;
+        font-size:1.7rem;
+    }
+
+
+
+/*Genre Filter Stylings*/
+
+    .genre-box {
+        color:white;
+        padding: 0.3rem; 
+        font-size: 12px !important;
+        border-radius: 5px !important;
+        margin-bottom: 15px !important;
+        cursor: default !important; 
+        text-align: center !important;
+        font-weight: bold !important;
+        display: block !important;
+        width: auto !important;
+    }
+
+    .types-of-books h2 {
+        text-align: left;
+        margin-left: 35px;
+        margin-bottom: 2rem;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        align-content: center;
+        gap: 1rem;
+        margin-left: 0;
+        flex: 1;
+        margin-bottom:2rem;
+    }
+
+    .tagsInBox {
+        background-color: white;
+        border-radius: 5px;
+        border: 0.5px solid black;
+        display: flex; 
+        justify-content: center; 
+        flex-wrap: wrap; 
+        padding: 0.2rem;
+        max-width: 100%; 
+        margin-top: 10px;
+        margin-bottom: 5px; 
+    }
+
+    .tagButtons {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start; 
+        width: 25vw; 
+    }
+
+    .tagButtons button {
+        margin:0.25rem;
+        width:100%;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: #ffffff;
+    }
+
+/*Tag Formatting */
+    .type-button-fiction,
+    .type-button-non-fiction,
+    .type-button-mystery,
+    .type-button-romance,
+    .type-button-narrative,
+    .type-button-informative,
+    .type-button-children,
+    .type-button-fairytale,
+    .type-button-science,
+    .type-button-horror,
+    .type-button-biography,
+    .type-button-poetry {
+        padding: 10px 7px;
+        width: calc(16.666% - 10px);
+        font-size: 1rem;
+        border-radius: 5px;
+        margin-bottom: 15px; 
+        cursor: pointer;
+        text-align: center;
+        font-weight: bold;
+        display: inline-block; 
+    }
+
+/*Colors of tags*/
+
+    .type-button-horror {
+        background-color: #991224;
+    }
+
+    .type-button-fiction {
+        background-color: #0a538e;
+    }
+
+    .type-button-non-fiction {
+        background-color: #aa6161; 
+    }
+
+    .type-button-mystery {
+        background-color: rgb(128, 77, 0); 
+    }
+
+    .type-button-romance {
+        background-color: rgb(169, 59, 88); 
+    }
+
+    .type-button-narrative {
+        background-color: #257372; 
+    }
+
+    .type-button-informative {
+        background-color: rgb(170, 60, 38);
+    }
+
+    .type-button-children {
+        background-color: rgb(149, 65, 149);
+    }
+
+    .type-button-fairytale {
+        background-color: rgb(93, 128, 36); 
+    }
+
+    .type-button-science  {
+        background-color: #be06a9;
+    }
+
+    .type-button-poetry {
+        background-color: #2577b1;
+    }
+
+    .type-button-biography {
+        background-color: #5d4896;
+    }
+
+/* Homepage art */
+
+    .custom-section {
+        background-image: url('/src/images/oldbooks.jpg');
+        display: flex;
+        width: 100vw;
+        height: 100vh; 
+        background-size: cover;
+        background-position: center 65%;
+        margin-top:0; 
+    }
+
+    .header-content {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5vh;
+    }
+
+/* Homepage- Join Our Community Button */
+
+    .create {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .create button {
+        width: fit-content;
+        font-size: 1.8rem;
+        height: 10vh;
+        text-decoration: none;
+        background-color:#638a5e;
+        border-radius: 10px;
+        margin-top:1rem;
+        color:white;
+        box-shadow: 0 4px 9px rgba(0, 0, 0, 0.15);
+    }
+
+    .create button:hover {
+        background-color: #7B5F49ff;
+    }
+
+/* Homepage Search Bar */
+
+    .search-container {
+        max-width: 400px; 
+        margin: auto;
+        padding: 2rem;
+    }
+
+    .search-input-container {
+        display: flex;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .search-input-container input[type="text"] {
+        flex-grow: 1; 
+        padding: 10px;
+        border: none; 
+        margin-bottom:0;
+    }
+
+    .search-input-container button {
+        background-color: #638a5e; 
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 0 5px 5px 0; 
+        font-size: 1.3rem;
+    }
+
+    .search-container button:hover {
+        background-color: #7B5F49;
+    }
+
+    .reset-button {
+        font-size: 1.3rem;
+        padding: 10px 7px;
+        background-color: #638a5e !important;
+        color: white !important;
+        border: none !important;
+        cursor: pointer !important;
+        width: 150px !important;
+        height: 40px;
+        border-radius: 5px !important;
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto;
+        margin-right:auto;
+    }
+
+    .books-listed {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .item {
+        flex-basis: calc(25% - 20px);
+        box-sizing: border-box; 
+    }
+
+/* Card Styling */
+
+
+    .card {
+        border: 1px solid rgba(0, 0, 0, 0.31);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        height: 600px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card img {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+    }
+
+    .card h2 {
+        margin: 10px 0;
+        font-size: 16px;
+        text-align: center;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        max-height: 5em; 
+        width: 100%; 
+        font-weight:bold;
+    }
+
+
+    .card p {
+        color:#7B5F49;
+        font-weight:bold;
+    }
+
+    .error-message {
+        padding-left: 20px;
+    }
+
+
+/* Quiz Page */
+
+    .quiz-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    .quiz-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 30px; 
+    }
+
+    .option {
+        flex-basis: 45%; 
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .option input[type="radio"]{
+        accent-color: #7B5F49;
+        -ms-transform: scale(1.5); 
+        -webkit-transform: scale(1.5); 
+        transform: scale(1.5);
+        margin-right: 0.6rem;
+        margin-left: 0.6rem; 
+    }
+
+    .option label{
+        font-family: 'Poppins', sans-serif;
+        color: #7B5F49;
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center; 
+        width: 100%; 
+        margin-top: 20px; 
+        margin-left:10px;
+    }
+    
+    .submit button {
+        border-radius: 15px;
+        background-color: #7B5F49ff;
+        color: #fff; 
+        font-size: 1rem;
+        width: 25vw;
+        height: 8vh;
+        cursor: pointer; 
+        border: none; 
+    }
+
+
+    .quizlink-home button {
+        text-decoration: none;
+        border: 2px solid #7B5F49ff;
+        background-color: #638a5e;
+        border-radius: 10px;
+        color: #7B5F49ff;
+    }
+
+    .quizlink-home a {
+        text-decoration: none;
+        color: #7B5F49ff;
+    }
+
+    .quizlink-home button:hover a {
+        color: white;
+    }
+
+/* Book Reccomendations */
+
+
+    .recommendations-container {
+        font-size: 30px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .recommend {
+        border: 1px solid rgba(0, 0, 0, 0.31);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        max-width: 250px; 
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px; 
+        margin: auto; 
+    }
+    
+
+    .recommend img {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+    }
+
+    .listed-recommendations {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .resultscard {
+        flex-basis: calc(20% - 20px);
+    }
+    
+    
+    .book-title {
+        font-size: 1rem; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; 
+        -webkit-box-orient: vertical;
+        width: 70%; 
+        margin-top:20px;
+        margin-bottom:0; 
+    }
+
+/* About Us Page */
+
+    .custom-body {
+        position: relative;
+        background-color:white;
+        min-height: 100vh;
+        
+    }
+
+    .page-title {
+        margin-top: 1em; 
+        margin-bottom: 0em;
+    }
+    .page-title header {
+        margin-top: 1em;
+        margin-bottom: 0em;
+        font-size: 30px;
+    }
+
+    .page-title h2 {
+        color:#7B5F49;
+        font-size: 30px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .aboutus-page {
+        color: #7B5F49ff;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .aboutus-page h2 {
+        margin-top:1rem;
+        margin-bottom:2rem;
+        color:#7B5F49;
+        margin-left:0;
+    }
+
+    .aboutus-page p {
+        color:#7B5F49;
+    }
+
+    .person-container {
+        display: inline-block;;
+        margin-right: 60px;
+        margin-left: 60px;
+        text-align: center;
+        height: 500px;
+        vertical-align: top;
+    }
+
+    .person-container img {
+        height: auto;
+        width: 220px;
+        object-fit: cover;
+        
+    }
+
+    .img-with-text {
+        text-align: center;
+        width: 200px;
+        height: 450px;
+    }
+
+    .img-with-text img {
+        display: block;
+        margin: 0 auto;
+        height: 280px;
+    }
+
+    .image-container img {
+        width: 200px;
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+/*BOOKSHELF*/
+
+    .myshelfcontainer h2 {
+        text-align: center;
+        font-size: 50px;
+        color:#7B5F49;
+    }
+
+    .myshelfcontainer p {
+        text-align: center;
+    }
+
+
+    .bookshelf {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+        grid-template-rows: repeat(3, 250px);
+        justify-content: center;
+        align-items: start; 
+        position:relative;
+        background-image: none;
+        background-size:contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height:700px;
+        overflow: visible;
+        padding-top:2rem;
+    }
+
+    .book {
+        width: auto;
+        height: 200px;
+        margin-top:2.5rem;
+    }
+
+    .book img {
+        max-height: 175px;
+        width: auto; 
+        display:block;
+    }
+
+
+
+/*individual book pages*/
+/* Card Styling */
+    .carddetail {
+
+        border: 1px solid rgba(0, 0, 0, 0.31);
+        background: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        overflow: hidden;
+        width: 100%;
+        height: auto; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    
+    }
+    
+    .carddetail img {
+        max-width: 100%;
+        max-height: 300px;
+        display: block;
+    }
+    
+    .carddetail h2 {
+        margin: 10px 0;
+        font-size: 20px;
+        text-align: center;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1; 
+        -webkit-box-orient: vertical;
+        max-height: 2em; 
+        width: 100%; 
+    }
+    
+    .carddetail p {
+        color:#7B5F49;
+        font-weight:bold;
+    }
+
+    .copy-email-btn {
+        padding: 10px 20px;
+        margin-top: 20px; 
+        font-size: 16px; 
+        background-color: #658961; 
+        border: none;
+        border-radius: 10px; 
+        cursor: pointer; 
+        display: inline-block;
+        transition: background-color 0.3s; 
+      }
+      
+      .copy-email-btn:hover {
+        background-color: #283626; 
+      }
+
+/*Upload*/
+
+    .form {
+        margin-top:2.5rem;
+        margin: auto;
+        align-self: center;
+        align-items: center;
+        width: 80%;
+        padding: 20px;
+        background-color: #638a5e;
+        position: relative;
+    }
+
+    .form h2 {
+        color: white;
+    }
+
+    .form-info {
+        text-align: center;
+        color:white;
+        font-size:1.7rem;
+        font-weight: bold;
+        
+    }
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input[type='text'],
+    select {
+        margin-bottom: 20px;
+        padding: 8px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 100%; 
+    }
+
+    .radioupload {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    
+    .submit-button {
+        background-color: white;
+        color: green;
+        border: none;
+        padding: 10px;
+        font-size: 1.3rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: auto;
+        width:120px;
+    }
+
+    .button-container {
+        text-align: center; 
+    }
+
+/* Universal button styling */
+    button {
+        background-color: #638a5e;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
+ /* Footer */
+
+    footer {
+        position:relative;
+        margin-top:1rem;
+        margin-bottom: 0;
+        left: 0;
+        padding-top: 1rem;
+        font-size: 100%;
+        padding-left: 20px;
+        color: #7B5F49;
+    }
+
+    footer a {
+        text-decoration: underline;
+    }
+    
+    /* MEDIA QUERIES  */
+    @media (min-width: 414px) {
+
+        /* nav */
+        .navbar {
+            padding: 1rem 1.5rem;
+        }
+
+        .type-button-fiction,
+        .type-button-non-fiction,
+        .type-button-mystery,
+        .type-button-romance,
+        .type-button-narrative,
+        .type-button-informative,
+        .type-button-children,
+        .type-button-fairytale,
+        .type-button-science,
+        .type-button-horror,
+        .type-button-biography,
+        .type-button-poetry {
+        width: calc(30% - 10px);
+        font-size: 12px;
+        }
+
+        /* home page content */
+        .reset-button {
+            font-size: 1rem !important;
+            margin-bottom: 30px !important;
+        }
+
+
+        .header-content h1{
+            margin-top:6rem;
+            font-size: 4rem;
+        }
+
+        .header-content p {
+            font-size:smaller;
+        }
+
+
+        .create button {
+            margin-top: 2rem;
+            height:4rem;
+            width:10rem;
+            font-size:19px;
+        }
+
+        .genre-box {
+            padding: 5px 10px !important;
+            margin-top:1rem;
+            margin-bottom:0;
+        }
+
+        .decision-tag {
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-align: center;
+            
+            color: white;
+            font-size:smaller;
+            font-weight: 600;
+        }
+
+        .decision-tag.swap{
+            background-color: #1b4b36;
+        }
+
+        .decision-tag.giveaway {
+            background-color: #7B5F49;
+        }
+
+        .item {
+            flex-basis: calc(50% - 10px); 
+        }
+        /* Books listed */
+        .card {
+            margin-left:6px;
+            width: 90%; 
+            height: 350px;
+        }
+
+        .card h2 {
+            font-size:12px;
+        }
+
+        .card img {
+            max-width: 100%;
+            max-height: 170px; 
+        }
+
+        /* Quiz */
+        .submit-button {
+            background-color: white;
+            color: green;
+            margin-top: 20px;
+            margin-left: 5rem;
+            width: 120px;
+        }
+
+        .form-info {
+            text-align: center;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        /* About Us */
+        .person-container {
+            display: inline-block;
+            margin-left: 5.5rem;
+            text-align: center;
+            height: 500px;
+            vertical-align: top;
+        }
+
+        .img-with-text {
+            text-align: center;
+            height: 450px;
+        }
+
+        .quiz h2 {
+            margin-top:1rem;
+            margin-left:1rem;
+            font-size:smaller;
+        }
+
+        .quiz-item {
+            margin-left: 0; 
+        }
+        
+        .option {
+            flex-basis: calc(50% - 20px); 
+        }
+
+
+        .submit button {
+            background-color: #7B5F49ff;
+            color: #fff; 
+            font-size: 1rem;
+            width: 30vw;
+            height: 7vh;
+            
+        }
+
+        /* Bookshelf */
+        .bookshelf {
+            margin-left:1.5rem;
+        }
+
+        .myshelfcontainer h2 {
+            margin-top:8px;
+            text-align: center;
+            font-size: 20px;
+            color: #7B5F49;
+        }
+
+        footer {
+            font-size: 10px;
+        }
+    } 
+
+    @media (min-width: 768px) {
+
+        /* Navbar */
+        .navbar {
+            padding: 1rem 1.5rem;
+        }
+        
+        .nav-links {
+            flex-direction: row;
+            list-style: none; 
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-top:1rem;
+            margin-left: 16px; 
+        }
+        
+        .nav-links a {
+            color: white;
+            font-weight: 700;
+            text-decoration: none; 
+        }
+
+        .nav-links a:hover {
+            color: #7B5F49ff
+        }
+
+        .hamburger-menu{
+            display: none;
+        }
+
+        .hamburger-links {
+            display: none;
+        }
+
+        /* Homepage content */
+        .page-title h1,
+        .header-content h2 {
+            font-size: 3rem;
+        }
+
+        .header-content h1{
+            margin-top:7rem;
+            font-size: 6rem;
+        }
+
+        .header-content p {
+            font-size:20px;
+        }
+
+
+        .create button {
+            width: 35vw;
+            font-size:23px;
+        }
+
+
+        /* Genre Filter
+        /*Tag sizes*/
+
+        .genre-box {
+            padding: 10px 70px !important;
+            margin-top:1rem;
+            
+        }
+
+        .type-button-fiction,
+        .type-button-non-fiction,
+        .type-button-fantasy,
+        .type-button-mystery,
+        .type-button-romance,
+        .type-button-narrative,
+        .type-button-informative,
+        .type-button-children,
+        .type-button-fairytale,
+        .type-button-science,
+        .type-button-horror,
+        .type-button-biography,
+        .type-button-poetry {
+            padding: 10px 7px;
+            width: calc((100% - 120px) / 6);
+            height: fit-content;
+            font-size:1rem;
+        }
+
+
+        .reset-button {
+            font-size: 1.3rem !important;
+            margin-bottom: 30px !important;
+
+        }
+
+        .decision-tag {
+            padding: 8px 14px;
+            font-size: 1.3rem;
+            border-radius: 20px;
+            background-color: #638a5e;
+            color: white;
+            font-weight: 600;
+        }
+
+
+        /*Book Card*/
+
+        .books-listed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .item {
+            flex-basis: calc(45% - 20px);
+            box-sizing: border-box; 
+        }
+
+        /* Upload */
+        .form-info h2 {
+            font-size: 2.3rem;
+        }
+        .form-info p {
+            font-size: 2rem;
+        }
+
+        /* Centering submit button */
+
+        .submit-button {
+        margin-left: 14rem;
+        }
+        
+
+        /* About Us */
+
+        .person-container {
+            margin-right: 22px;
+            margin-left: 10px;
+        }
+
+        .person-container img {
+            width: 170px;
+            object-fit: cover;
+        }
+
+        .img-with-text {
+        width: 150px;
+        height: 350px;
+        font-size:smaller;
+        }
+
+        /* Quiz */
+
+        .quiz {
+            max-width:400px;
+        }
+
+        .quiz-item {
+            margin-left: 2rem; 
+        }
+        
+        .option {
+            flex-basis: calc(50% - 20px); 
+        }
+
+        /*Book Shelf*/
+
+        .myshelfcontainer h2 {
+            text-align: center;
+            font-size: 50px;
+            color:#7B5F49;
+        }
+
+        .myshelfcontainer p {
+            text-align: center;
+        }
+
+        .bookshelf {
+            grid-template-columns: repeat(3, 250px);
+            grid-template-rows: repeat(3, 190px);
+            padding-left:7rem;
+            background-image: url('/src/images/shelfhold.jpg');
+        }
+
+        .book {
+            height: 100px;
+            margin-top:4.5rem;
+        }
+        
+        .book img {
+            max-height: 175px;
+            width: 100px; 
+        }
+    }
+
+    @media (min-width: 1200px) {
+
+        /* Home page books */
+        .books-listed {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .item {
+            flex-basis: calc(25% - 20px);
+            box-sizing: border-box; 
+        }
+
+        /* Quiz */
+
+        .submit-button {
+            background-color: white;
+            color: green;
+            margin: auto;
+        }
+
+        /* About Us */
+
+        .person-container {
+            display: inline-block;;
+            margin-left: 60px;
+            text-align: center;
+        }
+        
+        .person-container img {
+            height: auto;
+            width: 220px;
+            
+        }
+        
+        .img-with-text {
+            text-align: center;
+            width: 200px;
+        }
+        
+        .img-with-text img {
+            height: 280px;
+        }
+        
+        .image-container img {
+            width: 200px;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
+
+        .page-title h2 {
+            font-size:25px;
+        }
+
+        .bookshelf {
+            grid-template-columns: repeat(3, 250px);
+            grid-template-rows: repeat(3, 210px);
+        
+        }
+        
+        .book {
+            margin-top:2.5rem;
+        }
+
+        .book img {
+            height: 179px;
+            width: 100px;
+        }
+        
+    }
+
+    @media (min-width: 1400px) { 
+
+        .person-container {
+            margin-right: 80px;
+            margin-left: 60px;
+        }
+        
+        .person-container img {
+            width: 250px; 
+        }
+        
+    }
