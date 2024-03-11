@@ -1,4 +1,4 @@
-    html, body {
+html, body {
         min-height: 100vh;
         overflow-x: hidden;
         min-width: 100vw;
@@ -30,6 +30,8 @@
     .nav-links {
         flex-direction: column;
         margin-top: 1rem;
+        margin-right: 1rem;
+        display: none;
     }
 
     .nav-links li {
@@ -53,14 +55,11 @@
         margin-right: 8px; 
     }
 
-    .nav-links {
-        display: none;
-    }
-
     .hamburger-menu{
         display: block; 
         align-content: center;
         cursor: pointer;
+        margin: 1rem;
     }
 
     .hamburger-links{
@@ -597,37 +596,49 @@
 
     .page-title {
         margin-top: 1em; 
-        margin-bottom: 0em;
+        margin-bottom: 0.5em;
     }
+
     .page-title header {
-        margin-top: 1em;
-        margin-bottom: 0em;
         font-size: 30px;
     }
 
     .page-title h2 {
         color:#7B5F49;
-        font-size: 30px;
         margin-top: 0;
         margin-bottom: 0;
     }
 
-    .aboutus-page {
-        color: #7B5F49ff;
-        margin-left: 20px;
-        margin-right: 20px;
+    .aboutus-page{
+        
+        margin-left: 1rem;
+        margin-right: 1.5rem;
     }
 
     .aboutus-page h2 {
-        margin-top:1rem;
-        margin-bottom:2rem;
         color:#7B5F49;
-        margin-left:0;
+        margin: auto;
+        font-size: 1.7rem;
     }
 
-    .aboutus-page p {
+    .accordion-button.collapsed {
         color:#7B5F49;
     }
+
+    .accordion-button:not(.collapsed) {
+        background-color: #638a5e!important;
+        color: white !important;
+    }
+
+    .accordion-button:focus {
+        box-shadow: 0 0 0 .25rem rgb(188, 207, 157) !important;
+    }
+    .accordion-collapse {
+        color: #7B5F49 !important;
+        font-size: 1.3rem;
+    }
+
+
 
     .person-container {
         display: inline-block;;
@@ -1032,7 +1043,8 @@
         
         .nav-links li {
             margin-top:1rem;
-            margin-left: 16px; 
+            margin-left: 1.5rem;
+            margin-right: 1rem; 
         }
         
         .nav-links a {
