@@ -35,7 +35,6 @@ function BookList() {
       setBooks([]);
     });
 
-    /* we might get points off for the unsubscribe ? since its in the reutun but we will figure that out latersss*/
     return () => unsubscribe();
   }, []);
   

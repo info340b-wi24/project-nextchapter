@@ -857,7 +857,7 @@ html, body {
         margin-bottom: 0;
         left: 0;
         padding-top: 1rem;
-        font-size: 100%;
+        font-size: 30px;
         padding-left: 20px;
         color: #7B5F49;
     }
@@ -1024,7 +1024,7 @@ html, body {
         }
 
         footer {
-            font-size: 10px;
+            font-size: 18px;
         }
     } 
 
