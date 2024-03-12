@@ -47,7 +47,7 @@ function AboutUs(props) {
         <Accordion.Header>Who Are We?</Accordion.Header>
         <Accordion.Body>
           <Person name="Brianna Pak" description="Third Year studying informatics with a focus in project management and data science." image={briImage} />
-          <Person name="Kayla Tounaloum" description="Third year studying informatics with a focus in project management and human-computer interaction." image={kaylaImage} />
+          <Person name="Kayla Tounalom" description="Third year studying informatics with a focus in project management and human-computer interaction." image={kaylaImage} />
           <Person name="Alexis Nguyen" description="Senior studying Informatics specializing in Full-Stack Development." image={alexisImage} />
           <Person name="Erica Luo" description="Second year studying Psychology with a minor in Informatics." image={ericaImage} />
         </Accordion.Body>

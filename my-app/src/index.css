@@ -105,7 +105,7 @@
     }
 
     h2 {
-        color:#7B5F49ff;
+        color:#7B5F49ff !important;
         margin-bottom:2rem;
         font-weight:600;
         font-size:25px;
@@ -142,6 +142,7 @@
 
 
 /*Genre Filter Stylings*/
+
 
     .genre-box {
         color:white;
@@ -373,7 +374,6 @@
 
     .reset-button {
         font-size: 1.3rem;
-        padding: 10px 7px;
         background-color: #638a5e !important;
         color: white !important;
         border: none !important;
@@ -885,6 +885,10 @@
         .type-button-poetry {
         width: calc(30% - 10px);
         font-size: 12px;
+        }
+
+        .tags {
+            margin-left:100px;
         }
 
         /* home page content */

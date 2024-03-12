@@ -456,7 +456,7 @@ html, body {
     }
 
     .quiz {
-        width: 100%;
+        width: 90%;
         max-width: 800px;
         margin: 0 auto;
         margin-bottom: 10px;
@@ -903,6 +903,10 @@ html, body {
         font-size: 12px;
         }
 
+        .tags {
+            margin-left:10px;
+        }
+
         /* home page content */
         .reset-button {
             font-size: 1rem !important;
@@ -995,6 +999,7 @@ html, body {
 
         .img-with-text {
             text-align: center;
+            width: 250px;
             height: 450px;
         }
         
@@ -1009,9 +1014,21 @@ html, body {
         .quiz-item {
             margin-left: 0; 
         }
+
+        .container label {
+            font-size: 1rem;
+        }
+        .container input::placeholder {
+            font-size: 1rem;
+        }
+
+        .option label {
+          margin-left:0;
+        }
+       
         
         .option {
-            flex-basis: calc(50% - 20px); 
+            flex-basis: calc(50% - 50px); 
         }
 
 
@@ -1128,6 +1145,10 @@ html, body {
             font-size:1rem;
         }
 
+        .tags {
+            margin-left:5px;
+        }
+
 
         .reset-button {
             font-size: 1.3rem !important;
@@ -1167,7 +1188,11 @@ html, body {
         }
 
         .container label {
+            font-size: 1.4rem;
             display: block;
+        }
+        .container input::placeholder {
+            font-size: 1.4rem;
         }
 
         /* Centering submit button */
@@ -1182,20 +1207,29 @@ html, body {
         .person-container {
             display: inline-block;
             margin-right: 20px;
-            margin-left: 5px;
+            margin-left: 3rem;
         }
-
+        
         .person-container img {
-            width: 170px;
-            object-fit: cover;
+            height: auto;
+            width: 220px;
+            
         }
-
+        
         .img-with-text {
-        width: 150px;
-        height: 350px;
-        font-size:smaller;
+            text-align: center;
+            width: 250px;
         }
-
+        
+        .img-with-text img {
+            height: 280px;
+        }
+        
+        .image-container img {
+            width: 200px;
+            margin-right: 40px;
+            margin-left: 40px;
+        }
         /* Quiz */
 
         .quiz {
@@ -1256,12 +1290,16 @@ html, body {
             box-sizing: border-box; 
         }
 
+        .book-title {
+            -webkit-line-clamp: 1; 
+        }
+
         /* Quiz */
 
         .submit-button {
             background-color: white;
             color: green;
-            margin: auto;
+            margin-left: 23rem;
         }
 
         /* About Us */
@@ -1311,13 +1349,20 @@ html, body {
             height: 179px;
             width: 100px;
         }
+
+        .container label {
+            font-size: 2rem;
+        }
+        .container input::placeholder {
+            font-size: 2rem;
+        }
         
     }
 
     @media (min-width: 1400px) { 
 
         .person-container {
-            margin-right: 80px;
+            margin-right: 60px;
             margin-left: 60px;
         }
         
