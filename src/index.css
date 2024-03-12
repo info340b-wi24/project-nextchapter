@@ -390,6 +390,10 @@ html, body {
         padding: 20px;
     }
 
+    .books-listed a {
+        text-decoration: none;
+    }
+
     .item {
         flex-basis: calc(25% - 20px);
         box-sizing: border-box; 
@@ -806,6 +810,11 @@ html, body {
         display: flex;
         flex-direction: column;
     }
+
+    .container label {
+        color: white;
+        font-size: 1.5rem;
+    }
     
     input[type='text'],
     select {
@@ -1151,6 +1160,10 @@ html, body {
         }
         .form-info p {
             font-size: 2rem;
+        }
+
+        .container label {
+            display: block;
         }
 
         /* Centering submit button */
