@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { ref, get, getDatabase } from 'firebase/database';
 import { Link } from 'react-router-dom';
 
-
 function QuizResults() {
   const location = useLocation();
   const [books, setBooks] = useState([]);

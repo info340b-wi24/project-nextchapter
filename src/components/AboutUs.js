@@ -58,6 +58,4 @@ function AboutUs(props) {
   );
 }
 
-
-
 export default AboutUs;
