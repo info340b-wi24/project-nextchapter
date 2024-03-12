@@ -16,7 +16,6 @@ function HeaderSection(props) {
     );
   }
 
-
 function Home(props) {
     return (
         <HeaderSection />

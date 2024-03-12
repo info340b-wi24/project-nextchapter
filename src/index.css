@@ -104,7 +104,7 @@ html, body {
     }
 
     h2 {
-        color:#7B5F49ff;
+        color:#7B5F49ff !important;
         margin-bottom:2rem;
         font-weight:600;
         font-size:25px;
@@ -616,13 +616,17 @@ html, body {
     .aboutus-page{
         
         margin-left: 1rem;
-        margin-right: 1.5rem;
+        margin-right: 1rem;
     }
 
     .aboutus-page h2 {
         color:#7B5F49;
         margin: auto;
         font-size: 1.7rem;
+    }
+
+    button.accordion-button {
+        font-size: 1.5rem;
     }
 
     .accordion-button.collapsed {
@@ -637,6 +641,7 @@ html, body {
     .accordion-button:focus {
         box-shadow: 0 0 0 .25rem rgb(188, 207, 157) !important;
     }
+
     .accordion-collapse {
         color: #7B5F49 !important;
         font-size: 1.3rem;
@@ -645,9 +650,8 @@ html, body {
 
 
     .person-container {
-        display: inline-block;;
-        margin-right: 60px;
-        margin-left: 60px;
+        align-items: center;
+        margin: auto;
         text-align: center;
         height: 500px;
         vertical-align: top;
@@ -795,12 +799,11 @@ html, body {
     }
 
     .form h2 {
-        color: white;
+        color: white !important;
     }
 
     .form-info {
         text-align: center;
-        color:white;
         font-size:1.7rem;
         font-weight: bold;
         
@@ -813,6 +816,10 @@ html, body {
 
     .container label {
         color: white;
+        font-size: 1.5rem;
+    }
+
+    .container input::placeholder {
         font-size: 1.5rem;
     }
     
@@ -984,9 +991,7 @@ html, body {
 
         /* About Us */
         .person-container {
-            display: inline-block;
-            margin-left: 5.5rem;
-            text-align: center;
+            margin-left: 4.25rem;
             height: 500px;
             vertical-align: top;
         }

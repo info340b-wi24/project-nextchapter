@@ -30,7 +30,6 @@ function BookShelf() {
       console.error(error);
       setBooks([]);
     });
-
     
     return () => unsubscribe();
   }, []);
