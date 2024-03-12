@@ -30,10 +30,9 @@ function BookShelf() {
       console.error(error);
       setBooks([]);
     });
-
-    
     return () => unsubscribe();
   }, []);
+  
   return (
     <div className="myshelfcontainer">
       <header className="page-title">
