@@ -625,6 +625,10 @@ html, body {
         font-size: 1.7rem;
     }
 
+    button.accordion-button {
+        font-size: 1.5rem;
+    }
+
     .accordion-button.collapsed {
         color:#7B5F49;
     }
@@ -637,6 +641,7 @@ html, body {
     .accordion-button:focus {
         box-shadow: 0 0 0 .25rem rgb(188, 207, 157) !important;
     }
+
     .accordion-collapse {
         color: #7B5F49 !important;
         font-size: 1.3rem;
@@ -645,9 +650,8 @@ html, body {
 
 
     .person-container {
-        display: inline-block;;
-        margin-right: 60px;
-        margin-left: 60px;
+        align-items: center;
+        margin: auto;
         text-align: center;
         height: 500px;
         vertical-align: top;
@@ -988,9 +992,7 @@ html, body {
 
         /* About Us */
         .person-container {
-            display: inline-block;
-            margin-left: 5.5rem;
-            text-align: center;
+            margin-left: 4.25rem;
             height: 500px;
             vertical-align: top;
         }
