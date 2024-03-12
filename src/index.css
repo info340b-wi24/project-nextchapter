@@ -104,7 +104,7 @@ html, body {
     }
 
     h2 {
-        color:#7B5F49ff;
+        color:#7B5F49ff !important;
         margin-bottom:2rem;
         font-weight:600;
         font-size:25px;
@@ -799,12 +799,11 @@ html, body {
     }
 
     .form h2 {
-        color: white;
+        color: white !important;
     }
 
     .form-info {
         text-align: center;
-        color:white;
         font-size:1.7rem;
         font-weight: bold;
         
