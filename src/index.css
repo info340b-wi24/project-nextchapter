@@ -1322,7 +1322,7 @@ html, body {
         }
         
         .img-with-text img {
-            height: 280px;
+            height: 250px;
         }
         
         .image-container img {
@@ -1353,6 +1353,7 @@ html, body {
         .container label {
             font-size: 2rem;
         }
+        
         .container input::placeholder {
             font-size: 2rem;
         }
