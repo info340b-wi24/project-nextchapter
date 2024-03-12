@@ -35,7 +35,6 @@ function NavBar(props) {
         <li><Link to="/about-us">About Us</Link></li>
         <li><Link to="/book-shelf">BookShelf</Link></li>
       </ul>
-      
       <div className="hamburger-menu" onClick={() => toggleHamburger()}> 
             <span className="bar"></span>
             <span className="bar"></span> 

@@ -27,11 +27,9 @@ const Form = () => {
     const [image, setImage] = useState(null);
     const [choice, setChoice] = useState('');
 
-    // Event handler for radio button change
     const handleRadioChange = (event) => {
         setChoice(event.target.value);
     };
-
 
     const handleImageChange = e => {
         if (e.target.files[0]) {
