@@ -42,7 +42,6 @@ function BookShelf() {
       </header>
       <div className="bookshelf">
         {books.map((book, index) => (
-          // Correctly wrapping the div with the Link
           <Link to={`/books/${encodeURIComponent(book.BookTitle)}`} key={index}>
             <div className="book">
               <img src={book.imgSrc} alt={book.altText || "Book cover"} />
